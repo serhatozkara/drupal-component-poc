@@ -1,0 +1,62 @@
+{% set stepValueLabelStyle = 'small' %}
+{% set stepValueLabel = 'Data 6 GB, Unlimited SMS, Voice 500 minutes, Voicemail, Quebec' %}
+{% set priceReveal = 'yes' %}
+{% set formLabel = 'Your monthly plan' %}
+
+{% extends 'organisms-collapsible-form-container' %}
+
+{% block activationForm %}
+
+  <h4 data-form-scroll="yes">Your monthly plan</h4>
+  <p class="text-muted">Adjust your settings until you have exactly what you need this month. You can always make changes later.</p>
+
+  <div class="my-50">
+    {% include 'organisms-progress-increment' with { progressValueLabel: 6, progressValueProduct: 'GB of data', progressValue: 6,  progressMax: 8 } %}
+  </div>
+
+  <div class="mb-50">
+    {% include 'organisms-progress-toggle' with { progressValue: 1, progressValueProduct: 'Text messages', progressMax: 1 } %}
+  </div>
+  
+  <div class="mb-50">
+    {% include 'organisms-progress-increment' with { progressValueLabel: 300, progressValueProduct: 'min. of voice', progressValue: 300, progressMax: 1000, incrementStep: 100 } %}
+  </div>
+
+  <div class="mb-50"><a href="#">How do i choose the perfect plan?</a></div>
+
+  <div class="mb-50">
+    <h4>Select your coverage{% include 'atoms-tooltip' with { margin:'ml-1', title: '<strong>Lorem ipsum?</strong><br/ > Vestibulum rhoncus est pellentesque elit ullamcorper.'} %}</h4>
+    {% include 'organisms-radio-list' %}
+  </div>
+
+  <div class="mb-50"><a href="#">What if I travel only occasionally?</a></div>
+
+  <div class="mb-50">
+    <h4>Calling options</h4>
+    <p class="text-muted">These will be renewed every billing cycle</p>
+    <div class="py-4 border-bottom">
+      {% include 'organisms-text-toggle' %}
+    </div>
+    <div class="pt-5 pb-4 border-bottom">
+      {% include 'organisms-text-toggle' with { inputContainerID: 'longDistance', checkedStatus: ' ', productName: 'Long distance call', productDescription: 'A fee of $5 will be applied.' } %}
+
+      {% include 'organisms-long-distance-country-checkbox' %}
+    </div>
+    <div class="pt-5">
+      <span class="float-right">{% include 'atoms-circle-icon-16' with { circleColor: 'electric-blue', icon: 'check', color: 'white'} %}</span>
+      <h5>Free stuff everyone gets:</h5>
+      <ul class="checklist two-column text-muted">
+        <li>Call display</li>
+        <li>Call waiting</li>
+        <li>Conference calling</li>
+        <li>Call forwarding</li>
+      </ul>     
+    </div>
+  </div> 
+  
+  <div class="text-center">
+    {% include 'atoms-button-icon-right-large' with { buttonLabel: 'Save', icon: 'arrow-right', uniqueID: uuid } %}
+  </div>
+
+
+{% endblock %}

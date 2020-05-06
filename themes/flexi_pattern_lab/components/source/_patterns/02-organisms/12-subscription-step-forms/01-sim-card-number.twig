@@ -1,0 +1,22 @@
+{% set stepValueLabelStyle = 'large' %}
+{% set stepValueLabel = '1 SIM card' %}
+{% set formLabel = 'Order a SIM card' %}
+{% set formContainerPadding = 'py-50 py-lg-120'  %}
+
+{% extends 'organisms-collapsible-form-container' %}
+
+{% block activationForm %}
+
+  <img src="/images/spot/sim-card-subscription.png" width="175px" class="d-block mx-auto mb-50">
+  <h1 class="text-center">Getting set up</h1>
+  <p class="text-center text-muted mb-50">Order a SIM card. {% include 'atoms-tooltip' with { margin:'mx-0', title: 'While you’re at it, order SIM cards for friends or family. Want to start a family account? Order their SIM cards now and add them after you’ve activated your account.'} %}</p>
+
+  <div class="d-flex justify-content-center">
+    {% include 'organisms-number-increment' %}
+  </div>
+  
+  <div class="text-center mt-50">
+    {% include 'atoms-button-icon-right-large' with { buttonLabel: 'Save', icon: 'arrow-right', uniqueID: uuid} %}
+  </div>
+
+{% endblock %}

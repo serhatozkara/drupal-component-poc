@@ -1,0 +1,97 @@
+body.price-status-reveal-padding {
+  padding-bottom: 150px;
+}
+
+.price-status {
+  max-height: 0px;
+  background: $white;
+  -webkit-box-shadow: 0px -3px 38px -7px rgba(0,0,0,0.26);
+  -moz-box-shadow: 0px -3px 38px -7px rgba(0,0,0,0.26);
+  box-shadow: 0px -3px 38px -7px rgba(0,0,0,0.26);
+  transition: all 1s ease;
+}
+
+.price-status.show {
+  max-height: 180px;
+  transition: all 1s ease;
+}
+
+h3.price-status-total {
+  font-size: 1.375rem;
+  line-height: 1.375rem;
+  margin-bottom: 0;
+}
+
+h2.price-status-value {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin: 0 0 0 1rem;
+
+  span.dollar-sign {
+    font-size: 1.2rem;
+  }
+
+  span.per-month {
+    display: inline-block;
+    max-width: 60px;
+    padding-left: 0.2em;
+    color: $gray;
+    font-size: 1rem;
+    font-weight: lighter;
+    line-height: 1rem;
+  }
+}
+
+.price-status-terms {
+  max-height: 0;
+  visibility: hidden;
+  transition: max-height 1s ease;
+}
+
+.price-status-terms.show {
+  max-height: 100px;
+  visibility: visible;
+  transition: max-height 1s ease;
+}
+
+@include media-breakpoint-up(md) {
+  .price-status-terms {
+    border-top: 1px solid $light-gray;
+  }
+}
+
+// Price Tables
+ul.price-summary {
+  li {
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  li:last-child {
+    border-bottom: 0;
+  }
+
+  .item-price {
+    padding-left: 10px;
+    font-weight: bold;
+  }
+}
+
+ul.price-summary-tax {
+  li {
+    border: none;
+  }
+
+  .item-description {
+    display: flex;
+    align-items: center;
+  }
+
+  span.dotted {
+    content: '';
+    flex: 1 1 auto;
+    margin-left: 1em;
+    border-top: 1px dashed $light-gray;
+  }
+}

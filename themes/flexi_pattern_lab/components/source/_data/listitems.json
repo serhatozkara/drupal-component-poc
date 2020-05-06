@@ -1,0 +1,31 @@
+{
+  "1": {
+    "menuTitle": "Mobile",
+    "footerMenuTitle": "Terms & Conditions",
+    "inlineAnchor": "mobile",
+    "titleLong": "Nullam eget justo posuere, fringilla purus a, posuere purus."
+  },
+  "2": {
+    "menuTitle": "Internet",
+    "footerMenuTitle": "Accessibility",
+    "inlineAnchor": "services",
+    "titleLong": "Aenean blandit lectus non hendrerit porta."
+    
+  },
+  "3": {
+    "menuTitle": "Support",
+    "footerMenuTitle": "Privacy",
+    "inlineAnchor": "support",
+    "titleLong": "Maecenas imperdiet feugiat magna et vulputate."
+  },
+  "4": {
+    "menuTitle": "About",
+    "inlineAnchor": "about",
+    "titleLong": "Cras porta eros faucibus ligula bibendum, sit amet congue."
+  },
+  "5": {
+    "menuTitle": "Discover",
+    "inlineAnchor": "discover",
+    "titleLong": "Integer malesuada nulla quis nisl viverra, id egestas ante dapibus."
+  }
+}

@@ -1,0 +1,55 @@
+name: Flexi Pattern Lab
+type: theme
+description: "A Bootstrap based theme for Flexi Pattern Lab"
+# core: 8.x
+base theme: classy
+libraries:
+  - flexi_pattern_lab/global
+
+regions:
+  page_top: 'Page Top'
+  header: Header
+  breadcrumb: Breadcrumb
+  help: Help
+  highlighted: Highlighted
+  content_top: Content Top
+  content: Content
+  content_bottom: Content Bottom
+  sidebar_first: Sidebar First
+  footer: Footer
+  footer_bottom: Footer Bottom
+  disabled: Disabled
+  page_bottom: 'Page Bottom'
+
+component-libraries:
+  base:
+    paths:
+      - components/source/_patterns/04-base
+  components:
+    paths:
+      - components/source/_patterns/05-components
+  layouts:
+    paths:
+      - components/source/_patterns/06-layouts
+  templates:
+    paths:
+      - components/source/_patterns/03-templates
+  pages:
+    paths:
+      - components/source/_patterns/07-pages
+  atoms:
+    paths:
+      - components/source/_patterns/00-atoms
+  molecule:
+    paths:
+      - components/source/_patterns/01-molecule
+  organisms:
+    paths:
+      - components/source/_patterns/02-organisms
+
+
+# Information added by Drupal.org packaging script on 2019-03-04
+version: '8.x-1.1'
+core: '8.x'
+project: 'flexi_pattern_lab'
+datestamp: 1551713103

@@ -1,0 +1,38 @@
+{% extends 'organisms-dashboard-container' %}
+
+{% block dashboardContent %}
+  <div class="py-50 py-md-120 bg-lightest-gray">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-12 mb-5">
+          <a class="text-muted d-flex align-item-center" href="#">
+            {% include'atoms-icon-24' with {icon:'chevron-left',color:' text-muted'} %}Plans and Billing
+          </a>
+        </div>
+
+        <div class="col-12 text-center mb-4">
+          <h1>OUT OF DATA</h1>
+          <p class="text-muted">27 DAYS LEFT IN THIS BILLING CYCLE</p>
+          <small class="text-muted">Cannot wait ? We got you covered</small>
+          <p class="pt-2">{% include 'atoms-button-outline-large' with { buttonLabel: 'ADD-ON' } %}</p>
+        </div>
+
+        <div class="col-12 mb-5">
+          <div class="card p-4 mb-5">
+            <div class="col-12 text-center mb-4">
+              <p><a href="#" class="link text-muted d-inline-flex">Show usage history</a></p>
+            </div>
+            <div class="data-blocks">
+              {% include 'molecule-data-block-out-of-data' with { active: 'current', height: '100%', num_gigs: '1 GB', data_type: 'rollover', days_left: 'used' } %}
+              {% include 'molecule-data-block-out-of-data' with { active: 'current', height: '100%', num_gigs: '1 GB', data_type: 'rollover', days_left: 'used' } %}
+              {% include 'molecule-data-block-out-of-data' with { active: 'current', height: '100%', num_gigs: '1 GB', data_type: 'rollover', days_left: 'used' } %}
+            </div>
+            <p class="pt-2 text-center">{% include 'atoms-button-outline-large' with { buttonLabel: 'ADD-ON' } %}</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

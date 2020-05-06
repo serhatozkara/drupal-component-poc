@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-12">
+
+    <div class="d-flex align-items-center">
+      {% include 'atoms-input-appended-button' with { icon: 'search', placeholder: 'Last four digits', describedby: 'findNumber'} %}
+      {% include 'atoms-tooltip' with {margin:'mx-3'} %}
+    </div>
+
+    <div id="search-a-number-results">
+      {% include 'atoms-block-radio-text-center-small' with { inputNumber: "choosePhone1", labelName: '514 925 3365' } %}
+
+      {% include 'atoms-block-radio-text-center-small' with { inputNumber: "choosePhone2", labelName: '514 911 0096' } %}
+
+      {% include 'atoms-block-radio-text-center-small' with { inputNumber: "choosePhone3", labelName: '438 200 1888' } %}
+
+      {% include 'atoms-block-radio-text-center-small' with { inputNumber: "choosePhone4", labelName: '438 200 2525' } %}
+
+      {% include 'atoms-block-radio-text-center-small' with { inputNumber: "choosePhone5", labelName: '438 221 6565' } %}
+    </div>
+  </div>
+</div>

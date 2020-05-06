@@ -1,0 +1,47 @@
+{% extends "organisms-dashboard-container" %}
+
+{% block dashboardContent %}
+
+    <h1 class="text-center">Adjust your plan</h1>
+    <p class="text-center text-muted">Make changes to your plan or buy an Add-On.</p>
+    
+    
+    <div class="row">
+      <div class="col col-lg-8 offset-lg-2">
+        
+        <div class="card">
+      
+          <div class="p-4 border-bottom">
+            <div class="media">
+              <img src="http://via.placeholder.com/60x60" class="rounded-circle mr-3">
+              <div class="media-body">
+                <h5>Change your plan</h5>
+                <p>Changes to your plan will start at your next billing cycle. If you need something right away you can get an Add-On.</p>
+              </div>
+            </div>
+            <div class="text-center">
+              {% include 'atoms-button' with{ buttonLabel:'Change Plan',buttonSize:'l', classes:''} %}
+            </div>
+          </div>
+      
+           <div class="p-4">
+            <div class="media">
+              <img src="http://via.placeholder.com/60x60" class="rounded-circle mr-3">
+              <div class="media-body">
+                <h5 class="d-inline-block">Buy an Add-On</h5>
+                {% include 'atoms-tooltip' with { title: 'An Add-On is temporary additional usage — it could be data, voice & text or long distance — that you can use right away. You may want to buy an Add-On if you’re running low on monthly data, or if you want to add a feature that’s not part of your monthly plan.'} %}
+                <p>Order an Add-On and use it right away.</p>
+              </div>
+            </div>
+        
+            <div class="text-center">
+              {% include 'atoms-button' with{ buttonLabel:'Buy an Add-On',buttonSize:'l', classes:''} %}
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+{% endblock %}

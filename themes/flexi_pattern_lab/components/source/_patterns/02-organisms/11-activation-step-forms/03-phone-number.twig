@@ -1,0 +1,79 @@
+{% set stepValueLabelStyle = 'large' %}
+{% set stepValueLabel = '438 921 4445' %}
+{% set priceReveal = 'no' %}
+{% set formLabel = 'Your phone number' %}
+
+{% extends 'organisms-collapsible-form-container' %}
+
+{% block activationForm %}
+
+  <h4 data-form-scroll="yes">{{ header|default('Your phone number') }}</h4>
+
+  <form class="mt-30">
+    {% include 'atoms-radio' with { uuid: 'phone-keep', formID: 'phoneNumber', label: 'Keep a number'} %}
+    {% include 'atoms-radio' with { uuid: 'phone-new', formID: 'phoneNumber', label: 'Get a new number'} %}
+    {% include 'atoms-radio' with { uuid: 'phone-choose', formID: 'phoneNumber', label: 'Find a number (enter the last 4 digits - $2 one-time fee)'} %}
+  </form>
+
+  <form class="pt-4 mb-50 collapse" id="phone-keep">
+    <div class="form-row">
+      <div id="phone-keep-number" class="form-group col-12">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Your phone number" aria-label="Your phone number" aria-describedby="yourPhoneNumber">
+          <div class="input-group-append">
+            <button class="btn btn-primary" id="phone-keep-number-verify" type="button">{% include 'atoms-icon-24' with { color: 'black', icon: 'arrow-right'} %}</button>
+          </div>
+        </div>
+      </div>
+      <div id="phone-keep-provider" class="form-group col-12 collapse">
+        <div class="row">
+          <div class="col-11">
+            <select class="custom-select">
+              <option  disabled selected>Who is your current provider?</option>
+              <option>Bell</option>
+              <option>Rogers</option>
+              <option>Fido</option>
+              <option>Virgin</option>
+              <option>Chatr</option>
+              <option>Telus</option>
+              <option>Koodo</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="col-1 px-0 pt-3">
+            {% include 'atoms-tooltip' with { margin:'mx-0', title: 'If you’re not sure who your provider is, choose “other”.' } %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="phone-keep-account" class="form-row collapse">
+      <div class="form-group col-12 d-flex align-items-center">
+        <input type="text" class="form-control form-inline-tooltip" placeholder="Account number">
+        {% include 'atoms-tooltip' with { margin:'mx-3', title: 'Enter your account number from your current mobile provider. You’ll find it on your bill.' } %}
+      </div>
+      <div class="form-group col-12 d-flex align-items-center">
+        <input type="text" class="form-control form-inline-tooltip" placeholder="IMEI Number">
+        {% include 'atoms-tooltip' with { margin:'mx-3', title: 'To find your IMEI, dial *#06#. Your IMEI number is a 15-digit serial number that identifies your phone.'} %}
+      </div>
+      <div class="form-group col-12">
+        {% include 'atoms-checkbox' with{ uuid: 'chk-end-user', label:'I confirm that I am the end user of this mobile service.'} %}
+      </div>
+      <div class="form-group col-12">
+        {% include 'atoms-checkbox' with{ label:'I understand that I am transferring my phone number from my current provider to Bbbb.'} %}
+      </div>
+    </div>
+  </form>
+
+  <form class="pt-4 mb-50 collapse" id="phone-new">
+    {% include 'organisms-random-phone-number-list' %}
+  </form>
+
+  <form class="pt-4 mb-50 collapse" id="phone-choose">
+    {% include 'organisms-choose-phone-number' %}
+  </form>
+
+  <div class="text-center">
+    {% include 'atoms-button-icon-right-large' with { buttonLabel: 'Save', icon: 'arrow-right', uniqueID: uuid} %}
+  </div>
+
+{% endblock %}

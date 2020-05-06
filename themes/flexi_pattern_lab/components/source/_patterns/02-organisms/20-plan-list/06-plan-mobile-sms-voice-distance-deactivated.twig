@@ -1,0 +1,74 @@
+<div class="card card-normal mb-50">
+  <div class="card-section card-header user-plan px-3 px-md-5 pt-4">
+    <div class="d-flex flex-row align-items-start align-items-sm-center justify-content-between">
+      <div>
+        <h5 class="icon-custom-mobile">Mobile</h5>
+        <p class="sm-smaller-p text-muted">(514) 423-4567</p>
+      </div>
+      <div class="mb-md-40 pl-xl-50 pl-lg-20">
+        <div class="d-flex flex-row align-items-center">
+          <h5>$00.00</h5>
+          <p class="sm-smaller-p text-muted mb-10 pl-1">/ month + tx</p>
+        </div>
+      </div>
+      <div class="d-none d-lg-flex">
+        {% include 'atoms-button-outline' with{ buttonLabel:'Invoices',buttonSize:'xl'} %}
+        {% include 'atoms-button' with{ buttonLabel:'Manage',buttonSize:'xl', classes:'ml-3 ml-xl-4'} %}
+      </div>
+    </div>
+  </div>
+
+  <div class="card-section card-body user-plan px-3 px-md-5">
+    <div class="row">
+
+      <div class="col-lg-6 col-xl-6 col-xxl-3 py-3 py-lg-4">
+        <h4 class="d-inline-block alert-numbers">0</h4>
+        <span class="display-2 xl-smaller-dash text-muted">/ </span>
+        <p class="text-muted no-br-xxl d-inline-block">Gigs</br> of data</p>
+        {% include 'atoms-progress-slider' with { gradientcolor:'green', progressValue: 0, direction:'descending' } %}
+        <div class="d-flex justify-content-start mt-3 mt-sm-4">
+          {% include 'atoms-button-link' with { buttonLabel:'Usage', active: 'active' } %}
+          {% include 'atoms-button-link' with { buttonLabel:'Add-on' } %}
+          {% include 'atoms-button-link' with { buttonLabel:'Give' } %}
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-xl-6 col-xxl-3 py-3 py-lg-4">
+        <h4 class="d-inline-block alert-numbers">0</h4>
+        <span class="display-2 xl-smaller-dash text-muted">/ </span>
+        <p class="text-muted no-br-xxl d-inline-block">min.</br> of voice</p>
+        {% include 'atoms-progress-slider' with { gradientcolor:'green', progressValue: 0, direction:'descending' } %}
+        <div class="d-flex justify-content-start mt-3 mt-sm-4">
+          {% include 'atoms-button-link' with { buttonLabel:'Usage', active: 'active' } %}
+          {% include 'atoms-button-link' with { buttonLabel:'Add-on' } %}
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-xl-6 col-xxl-3 pb-4 pt-1">
+        <p class="mb-1"><strong>United-States</strong></p>
+        <h4 class="d-inline-block alert-numbers">0</h4>
+        <span class="display-2 xl-smaller-dash text-muted">/ </span>
+        <p class="text-muted no-br-xxl d-inline-block">min.</br> of voice</p>
+        {% include 'atoms-progress-slider' with { gradientcolor:'green', progressValue: 0, direction:'descending' } %}
+        <div class="d-flex justify-content-start mt-3 mt-sm-4">
+          {% include 'atoms-button-link' with { buttonLabel:'Usage', active: 'active' } %}
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-xl-6 col-xxl-3 py-3 py-lg-4">
+        <h4 class="d-inline-block alert-numbers">0</h4>
+        <p class="text-muted no-br-xxl d-inline-block">/ SMS</p>
+        {% include 'atoms-progress-slider' with { gradientcolor:'green', progressValue: 0, direction:'descending' } %}
+        <div class="d-flex justify-content-start mt-3 mt-sm-4">
+          {% include 'atoms-button-link' with { buttonLabel:'Usage', active:'active' } %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="card-section card-body px-2 px-md-5 pb-10 d-flex d-lg-none justify-content-center align-items-center">
+    {% include 'atoms-button' with{ buttonLabel:'Manage',buttonSize:'xl', classes:'mx-2'} %}
+    {% include 'atoms-button-outline' with{ buttonLabel:'Invoices',buttonSize:'xl', classes:'mx-2'} %}
+  </div>
+</div>

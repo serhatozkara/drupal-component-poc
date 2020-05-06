@@ -1,0 +1,29 @@
+// .hero-50-left-text,
+// .hero-50-right-text {
+//   min-height: 70vh;
+// }
+
+.hero *{
+  z-index: 1;
+  position:relative;
+}
+
+.hero svg {
+  display: block;
+  margin-bottom: -1px;
+}
+
+// @include media-breakpoint-up(md) {
+//   .hero-50-left-text,
+//   .hero-50-right-text {
+//     min-height: 80vh;
+//   }
+// }
+
+.height-unset {
+  min-height: unset;
+}
+
+// TODO: Find a way to dynamically apply a white font color if the background is dark.
+// Bootstrap ships with a color-yiq() function that will automatically switch
+// the font color if the background is a certain darkness.

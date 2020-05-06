@@ -1,0 +1,6 @@
+<div class="alert alert-danger-v2 alert-dismissible fade show text-center" role="alert">
+  {% include "atoms-icon" with {size:'24' } %}
+  <p class="alertmsg text-center">{{ mobileText|default("Error!")}}</p>
+  <p class="text-center text-md-left mb-0 pl-md-3">{{ notificationText|default("Change a few things up and try submitting again.")}}</p>
+  {% include "atoms-button-close" %}
+</div>

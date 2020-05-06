@@ -1,0 +1,29 @@
+{% extends 'organisms-dashboard-container' %}
+
+{% block dashboardContent %}
+  <div class="py-50 bg-lightest-gray">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 mb-5">
+          <div class="card p-4 mb-5">
+            <div class="col-10 offset-1 mb-5">
+              <h4 data-form-scroll="yes">Add contact</h4>
+              <p class="text-muted">Email or phone number must be filled</p>
+              <form class="mb-3">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Name / Nickname">
+                </div>
+                {% include 'atoms-dropdown' with { selected: 'CATEGORY (optional)' } %}
+              </form>
+              <p class="text-muted">PHONE NUMBER<br>514 921 7548</p>
+            </div>
+            <div class="text-center mt-20">
+              {% include 'atoms-button' with { buttonLabel: 'Add', buttonSize:'l', buttonColor: 'green' } %}
+              {% include 'atoms-button' with { buttonLabel: 'Cancel', buttonSize:'l', buttonColor: 'light-gray' } %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

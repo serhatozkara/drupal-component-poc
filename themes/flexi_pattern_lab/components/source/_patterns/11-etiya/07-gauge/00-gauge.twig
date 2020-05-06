@@ -1,0 +1,25 @@
+<div class="container mt-50">
+  <h2 class="text-center mb-5">Hello, John</h2>
+
+  <div class="card p-4 mb-5">
+    
+    <div class="row">
+      <div class="col-12 col-md-9 col-lg-7 col-xl-6 mx-auto">
+        <h4 class="text-center">Data</h4>
+        <p class="text-muted text-center">Mobile • (514) 423-4567</p>
+    
+        <div class="text-center">
+          {% include 'atoms-gauge-three-sector' with { gaugePercent: '0.7' } %}
+          <h3 class="text-electric-blue">So far, so good!</h3>
+          <p class="text-muted">Just keep doing what you're doing.</p>
+          <p class="text-muted"><span class="text-electric-blue"><strong>5GB</strong></span> left • <strong>3 days</strong> left</p>
+          
+          <div class="text-center pt-3">
+            {% include 'atoms-button' with { buttonLabel: 'Share the wealth' } %}
+            {% include 'atoms-button-outline-large' with { buttonLabel: 'See usage' } %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

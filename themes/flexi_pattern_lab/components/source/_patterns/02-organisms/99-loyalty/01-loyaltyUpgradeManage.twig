@@ -1,0 +1,14 @@
+<div class="d-flex mb-10 mb-md-30 flex-wrap">
+  <h5 class="mb-0 pr-3">{{ name|default('John D.') }}</h5>
+  <span class="d-flex align-self-end font-bookmark text-gray">{{ phone|default('438 921 1104') }}</span>
+</div>
+
+<div class="upgrade-container d-flex justify-content-between mx-0">
+  {% include 'molecule-upgrade' %}
+  {% include 'molecule-upgrade-add' %}
+  {% include 'molecule-upgrade-locked' %}
+</div>
+
+<div class="mt-20 mt-md-30 mb-15 mb-md-40 d-flex justify-content-center">
+  {% include 'atoms-button' with { buttonLabel:'Manage my upgrades', dataToggle: 'collapse', dataTarget: '.upgradeCollectionPaneBody', ariaExpanded: 'false' } %}
+</div>

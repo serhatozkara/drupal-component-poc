@@ -1,0 +1,10 @@
+<div class="col-12 px-md-0">
+  <div class="form-checkbox-block d-flex my-2 my-md-3">
+    <input class="sr-only" type="checkbox" name="checkboxOptions" id="checkbox{{inputNumber}}" value="option{{inputNumber}}">
+    <label class="align-self-center align-items-center w-100 p-3 d-flex" for="checkbox{{inputNumber}}">
+      <h4 class="col-4 p-0 text-{{ pricecolor|default('black') }}">{{ price|default('$0') }}</h4>
+      <span class="col-8 "><strong>{{ labelName|default('Quebec') }}</strong></span>
+      {% include 'atoms-circle-icon-16' with { circleColor: 'electric-blue', icon: 'check', color: 'white'} %}
+    </label>
+  </div>
+</div>

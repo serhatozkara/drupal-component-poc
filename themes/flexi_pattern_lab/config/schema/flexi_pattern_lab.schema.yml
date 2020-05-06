@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Startup Growth Lite theme.
+
+flexi_pattern_lab.settings:
+  type: theme_settings
+  label: 'Flexi Pattern Lab settings'

@@ -1,0 +1,96 @@
+.forgot-label-right {
+  top: 0;
+  right: 0;
+  padding: 1.2rem 1rem !important;
+  position: absolute !important;
+  font-size: 0.75em;
+  margin-bottom: 0;
+}
+
+.h-60 {
+  height: 60px;
+}
+
+.btn-height-55 {
+  height: 55px;
+  border-radius: 30px;
+}
+
+.login-modal {
+  max-width: 510px;
+  margin: 0 auto;
+  margin-top: 1%;
+}
+
+.btn-facebook {
+  background-color: #32569f;
+}
+
+.btn-instagram {
+  background-color: #ce000b;
+}
+
+.btn-google {
+  background-color: #f13921;
+}
+
+.btn-amazon {
+  background-color: #ff463c;
+}
+
+.btn-linkedin {
+  background-color: #0078ba;
+}
+
+.btn-twitter {
+  background-color: #1DA1F2;
+}
+
+.btn-twitch {
+  background-color: #fb8c31;
+}
+
+.btn-steam {
+  background-color: #21d776;
+}
+
+.socialz a {
+  display: inline-block;
+  width: 80px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 47px;
+}
+
+@media (max-width: 568px) {
+  .socialz a {
+    width: 59px !important;
+    height: 46px !important;
+  }
+}
+.login-bottom{
+    font-size: 1.2rem;
+    margin: -20px 0 0 0;
+    padding: 30px 0 50px 0;
+}
+
+@media only screen and (max-height: 750px) {
+  .inline-link {
+    padding: 1.3rem 1.25rem !important;
+    position: absolute !important;
+  }
+}
+
+
+
+
+
+
+
+
+#tooltip-password {
+    position: absolute;
+    margin-top: -60px;
+    right: 10px;
+}

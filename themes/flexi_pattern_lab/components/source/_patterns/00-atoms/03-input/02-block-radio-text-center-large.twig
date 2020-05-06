@@ -1,0 +1,8 @@
+<div class="form-radio-block d-flex col-12 col-sm my-2 my-md-3">
+  <input class="sr-only" type="radio" name="radio{{ formId|default('Options') }}" id="radio{{inputNumber}}" value="option{{inputNumber}}">
+  <label class="align-self-center w-100 py-3 text-center" for="radio{{inputNumber}}">
+    <h3 class="mb-0">{{ title|default('30') }}</h3>
+    <span>{{ subtitle|default('Mbps') }}</span>
+    {% include 'atoms-circle-icon-16' with { circleColor: 'electric-blue', icon: 'check', color: 'white'} %}
+  </label>
+</div>

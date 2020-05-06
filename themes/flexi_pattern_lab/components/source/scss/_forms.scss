@@ -1,0 +1,259 @@
+input.is-invalid {
+  background-color: $white;
+  color: theme-color("danger");
+}
+
+input.is-invalid::placeholder,
+input.is-invalid:focus {
+  color: theme-color("danger");
+}
+
+.form-group-inline-label {
+  position: relative;
+
+  label {
+    position: absolute;
+    color: $gray;
+    font-size: 0.75em;
+  }
+}
+
+.form-group-inline-label-top {
+  input {
+    padding: ($input-padding-y*1.5) $input-padding-x ($input-padding-y/2);
+  }
+}
+
+.form-group-inline-label-left-icon {
+  input {
+    padding: $input-padding-y ($input-padding-x * 2);
+  }
+}
+
+.form-group-inline-label-right {
+  &:after {
+    clear: both;
+    width: 100%;
+    content: '';
+    display: block;
+  }
+}
+
+.form-group-inline-label-right-icon {
+  input {
+        padding: $input-padding-y ($input-padding-x * 2) $input-padding-y $input-padding-x;
+  }
+}
+
+.form-group-inline-label-top.form-group-inline-label-right-icon {
+  input {
+        padding: ($input-padding-y*1.5) ($input-padding-x * 2) ($input-padding-y/2) $input-padding-x;
+  }
+}
+
+.label-top {
+  top: 0;
+  padding: ($input-padding-y/2) $input-padding-x;
+}
+
+.form-group-inline-label .label-right {
+  position: relative;
+  float: right;
+  padding: ($input-padding-y*0.3) 0 ($input-padding-y*0.3) $input-padding-x;
+  margin-bottom: 0;
+}
+
+.label-left-icon {
+  top: 0;
+  padding: ($input-padding-y*1.3) $input-padding-x;
+}
+
+.label-right-icon {
+  top: 0;
+  right: 0;
+  padding: ($input-padding-y*1.3) $input-padding-x;
+}
+
+// Global Search
+.form-global-search {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $white;
+  font-weight: $font-weight-bold;
+
+  @include media-breakpoint-up(md) {
+    font-size: 2em;
+  }
+
+  &:focus {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $white;
+    color: $white;
+  }
+}
+
+.small-screen-search .label-right-icon {
+  padding: 12px 15px 0px 0px !important;
+}
+
+@media (min-width: 768px) {
+  .small-screen-search .label-right-icon {
+    padding: ($input-padding-y*1.3) $input-padding-x !important;
+  }
+}
+
+// Global Search Colored
+.form-global-search-colored {
+  border: none;
+
+  &:focus {
+    background: $lightest-gray;
+    border: none;
+  }
+}
+
+// Appended Button Forms
+.input-group-lg > .input-group-append > .btn {
+  font-size: 0.75em;
+}
+
+// Disable Number Spinners
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+// Progress Inputs
+.progress-input-container {
+  .progress {
+    width: calc(100% - 110px);
+    float: left;
+  }
+
+  .toggle-container {
+    float: right;
+  }
+}
+
+// Toggle Inputs
+.toggle-input-container {
+  .toggle-text-container {
+    width: calc(100% - 110px);
+    float: left;
+  }
+
+  .toggle-container {
+    float: right;
+  }
+}
+
+// Number Increment Input
+.number-increment-container {
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.input-number-increment {
+  border: none;
+  background: transparent;
+  width: 70px;
+  height: 40px;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 0;
+
+  @include media-breakpoint-up(md) {
+    font-size: 2.4em;
+  }
+}
+
+// 'Normal' custom radio buttons
+.custom-radio {
+  input[type="radio"]:checked+label {
+    font-weight: bold;
+  }
+}
+
+.radio-text-input::before {
+  top: 1.25rem;
+}
+
+.custom-control-label {
+  padding-bottom: 1em;
+}
+
+// Block Radio Buttons
+.form-radio-block label:not(.close-label),
+.form-checkbox-block label:not(.close-label),
+.form-checkbox-block div.input-container {
+  position: relative;
+  color: $compliment-gray;
+  border: 1.5px solid $light-gray;
+  border-radius: 6px;
+  background-color: $lightest-gray;
+  margin-bottom: 0;
+
+  &:hover {
+    background-color: $faded-blue;
+    cursor: pointer;
+  }
+
+  > .fi-circle {
+    display: none;
+  }
+}
+
+.form-radio-block > input[type=radio]:checked + label,
+.form-checkbox-block > input[type=checkbox]:checked + label {
+  border: 1.5px solid $electric-blue;
+  background-color: $faded-blue;
+  color: $black;
+
+  > .fi-circle {
+    display: inline-block;
+    position: absolute;
+    top: -16px;
+    right: -16px;
+  }
+}
+
+.form-radio-block > input[type=radio]:disabled + label,
+.form-checkbox-block > input[type=checkbox]:disabled + label {
+  background-color: $lightest-gray;
+  cursor: auto;
+  color: #B4B4B4;
+}
+
+// Form with Help Tooltip
+// To get a Tooltip beside a form, we need to add a class to the <input>
+// This will set the display to inline-block and adjust the width
+input.form-inline-tooltip {
+  display: inline-block;
+  width: calc(100% - 30px);
+}
+
+// Fixes Bootstrap's custom select classes to remove duplicate arrows in select lists.
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 1rem 1.25rem;
+}
+
+// Long Distance Country Selector
+#longDistanceSelect .list-group {
+  max-height: calc(50vh);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid $light-gray;
+  border-radius: 0.25rem;
+}
+
+#search-a-number-results, #add-shipping-address {
+  display: none;
+}

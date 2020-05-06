@@ -1,0 +1,9 @@
+<div class="progress {{ classes }}">
+  <div class="progress-bar progress-bar-{{ direction|default('ascending') }} gradient-{{ gradientcolor|default('blue') }}-gauge"
+       role="progressbar"
+       aria-valuenow="{{ progressValue|default(25) }}"
+       aria-valuemin="0"
+       aria-valuemax="{{ progressMax|default(100) }}"
+       data-increment-step="{{ incrementStep|default(1) }}">
+  </div>
+</div>

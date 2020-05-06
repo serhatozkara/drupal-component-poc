@@ -1,0 +1,13 @@
+{% extends '00-atoms/01-text/08-instruction-number.twig' %}
+
+{% block instructionItem %}
+  <li>
+    <div class="instruction-intro">
+      <h4>{{ textShort }}</h4>
+      <p>{{ textMedium }}</p>
+    </div>
+    <div class="instruction-body">
+      <p>{{ textLong }}</p>
+    </div>
+  </li>
+{% endblock %}

@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-lg-8 offset-lg-2">
+      <ol class="instructions">
+        {% for listItem in listItems.three %}
+            <li>
+              <div class="instruction-intro">
+                <h4>{{ textShort }}</h4>
+                <p>{{ textMedium }}</p>
+              </div>
+              <div class="instruction-body">
+                <p>{{ textLong }}</p>
+              </div>
+            </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+</div>

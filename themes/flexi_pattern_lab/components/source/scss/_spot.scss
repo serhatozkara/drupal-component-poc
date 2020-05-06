@@ -1,0 +1,224 @@
+$spot-gift-url: url("../images/spot/gift.svg");
+
+/*
+  -- as matthieu said were not sure if they are going to use image upload for spots.
+  -- but here the actual (2018-04-06) list of existing spot on sketch
+
+  placeholder
+  phonedark
+  phonelight
+  phonesms
+  phonedata
+  broadbandlaptop
+  broadbandlaptop2
+  broadbandlaptop3
+  broadbandlaptop4
+  broadbandtablet
+  rewards
+  boosts
+  perks
+  roolover
+  badge
+  simcard-compo
+  simcard
+  gift1
+  gift2
+  ebill
+  wallet
+  travel
+  travelpassport
+  changeplan
+  add-on
+  singleuser
+  multipleuser
+  aboutus
+  createyourplan
+  fastdelivery
+  enveloppe
+  giftcard
+  creditcard
+  howto
+  gettingstarted
+  customersupport
+  dataconsumption
+  cellunlocked
+  nationalblacklist
+  visibilitydefault
+  visibilitylimited
+  incognito
+
+  // medium
+  formsent
+  referafriend
+  anniversary
+  nocherryplanyet
+  simcard
+
+  // badge
+  badge-gift
+  badge-gift2
+  badge-gift3
+
+
+
+ */
+
+.spot-content {
+  h3 {
+    line-height: 4rem;
+  }
+}
+
+.spot-img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 1rem; // 32px;
+  min-height: 1rem;
+  height: 180px;
+
+  svg {
+    width: 100%;
+    max-width: 230px;
+    max-height: 160px;
+  }
+
+  img {
+    max-width: 230px;
+    max-height: 160px;
+  }
+}
+
+.spot.spot-small .spot-img {
+  height: 114px;
+}
+
+.spot.spot-small a {
+  display: block;
+  text-decoration: underline;
+  color: #2c75d8;
+  font-size: 0.857em;
+}
+
+.spot.spot-medium .spot-img {
+  height: 226px;
+}
+
+.spot-gift {
+  background-image: $spot-gift-url;
+}
+
+.badge {
+  .spot-small:nth-child(odd) .spot-img {
+    background-position: right;
+  }
+
+  .spot-small:nth-child(even) .spot-img {
+    background-position: left;
+  }
+}
+
+.badges-container {
+  margin: 0 -0.5rem;
+  flex: 1 0 auto;
+
+  @include media-breakpoint-up(sm) {
+    margin: 0 -1rem;
+  }
+}
+
+.badge {
+  width: 80px;
+  height: 80px;
+  margin: 15px;
+
+  @include media-breakpoint-up(sm) {
+    width: 100px;
+    height: 100px;
+  }
+
+  @media (max-width: 339px) {
+    margin: 15px 10px;
+  }
+}
+
+.badge-empty {
+  min-width: 80px;
+  height: 0;
+  margin-right: 15px;
+  margin-left: 15px;
+
+  @include media-breakpoint-up(xs) {
+    min-width: 100px;
+  }
+}
+
+.badge-locked {
+  position: relative;
+
+  img {
+    opacity: 0.3;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.badge-new {
+  position: relative;
+
+  .badge-label {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $red;
+    font-weight: bold;
+  }
+
+  .badge-label::after {
+    content: '';
+    width: 13px;
+    height: 13px;
+    display: block;
+    position: absolute;
+    background: $red;
+    top: 28px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+}
+
+.badge-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+@media (max-width: 768px) {
+  .badge-wrapper {
+    grid-template-columns: repeat(auto-fill, 80px);
+    column-gap: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  .badge-wrapper {
+    grid-template-columns: repeat(auto-fill, 80px);
+    column-gap: 20px;
+  }
+}
+
+.perk-container-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 80px);
+  row-gap: 10px;
+  justify-content: space-between;
+}

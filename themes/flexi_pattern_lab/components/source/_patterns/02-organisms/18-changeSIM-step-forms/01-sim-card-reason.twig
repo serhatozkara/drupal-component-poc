@@ -1,0 +1,26 @@
+{% set stepValueLabelStyle = 'large' %}
+{% set stepValueLabel = 'My Phone got stolen' %}
+{% set formLabel = 'SIM Card change Reason' %}
+{% set collapseDefault = 'collapse' %}
+
+{% extends 'organisms-collapsible-form-container' %}
+
+{% block activationForm %}
+  <div id="reasonChangeSIM">
+    <label for="selectChangeReason">SIM Card change reason</label>
+    <select class="custom-select" id="selectChangeReason">
+      <option disabled="" selected="">Reason</option>
+      <option>My phone was stolen</option>
+      <option>My card is broken</option>
+      <option>My phone got wet</option>
+      <option>Other</option>
+    </select>
+    <label for="descriptionChangeReason">Description (Optional)</label>
+    {% include 'atoms-text-area' with{id:'descriptionChangeReason',placeholder:' '} %}
+    <div class="">
+      <div class="text-center mt-50">
+        {% include 'atoms-button-collapse' with { buttonLabel: 'Continue', uniqueID: uuid} %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

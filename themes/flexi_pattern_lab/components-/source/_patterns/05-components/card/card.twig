@@ -1,0 +1,12 @@
+{% block main %}
+  <div class="content-inner-sec">
+    <div class="card__img card-image">
+      {{content.field_image}}
+    </div>
+    <div class="body-content-inner">
+      <h3 class="card__title card-title"><a href="{{ url }}">{{ label }}</a></h3>
+      <div class="card__date card-text text-muted">{{ author_name }} {{ date }}</div>
+      <div class="card__teaser card-text">{{ content.body }}</div>
+    </div>
+  </div>
+{% endblock %}

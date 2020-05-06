@@ -1,0 +1,57 @@
+{% extends 'organisms-dashboard-container' %}
+
+{% block dashboardContent %}
+    <p class="mb-30"><- Backlink</p>
+
+    <h1 class="text-center mb-30">My rewards</h1>
+    
+    <div class="d-md-none">
+      <h4 class="mb-0">Status</h4>
+      <div class="my-30">
+        {% include 'organisms-loyaltyLevel' %}
+      </div>
+    </div>
+    
+    <div class="mb-0">
+      <h4 class="mb-20 mb-md-30">My Upgrades</h4>
+      {% include 'organisms-loyaltyUpgradeManage' with {name:'John D.',phone:'438 921 1104'} %}
+      {% include 'organisms-loyaltyUpgradeManage' with {name:'Evangelista C.',phone:'438 854 6625'} %}
+    </div>
+    
+    <div>
+      <div class="d-lg-flex justify-content-between mb-20">
+        <h4 class="mb-0 mt-10 mt-md-0">My Perks</h4>
+        <div class="d-flex align-items-center mt-10 mt-sm-0">
+          {% include 'atoms-icon' with {size:'32',color:'red',icon:'alert-triangle'} %}
+          <span class="text-red pl-2 fs-14 fs-sm-16"><strong>Some rewards are about to expire</strong></span>
+        </div>
+      </div>
+      {% include 'organisms-loyaltyPerkPane' %}
+    </div>
+    
+    <div class="mt-30">
+      
+      <h4 class="mb-30">My Badges</h4>
+      
+      <div class="badge-wrapper mx-0 mb-md-50">
+        {% include 'molecule-badge-new' %}
+        {% include 'molecule-badge-new' %}
+        {% include 'molecule-badge' %}
+        {% include 'molecule-badge' %}
+        {% include 'molecule-badge' %}
+        {% include 'molecule-badge-locked' %}
+        {% include 'molecule-badge-locked' %}
+        {% include 'molecule-badge-locked' %}
+        {% include 'molecule-badge-locked' %}
+        {% include 'molecule-badge-locked' %}
+        {% include 'molecule-badge' %}
+        {% include 'molecule-badge' %}
+        {% include 'molecule-badge' %}
+        {% include 'molecule-badge-locked' %}
+        {% include 'molecule-badge-locked' %}
+        {% include 'molecule-badge-locked' %}
+      </div>
+    </div>
+
+  {% include 'organisms-loyaltyUpgradesCollection' %}
+{% endblock %}

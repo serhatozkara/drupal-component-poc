@@ -1,0 +1,30 @@
+{% set uuid = uniqueID|default(random()) %}
+
+<div class="form-collapse-container {{ collapseDefault|default(NULL) }}" {% if priceReveal is defined %} data-price-reveal="{{ priceReveal|default("no") }}"{% endif %}>
+  
+  <div class="edit-button-container collapse activation-collapse-{{uuid}}">
+    <div class="bg-lightest-gray py-30">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6">
+            <h4>{{ formLabel|default('Your activation code') }}</h4>
+            {% include 'atoms-activation-step-edit-button-w-tooltip' with { uniqueID: uuid } %}
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="form-container collapse activation-collapse-{{uuid}} show">
+    <div class="container {{ formContainerPadding|default('py-50 py-md-120')}}">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          
+          {% block activationForm %}{% endblock %}
+          
+        </div>
+      </div>
+    </div>    
+  </div>  
+  
+</div>

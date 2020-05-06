@@ -1,0 +1,11 @@
+{% set uuid = random() %}
+
+<div id="{{ inputContainerID|default('inputContainerID')}}" class="toggle-input-container">
+  <div class="d-flex">
+    <div class="toggle-text-container">
+      <h5>{{ productName|default('Voicemail') }}</h5>
+      <p class="text-muted">{{ productDescription|default('If you remove your voicemail, you will lose all your messages to save only $1 on your payment.') }}</p>
+    </div>
+    {% include 'molecule-toggle-switch' with { uuid: uuid } %}
+  </div>
+</div>

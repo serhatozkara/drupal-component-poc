@@ -1,0 +1,17 @@
+{% extends 'organisms-dashboard-container' %}
+
+{% block dashboardContent %}
+  <div class="container py-30">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <h4>Your actual phone number</h4>
+        {% include 'atoms-activation-step-edit-button-w-tooltip' %}
+      </div>
+    </div>
+  </div>
+  {% include 'organisms-phone-number' with{collapse:'show',header:'Your new phone number'} %}
+  {% include 'organisms-subscription-payment' %}
+  {% include 'organisms-price-summary-changePlan' with {classes:'pb-120'}%}
+  {% include 'organisms-price-status' %}
+
+{% endblock %}

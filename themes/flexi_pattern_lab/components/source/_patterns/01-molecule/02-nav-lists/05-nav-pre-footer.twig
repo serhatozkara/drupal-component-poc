@@ -1,0 +1,11 @@
+{% include "atoms-collapse-link" %}
+<i class="d-md-none float-right icon icon-16 icon-placeholder"></i>
+<div class="pre-footer-collapse collapse" id="collapse{{ inlineAnchor }}" data-parent="#accordion">
+  <ul class="list-unstyled">
+    {% for listItem in listItems.four %}
+      <li class="nav-item">
+        {% include "atoms-link-pre-footer-nav" with { menuTitle: listItem.menuTitle } %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

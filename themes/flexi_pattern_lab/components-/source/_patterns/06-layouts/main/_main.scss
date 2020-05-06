@@ -1,0 +1,126 @@
+// @file
+// Styles for Main
+.main {
+  padding: 0 0 20px;
+}
+.content-inner{
+	.block__content .page-title {
+		display: none
+	}
+	.node-page-title {
+		border-bottom: 2px solid rgb(155, 196, 81);
+		padding: 0 0 5px;
+		margin-bottom: 20px;
+		h1 {
+			font-size: 2em;
+			font-weight: 700;
+		}
+	}
+	.node__submitted {
+		font-size: 0.8em;
+		font-weight: 600;
+		color: $link_color;
+	}
+	.node--display-mode-full{
+		.field--type-image {
+			margin: 0 0 10px;
+		}
+	}
+}
+.comment {
+  background: #eee;
+  padding: 8px 15px;
+  margin: 0 0 5px;
+  @include border-radius(3px);
+  .comment__meta {
+    float: left;
+    .profile{
+      img {
+        @include border-radius(50%);
+        width: 50px;
+        height: 50px;
+      }
+    }
+    .author{
+      font-size: 0.950em;
+      line-height: normal;
+      position: relative;
+      top: -10px;
+      a{
+        color: $link_color;
+      }
+    }
+  }
+  .comment__content {
+    margin-left: 70px;
+    h3 {
+      font-size: 1.2em;
+      margin: 0 0 3px;
+    }
+    .comment__time {
+      font-size: 0.8em;
+      font-weight: 600;
+      color: $text_black;
+      margin: 0;
+      line-height: normal;
+    }
+    .field--name-comment-body {
+      p{
+        font-size: 0.9em;
+        margin: 5px 0;
+      }
+    }
+    ul {
+      li {
+        &:first-child {
+          padding-left: 0;
+        }
+        a{
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+}
+.comment-form__title {
+  margin-top: 20px;
+}
+.node__links {
+  ul.links.inline {
+    margin: 0 0 15px;
+    display: block;
+    li {
+      padding-left: 0;
+    }
+  }
+}
+@media only screen and (min-width:48em) {
+  .content-inner{
+    .node-page-title {
+      h1 {
+        font-size: 2.5em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 64em) {
+	.sidebar-first {
+		.content-inner-wrap {
+			margin: 0 -10px;
+		}
+		.content-inner {
+			width: 75%;
+			float: left;
+			padding: 0 10px;
+			background: $white_bg;
+		}
+		.sidebar-right {
+			width: 25%;
+			float: left;
+			padding: 0 10px;
+			background: $white_bg;
+		}
+  }
+  
+}

@@ -1,0 +1,10 @@
+<div class="dropdown {{ backgroundColor|default('bg-dark-blue') }}">
+  <button class="btn dropdown-toggle mb-0" type="button" id="dropdownYearReferal" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="h4">2018{% include 'atoms-icon-24' with{ icon:'chevron-down', color:'white', classes:'ml-2'} %}</span>
+  </button>
+  <div class="h4 dropdown-menu" aria-labelledby="dropdownYearReferal">
+    <a class="h4 dropdown-item" href="#">2018{% include 'atoms-icon-24' with{ icon:'chevron-up', color:'white', classes:'ml-2'} %}</a>
+    <a class="h4 dropdown-item" href="#">2017</a>
+    <a class="h4 dropdown-item" href="#">2016</a>
+  </div>
+</div>

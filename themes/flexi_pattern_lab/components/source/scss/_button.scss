@@ -1,0 +1,243 @@
+@each $color, $value in $colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+
+
+.btn {
+  margin-bottom: .75rem;
+  font-size: 13px;
+  &.btn-sm {
+      font-size: 12px;
+      height: 30px;
+      line-height: 15px;
+  }
+  &.btn-md {
+      height: 36px;
+      line-height: 15px;
+  }
+  &.btn-lg{
+    height: 46px;
+  }
+  &.btn-xl {
+    height: 56px;
+  }
+  .btn-xxl {
+    height: 60px;
+  }
+  &.btn-outline-dark{
+    line-height: 1.25;
+    font-size: 13px !important;
+    &.btn-sm {
+      height: 30px;
+      font-size: 12px !important;
+    }
+    &.btn-md{
+        height: 36px;
+        font-size: 13px;
+    }
+    &.btn-lg{
+      height: 46px;
+      font-size: 13px;
+    }
+    &.btn-xl {
+      height: 56px;
+      font-size: 13px;
+    }
+    .btn-xxl {
+      height: 60px;
+    }
+  }
+  svg.fi{
+    display: inline-block;
+  }
+}
+
+.input-group > .input-group-append > .btn {
+  margin-bottom: 0;
+}
+
+.btn-xl{
+  padding:1rem 2.3rem;
+  border-radius: 26px;
+}
+
+.btn-xxl {
+  padding:1.25rem 3rem;
+  border-radius: 1.8rem;
+}
+
+
+.btn,
+.btn:hover,
+.btn:not(:disabled):not(.disabled):active  {
+  color: $black;
+}
+
+[class*="btn-outline"],
+[class*="btn-outline"]:hover {
+  border-width: 2px;
+}
+
+[class*="btn-outline"]:hover,
+[class*="btn-outline"]:not(:disabled):not(.disabled):active {
+  color: $white;
+}
+
+button:disabled,
+a.btn.disabled{
+  background-color: $gray;
+}
+
+// Button Icons
+button.icon-right {
+  span {
+    padding-right: 5px;
+  }
+}
+
+button.icon-left {
+  span {
+    padding-left: 5px;
+  }
+}
+
+button.circle-button {
+  // Default Circle Button Color
+  background-color: $gray;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  outline: none;
+
+  svg.fi {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+  }
+}
+
+// Default Circle Button Hover Color
+button.circle-button {
+  &:hover {
+    background-color: $light-gray;
+  }
+}
+
+button.circle-white {
+  background-color: $white;
+}
+
+.number-increment-container {
+  button.circle-button {
+    margin: 0 0.3rem;
+  }
+}
+
+//Button Link
+button.link {
+  background: none;
+  border: none;
+  text-decoration: none;
+  &:focus {
+    outline: none;
+  }
+  &.active {
+    color: $link-blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &.mr-10-percent { margin-right: 10%; }
+}
+
+// Default background hover btn-white
+.btn-white {
+  border-color: #fff !important;
+  color: #fff !important;
+  background: transparent !important;
+  border-width: 2px !important;
+
+  &:hover {
+    background: #fff !important;
+    color: #191919 !important;
+  }
+}
+
+.btn-outline-dark:hover { color: #fff !important; }
+
+.btn-form-collapse,
+.btn-form-collapse:active,
+.btn-form-collapse:focus {
+  background: $white;
+  padding: 0.5rem 1rem;
+  box-shadow: 0px 0px 1px 1px rgba(236, 236, 236, 0.49);
+  border-radius: 10px;
+
+  // Allows for text to wrap
+  white-space: normal;
+
+  .btn-form-collapse-label {
+    text-align: left;
+  }
+
+  .btn-form-collapse-label-large {
+    font-size: 1.6rem;
+  }
+
+  .btn-form-collapse-label-small {
+    font-size: 0.9rem;
+    font-weight: lighter;
+  }
+
+  .btn-form-collapse-edit {
+    padding-left: 1em;
+    color: $light-gray;
+  }
+}
+
+.paragraph .btn {
+  margin: 0 5px 10px;
+
+  &.icon-left svg { padding-right: 5px; }
+  &.icon-right svg { padding-left: 5px; }
+}
+
+
+@media (max-width: 568px){
+    .btn {
+      &.btn-md {
+          font-size: 12px !important;
+          height: 30px !important;
+          line-height: 12px !important;
+      }
+      &.btn-lg,
+      &.btn-xl{
+        height: 36px !important;
+        font-size: 13px !important;
+        padding: 0.5rem 2.3rem !important;
+      }
+      &.btn-outline-dark{
+        &.btn-md{
+            font-size: 12px !important;
+            height: 30px !important;
+            line-height: 12px !important;
+        }
+        &.btn-lg,
+        &.btn-xl{
+            height: 36px !important;
+            font-size: 13px !important;
+        }
+      }
+  }
+}

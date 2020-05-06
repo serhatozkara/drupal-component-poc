@@ -1,0 +1,17 @@
+<nav id="main-menu" class="navbar navbar-center navbar-expand-lg">
+  <ul class="navbar-nav list-inline text-center mr-auto ml-auto">
+    {% for listItem in listItems.four %}
+      <li class="nav-item">
+        <div class="dropdown">
+          {% include "atoms-link-main-nav-dropdown" with { inlineAnchor: listItem.inlineAnchor, menuTitle: listItem.menuTitle } %}
+          <div class="dropdown-menu" aria-labelledby="{{ listItem.inlineAnchor }}">
+            <div class="dropdown-triangle"></div>
+            <a class="dropdown-item" href="#">Plans</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Coverage</a>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

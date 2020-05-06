@@ -1,0 +1,17 @@
+.ct-chart {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 9px;
+}
+
+.ct-label {
+  font-family: 'Bookmark', sans-serif;
+  font-weight: bold;
+}
+
+@media (min-width: 992px) {
+  .ct-chart {
+    overflow: hidden;
+  }
+
+}

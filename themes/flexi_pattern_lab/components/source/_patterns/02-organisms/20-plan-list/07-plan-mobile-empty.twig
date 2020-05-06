@@ -1,0 +1,35 @@
+<div class="card card-normal mb-50">
+  <div class="card-section card-header user-plan px-3 px-md-5 pt-4">
+    <div class="d-flex flex-row align-items-start align-items-sm-center justify-content-between">
+      <div>
+        <h5 class="icon-custom-mobile">Mobile</h5>
+        <p class="sm-smaller-p text-muted">(514) 423-4567</p>
+      </div>
+      <div class="mb-md-40 pl-xl-50 pl-lg-20">
+        <div class="d-flex flex-row align-items-center">
+          <h5>$00.00</h5>
+          <p class="sm-smaller-p text-muted mb-10 pl-1">/ month + tx</p>
+        </div>
+      </div>
+      <div class="d-none d-lg-flex">
+        {% include 'atoms-button-outline' with{ buttonLabel:'Invoices',buttonSize:'xl'} %}
+        {% include 'atoms-button' with{ buttonLabel:'Manage',buttonSize:'xl', classes:'ml-3 ml-xl-4'} %}
+      </div>
+    </div>
+  </div>
+
+  <div class="card-section card-body d-flex flex-column py-30 pb-20 px-2 px-md-5">
+    <div class="col-lg-8 mx-auto text-center">
+      <h5 class="d-inline-block">Your plan is empty</h5>
+      <p class="text-muted">Change plan or choose to add-on.</p>
+      {% include 'atoms-button-outline' with{ buttonLabel:'Change plan',buttonSize:'xl', classes:'mx-2'} %}
+      {% include 'atoms-button' with{ buttonLabel:'Add-on',buttonSize:'xl', classes:'mx-2'} %}
+    </div>
+  </div>
+
+
+  <div class="card-section card-body px-2 px-md-5 pb-10 d-flex d-lg-none justify-content-center align-items-center">
+    {% include 'atoms-button' with{ buttonLabel:'Manage',buttonSize:'xl', classes:'mx-2'} %}
+    {% include 'atoms-button-outline' with{ buttonLabel:'Invoices',buttonSize:'xl', classes:'mx-2'} %}
+  </div>
+</div>

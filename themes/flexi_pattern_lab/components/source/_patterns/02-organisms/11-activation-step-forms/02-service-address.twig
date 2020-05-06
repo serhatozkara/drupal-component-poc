@@ -1,0 +1,20 @@
+{% set stepValueLabelStyle = 'small' %}
+{% set stepValueLabel = '5631 Boul Saint-Michel<br>Montreal QC H1Y 2E3<br>Canada' %}
+{% set priceReveal = 'no' %}
+{% set formLabel = 'Your home address' %}
+
+{% extends 'organisms-collapsible-form-container' %}
+
+{% block activationForm %}
+
+  <h4 data-form-scroll="yes" class="d-inline-block">Service Address</h4>
+  
+  {% include 'atoms-tooltip' %}
+
+  {% include 'organisms-radio-list-left' %}
+
+  <div class="text-center mt-50">
+    {% include 'atoms-button-icon-right-large' with { buttonLabel: 'Save', icon: 'arrow-right', uniqueID: uuid} %}
+  </div>
+
+{% endblock %}

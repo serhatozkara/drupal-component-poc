@@ -1,0 +1,242 @@
+.datepicker-appointment {
+  background: url('../images/icons/calendar.png') no-repeat;
+  background-size: 25px 25px;
+  width: 25px;
+  height: 25px;
+  border: none;
+  color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Calendar Popup
+// This overrides the default styles from the Pickadate.js library
+
+// Centers the calendar
+.picker__holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.picker__frame {
+  margin-bottom: 0;
+  position: static;
+  // padding is a graceful fallback for non-flex browsers
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.picker__nav--next:before,
+.picker__nav--prev:before {
+  border: 0 !important;
+}
+
+.picker__nav--next:before {
+  content: "→" !important;
+}
+
+.picker__nav--prev:before {
+  content: '←' !important;
+}
+
+.picker__month,
+.picker__year {
+  font-family: 'Bookmark', sans-serif;
+  font-weight: bold !important;
+  font-style: normal !important;
+  font-size: 1em !important;
+  color: $black !important;
+}
+
+.timepicker-appointment fieldset legend {
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.timepicker-appointment fieldset.selected legend {
+  -webkit-box-shadow: 0px 3px 0px 0px rgba(50, 89, 238, 1);
+  -moz-box-shadow: 0px 3px 0px 0px rgba(50, 89, 238, 1);
+  box-shadow: 0px 3px 0px 0px rgba(50, 89, 238, 1);
+}
+
+.timepicker-appointment-date {
+  font-family: 'Bookmark', sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.timepicker-appointment-weekday {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.radio-timepicker-appointment {
+  display: none;
+
+  +label {
+    cursor: pointer;
+    width: 100%;
+    background-color: $lighter-gray;
+    border: 2px solid $light-gray;
+    border-radius: 1.5em;
+    margin: 0.5em 0;
+    padding: 0.5em 0;
+    text-align: center;
+  }
+
+  &:checked+label,
+  +label:hover {
+    border: 2px solid $vibrant-blue;
+  }
+}
+
+.radio-timepicker-appointment:disabled {
+  +label {
+    background: none;
+    border: none;
+    cursor: default;
+    color: $light-gray;
+  }
+}
+
+// Slick Slider Changes for Time Picker
+.timepicker-appointment {
+
+  .slick-prev,
+  .slick-next {
+    top: auto;
+    top: initial;
+    bottom: -10px;
+  }
+
+  .slick-prev {
+    left: 20px;
+  }
+
+  .slick-next {
+    right: 20px;
+  }
+
+  @include media-breakpoint-up(lg) {
+
+    .slick-prev,
+    .slick-next {
+      top: 50%;
+    }
+  }
+
+  .slick-slide:focus {
+    outline: none;
+  }
+}
+
+.picker--focused .picker__day--highlighted {
+  background: url('../images/calendar/blue-circle.svg') no-repeat !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 36px !important;
+  background-color: #fff !important;
+  color: #fff !important;
+}
+
+.picker__day--highlighted:hover,
+.picker__day--infocus:hover,
+.picker__day--outfocus:hover {
+  opacity: 0.6;
+  background: url('../images/calendar/blue-circle.svg') no-repeat !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 36px !important;
+  background-color: #fff !important;
+  border: none !important;
+  color: #fff !important;
+}
+
+.picker--focused .picker__day--disabled,
+.picker__day--disabled,
+.picker__day--disabled:hover {
+  background: url('../images/calendar/grey-circle.png') no-repeat !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 36px !important;
+  background-color: #fff !important;
+  border: none !important;
+  color: #fff !important;
+  opacity: 0.5;
+}
+
+.picker--focused .picker__day--highlighted,
+.picker__day--highlighted:hover,
+.picker__day--infocus:hover,
+.picker__day--outfocus:hover {
+  background-color: #fff !important;
+}
+
+.picker__day {
+  margin: 3px 0 !important;
+  background: url('../images/calendar/circle.svg') no-repeat !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 36px !important;
+  background-color: #fff !important;
+  border: none !important;
+  color: #3259ee !important;
+}
+
+.picker__day--outfocus {
+  color: #3259ee !important;
+  opacity: 0.5 !important;
+}
+
+.picker__button--clear:hover,
+.picker__button--close:hover,
+.picker__button--today:hover {
+  background: none important;
+  text-decoration: underline;
+}
+
+.picker__day,
+.picker__day--disabled {
+  font-size: 15px;
+  padding: 10px !important;
+}
+
+.radio-timepicker-appointment:disabled+label {
+  border: 2px solid #ffffff00 !important;
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 823px) {
+
+  .picker--focused .picker__day--highlighted {
+    background-size: 35px !important;
+    padding: 7px !important;
+  }
+
+  .picker__day--highlighted:hover,
+  .picker__day--infocus:hover,
+  .picker__day--outfocus:hover {
+    background-size: 35px !important;
+    padding: 7px !important;
+  }
+
+  .picker--focused .picker__day--disabled,
+  .picker__day--disabled,
+  .picker__day--disabled:hover {
+    background-size: 35px !important;
+    padding: 7px !important;
+  }
+
+  .picker__day {
+    background-size: 35px !important;
+    padding: 7px !important;
+  }
+
+}

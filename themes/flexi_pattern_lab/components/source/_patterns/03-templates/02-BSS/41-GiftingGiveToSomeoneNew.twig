@@ -1,0 +1,34 @@
+{% extends 'organisms-dashboard-container' %}
+
+{% block dashboardContent %}
+
+<div class="row bg-white mt-5 mb-5 p-5">
+  <div class="col-md-12 col-lg-6 offset-lg-3 text-center text-lg-left">
+    <h4>Give data to someone new</h4>
+    <p class="text-muted mb-10">You can enter his email address or his phone number</p>
+    <div class="row">
+      <div class="col-8 offset-2 col-lg-12 offset-lg-0">
+        <form>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="email" name="email" class="custom-control-input">
+            <label class="custom-control-label w-100" for="email">
+              <input id="email" class="form-control" name="value" type="text" placeholder="Email" />
+            </label>
+          </div>
+
+          <div class="custom-control custom-radio">
+            <input type="radio" id="imei" name="imei" class="custom-control-input">
+            <label class="custom-control-label w-100" for="imei">
+              <input id="imei" class="form-control" name="value" type="text" placeholder="imei" />
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-12 mt-5 text-center">
+      {% include 'atoms-button-icon-right' with{buttonLabel:'next'} %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

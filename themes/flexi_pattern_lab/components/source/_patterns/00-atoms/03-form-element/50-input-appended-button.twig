@@ -1,0 +1,6 @@
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="{{ placeholder|default('Referral code') }}" aria-label="{{ placeholder|default('Referral code') }}" aria-describedby="{{ describedby|default('referralCode') }}">
+  <div class="input-group-append">
+    <button class="btn btn-primary" type="button">{% include 'atoms-icon-24' with { icon :icon|default('arrow-right')} %}</button>
+  </div>
+</div>

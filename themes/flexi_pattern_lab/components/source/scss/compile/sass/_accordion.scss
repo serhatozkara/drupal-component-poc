@@ -1,0 +1,60 @@
+.accordion-list {
+  .accordion-item:last-child {
+    border-bottom: 1px solid $gray;
+  }
+}
+
+.accordion-item {
+  border-top: 1px solid $gray;
+}
+
+.accordion-item a {
+  color: $darker-gray-text;
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .accordion-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+    position: relative;
+
+    div {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .accordion-plus {
+      opacity: 0;
+    }
+    .accordion-minus {
+      opacity: 1;
+    }
+  }
+
+  &.collapsed {
+    .accordion-plus {
+      opacity: 1;
+    }
+    .accordion-minus {
+      opacity: 0;
+    }
+  }
+
+  h6 {
+    margin: 0;
+    line-height: 32px;
+  }
+  transition: all 1s;
+}
+
+
+.card-accordion {
+  .accordion-chevron-up{display: block;}
+  .accordion-chevron-down{display: none;}
+  .collapsed{
+    .accordion-chevron-up{display: none;}
+    .accordion-chevron-down{display:block;}
+  }
+}

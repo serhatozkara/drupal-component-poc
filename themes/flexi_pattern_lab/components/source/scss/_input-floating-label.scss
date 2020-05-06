@@ -1,0 +1,152 @@
+@import "./variables";
+
+.floating-label-group {
+  position: relative;
+  flex: 1 1 auto;
+
+  .floating-label {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    pointer-events: none;
+    top: 30px;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #6c757d !important;
+    font-size: 14px;
+    transition: 0.3s ease all;
+    margin-bottom: 0;
+
+    .hide-icon {
+      display: flex;
+      align-items: center;
+      margin-top: -2px;
+    }
+  }
+
+  .floating-label-input {
+    padding: 20px 15px 10px;
+    font-size: 14px;
+    background-color: #f6f6f8;
+    height: 60px;
+  }
+
+  .floating-label-input:focus {
+    & {
+      background-color: #fff;
+
+      ~ {
+        .floating-label {
+          top: 15px;
+          left: 15px;
+          font-size: 0.75em;
+          opacity: 1;
+
+          .hide-icon {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+
+  &-suffix {
+    .forgot-label-right {
+      top: 22px;
+      right: 20px;
+      padding: 0 !important;
+    }
+  }
+}
+
+.floating-label-control {
+  .floating-label {
+    top: 15px;
+    left: 15px;
+    color: #6c757d;
+    font-size: 0.75em;
+    opacity: 1;
+  }
+
+  .floating-label .hide-icon {
+    display: none !important;
+  }
+}
+
+.input-group {
+  .floating-label-group {
+    .floating-label-input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+.input-group {
+  &.input-group-lg {
+    .floating-label-group {
+      .floating-label {
+        top: 38px;
+      }
+
+      .floating-label-input {
+        &:focus~.floating-label {
+          top: 15px;
+        }
+      }
+    }
+
+    .floating-label-control {
+      .floating-label {
+        top: 15px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .h-md-75 {
+    height: 75px !important;
+
+    &~.floating-label {
+      top: 35px;
+    }
+  }
+
+  .floating-label-control {
+    .h-md-75 {
+      height: 75px !important;
+
+      &~.floating-label {
+        top: 15px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .floating-label-group {
+    .floating-label-input {
+      font-size: 12px;
+      height: 46px;
+      padding: 20px 15px 5px;
+    }
+
+    .floating-label {
+      top: 23px;
+    }
+
+    &.floating-label-control {
+      .floating-label {
+        top: 15px;
+      }
+    }
+
+    &-suffix {
+      .forgot-label-right {
+        top: 15px;
+        right: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center pt-5">
+  <div class="card p-5 d-flex flex-column justify-content-center align-items-center">
+    <div>
+      <h4>{{ header|default("Success! Your order has been processed") }}</h4>
+    </div>
+    {% include'atoms-icon' with{icon:'check-circle',color:'green',size:'64'} %}
+    <p>{{ text|default("Transation number: ")}}<span class="text-{{ textcolor|default('electric-blue')}}"><strong>{{ ordernumber|default('123456')}}</strong></span> {{ Invoice|default('Invoice')}}</p>
+  </div>
+</div>

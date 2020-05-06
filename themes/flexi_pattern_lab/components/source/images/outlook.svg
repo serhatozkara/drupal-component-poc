@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="27px" viewBox="0 0 28 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>outlook</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-1.7%" y="-2.7%" width="103.3%" height="107.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M5.625,13.7894922 C3.9025,13.7894922 2.5,12.1069922 2.5,10.0394922 C2.5,7.97199219 3.9025,6.28949219 5.625,6.28949219 C7.3475,6.28949219 8.75,7.97199219 8.75,10.0394922 C8.75,12.1069922 7.3475,13.7894922 5.625,13.7894922 Z M5.625,7.53949219 C4.59125,7.53949219 3.75,8.66074219 3.75,10.0394922 C3.75,11.4182422 4.59125,12.5394922 5.625,12.5394922 C6.65875,12.5394922 7.5,11.4182422 7.5,10.0394922 C7.5,8.66074219 6.65875,7.53949219 5.625,7.53949219 Z" id="path-2"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MyProfile/1440-referral-step2-email" transform="translate(-689.000000, -960.000000)">
+            <g id="BLOC-02" transform="translate(0.000000, 597.000000)">
+                <g id="Choix" filter="url(#filter-1)" transform="translate(385.000000, 288.000000)">
+                    <g id="outlook" transform="translate(214.000000, 0.000000)">
+                        <g transform="translate(94.000000, 77.000000)">
+                            <path d="M19.375,3.78949219 L10.625,3.78949219 C10.28,3.78949219 10,4.06949219 10,4.41449219 C10,4.75949219 10.28,5.03949219 10.625,5.03949219 L17.55375,5.03949219 L13.71375,8.02574219 L10.96,6.27449219 L10.29,7.32949219 L13.415,9.31699219 C13.51625,9.38199219 13.63375,9.41449219 13.75,9.41449219 C13.885,9.41449219 14.02125,9.37074219 14.13375,9.28324219 L18.75,5.69199219 L18.75,13.7894922 L10.625,13.7894922 C10.28,13.7894922 10,14.0694922 10,14.4144922 C10,14.7594922 10.28,15.0394922 10.625,15.0394922 L19.375,15.0394922 C19.72,15.0394922 20,14.7594922 20,14.4144922 L20,4.41449219 C20,4.06949219 19.72,3.78949219 19.375,3.78949219 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                            <path d="M11.02375,0.183242188 C10.88125,0.0644921875 10.69,0.0132421875 10.51,0.0507421875 L0.51,1.92574219 C0.21375,1.98074219 0,2.23824219 0,2.53949219 L0,16.2894922 C0,16.5894922 0.21375,16.8482422 0.51,16.9032422 L10.51,18.7782422 C10.5475,18.7857422 10.58625,18.7894922 10.625,18.7894922 C10.77,18.7894922 10.91125,18.7394922 11.02375,18.6457422 C11.1675,18.5269922 11.25,18.3494922 11.25,18.1644922 L11.25,0.664492187 C11.25,0.478242188 11.1675,0.301992188 11.02375,0.183242188 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                            <mask id="mask-3" fill="white">
+                                <use xlink:href="#path-2"></use>
+                            </mask>
+                            <use id="Shape" fill="#2196F3" fill-rule="nonzero" xlink:href="#path-2"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

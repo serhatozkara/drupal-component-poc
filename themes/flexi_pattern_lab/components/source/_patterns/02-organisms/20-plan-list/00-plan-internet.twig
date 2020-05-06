@@ -1,0 +1,43 @@
+<div class="card card-normal mb-50">
+  <div class="card-section card-header user-plan px-3 px-md-5 pt-4">
+    <div class="d-flex flex-row align-items-start align-items-sm-center justify-content-between">
+      <div>
+        <h5 class="icon-custom-laptop">Internet</h5>
+        <p class="sm-smaller-p text-muted">(514) 423-4567</p>
+      </div>
+      <div class="pl-xl-50 pl-lg-20">
+        <div class="d-flex flex-row align-items-center">
+          <h5>$35.00</h5>
+          <p class="sm-smaller-p text-muted mb-10 pl-1">/ month + tx</p>
+        </div>
+        <p class="sm-smaller-p text-muted">
+          {% include 'atoms-icon-16' with { icon:'clock', classes:'align-top' } %}
+          <strong>3 days</strong> left
+        </p>
+      </div>
+      <div class="d-none d-lg-flex">
+        {% include 'atoms-button-outline' with{ buttonLabel:'Invoices',buttonSize:'xl'} %}
+      </div>
+    </div>
+  </div>
+
+  <div class="card-section card-body user-plan d-flex flex-column flex-xl-row justify-content-between px-2 px-md-5">
+    <div class="col-12 col-xl-8 py-4">
+      <h4 class="d-inline-block text-green">Unlimited</h4>
+      <p class="text-muted d-inline-block">/ Data</p>
+      {% include 'atoms-progress-slider' with { gradientcolor:'green', progressValue: 100, direction:'descending' } %}
+      <div class="d-flex justify-content-start mt-4">
+        {% include 'atoms-button-link' with { buttonLabel:'Usage', active:'active', classes:'mr-10-percent'} %}
+      </div>
+    </div>
+    <!-- <div class="col-xl-4 p-3 p-xl-4 d-flex flex-row justify-content-center justify-content-xl-between"> -->
+    <div class="internet-speed p-3 p-xl-4">
+      {% include 'molecule-internet-speed'  with { number:'120' } %}
+      {% include 'molecule-internet-speed'  with { number:'20', title: 'Upload' } %}
+    </div>
+  </div>
+
+  <div class="card-section card-body px-2 px-md-5 pb-10 d-flex d-lg-none justify-content-center align-items-center">
+    {% include 'atoms-button-outline' with{ buttonLabel:'Invoices',buttonSize:'xl'} %}
+  </div>
+</div>

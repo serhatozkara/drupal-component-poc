@@ -1,0 +1,36 @@
+{% extends 'organisms-dashboard-container' %}
+
+{% block dashboardContent %}
+  {% set priceReveal = 'yes' %}
+
+  {% include 'molecule-notification-neutral' with{mobileText:'Success!', notificationText:"Nice! The country you selected is also in Zone 1 — No Add-On required.", icon:'thumbs-up'} %}
+  <div class="pb-120 mb-120">
+    <div class="container">
+      <div class="row p-3">
+        <div class="col-12 text-center">
+          <h4>Available Add-Ons</h4>
+          <p class="text-muted d-inline-flex">Need a boost? {% include 'atoms-tooltip' with{ icon:'thumbs-up', title:'An Add-On is additional usage — it could be data, voice & text or long distance — that you can use right away. You may want to buy an Add-On if you’re running low on monthly data, or if you want to add a feature that’s not part of your monthly plan. It will expire at the end of the following month.You can buy one Add-On, per category.',placement:'bottom'} %}</p>
+        </div>
+      </div>
+    </div>
+    {% include "organisms-accordion-addOn-data" %}
+    {% include "organisms-accordion-addOn-voice-sms" %}
+    {% include "organisms-accordion-addOn-long-distance" %}
+    {% include 'organisms-subscription-payment' with {collapse:' ',buttonLabel:'',formContainerPadding:'py-5'} %}
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6 pt-4">
+          {% include "organisms-price-summary-addOn" %}
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6 py-4">
+          {% include "organisms-price-summary-tax" %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include 'organisms-price-status-confirm' with{ show:'show',occurance:'one time charge'} %}
+{% endblock %}

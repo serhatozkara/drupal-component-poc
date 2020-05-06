@@ -1,0 +1,734 @@
+{% include "organisms-top-navigation-dropdown" %}
+
+<!-- Main : Start -->
+<main id="devices-list">
+
+    <!-- Main : Banner Header : Start -->
+    <div class="banner-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="banner-header-content">
+                        <h3>Mobile phones</h3>
+                        <h6>New or Pre-loved? Up to you to decide.</h6>
+                        <p>Choose the phone and plan that are truly you. Activation will be child's play.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12"><img alt="banner" src="/images/img.png" alt="Header Banner" /></div>
+            </div>
+        </div>
+    </div>
+    <!-- Main : Banner Header : End -->
+
+    <!-- Main : Banner : Start -->
+    <div class="container">
+        <img alt="banner plp" class="custom-banner" src="/images/banner-plp.png">
+    </div>
+    <!-- Main : Banner : End -->
+
+    <!-- Main : Filter Heading : Start -->
+    <div class="container">
+        <div id="filter-heading">
+            <div class="row">
+
+                <div class="col-12 col-lg-9 col-xl-9 total-phone"><h4><b>6</b> Phones</h4></div>
+                <div class="col-8 col-lg-2 col-xl-2">
+                    <div class="center">
+                        <select name="sources" id="sources" class="custom-select sources" placeholder="Default">
+                        <option value="1">Default</option>
+                        <option value="2">Price: low to high</option>
+                        <option value="3">Price: high to low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-4 col-lg-1 col-xl-1">
+
+
+                    <button class="btn btn-green btn-border-false btn-xl px-5" type="button" data-toggle="collapse" data-target="#filter-content" style="float: right;">
+                        <span>Hide filters</span>
+                        <div class="oval">
+                            <svg class="filter-position filter-plus fi fi-16 fi- "><use xlink:href="/images/icons/feather-sprite.svg#plus" href="/images/icons/feather-sprite.svg#plus"></use></use></svg>
+                            <svg class="filter-position filter-minus fi fi-16 fi- "><use xlink:href="/images/icons/feather-sprite.svg#minus" href="/images/icons/feather-sprite.svg#minus"></use></use></svg>
+                        </div>
+                    </button>
+
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Main : Filter Heading : End -->
+
+    <!-- Main : Filter Content : Start -->
+    <div class="container">
+        <div id="filter-content">
+        <div class="row">
+        <div class="col-lg-4 pl-30 pt-30 pr-50 price-label">
+            <h4>Price</h4>
+            <div id="price-slider">
+                <p>
+                    <input type="text" id="amount-min" disabled="">
+                    <input type="text" id="amount-max" disabled="">
+                </p>
+                <div id="slider-range"></div>
+            </div>
+        </div>
+
+
+            <div class="col-lg-5 pt-30 mpl-50">
+                <h4>Brand</h4>
+
+                <div class="check-item">
+                    <input type="checkbox" name="id-1" id="id-1" class="form-checkbox form-control">
+                    <label for="id-1" class="option">Alcatel</label>
+                </div>
+
+                <div class="check-item">
+                    <input type="checkbox" name="id-2" id="id-2" class="form-checkbox form-control">
+                    <label for="id-2" class="option">Apple</label>
+                </div>
+
+                <div class="check-item">
+                    <input type="checkbox" name="id-3" id="id-3" class="form-checkbox form-control">
+                    <label for="id-3" class="option">Google</label>
+                </div>
+
+                <div class="check-item">
+                    <input type="checkbox" name="id-4" id="id-4" class="form-checkbox form-control">
+                    <label for="id-4" class="option">Huawei</label>
+                </div>
+
+                <div class="check-item">
+                    <input type="checkbox" name="id-5" id="id-5" class="form-checkbox form-control">
+                    <label for="id-5" class="option">LG</label>
+                </div>
+
+                <div class="check-item">
+                    <input type="checkbox" name="id-6" id="id-6" class="form-checkbox form-control">
+                    <label for="id-6" class="option">Motorola</label>
+                </div>
+
+                <div class="check-item">
+                    <input type="checkbox" name="id-7" id="id-7" class="form-checkbox form-control">
+                    <label for="id-7" class="option">Samsung</label>
+                </div>
+
+            </div>
+            <div class="col-lg-3 pt-30 mpl-50 mpb-50">
+                <h4 class="text-blue">Good deals!</h4>
+
+                <div class="check-item">
+                    <input type="checkbox" name="id-8" id="id-8" class="form-checkbox form-control">
+                    <label for="id-8" class="option">Pre-Loved</label>
+                </div>
+
+                <div class="check-item">
+                    <input type="checkbox" name="id-9" id="id-9" class="form-checkbox form-control">
+                    <label for="id-9" class="option">Promotion</label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Main : Filter Content : End -->
+
+    <!-- Main : Product List : Start -->
+    <div class="container">
+    <div id="products" class="mt-4 mb-4">
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6">
+            <div class="product-item">
+                <img src="/images/phone.png" alt="#" />
+                <div class="phone-card">
+                    <div class="phone-card-content">
+                        <h3>Google Pixel 3a</h3>
+                        <span class="custom-full-width"> CA$100 <sup>00</sup></span>
+                        <span class="field-content btn-sm btn-tag-blue margin-right-8">New</span>
+                        <span class="field-content"><a href="https://bbcmsdev.etiya.com/en/product/731?upc=5" class="btn btn-green btn-border-false icon-null btn-xl px-5 device-button ">Buy this phone</a></span>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+            <div class="product-item">
+                <img src="/images/phone.png" alt="#" />
+                <div class="phone-card">
+                    <div class="phone-card-content">
+                        <h3>Google Pixel 3a</h3>
+                        <span class="custom-full-width"> CA$100 <sup>00</sup></span>
+                        <span class="field-content btn-sm btn-tag-blue margin-right-8">New</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+            <div class="product-item">
+                <img src="/images/phone.png" alt="#" />
+                <div class="phone-card">
+                    <div class="phone-card-content">
+                        <h3>Google Pixel 3a</h3>
+                        <span class="custom-full-width"> CA$100 <sup>00</sup></span>
+                        <span class="field-content btn-sm btn-tag-blue margin-right-8">New</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+            <div class="product-item">
+                <img src="/images/phone.png" alt="#" />
+                <div class="phone-card">
+                    <div class="phone-card-content">
+                        <h3>Google Pixel 3a</h3>
+                        <span class="custom-full-width"> CA$100 <sup>00</sup></span>
+                        <span class="field-content btn-sm btn-tag-blue margin-right-8">New</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+            <div class="product-item">
+                <img src="/images/phone.png" alt="#" />
+                <div class="phone-card">
+                    <div class="phone-card-content">
+                        <h3>Google Pixel 3a</h3>
+                        <span class="custom-full-width"> CA$100 <sup>00</sup></span>
+                        <span class="field-content btn-sm btn-tag-blue margin-right-8">New</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+            <div class="product-item">
+                <img src="/images/phone.png" alt="#" />
+                <div class="phone-card">
+                    <div class="phone-card-content">
+                        <h3>Google Pixel 3a</h3>
+                        <span class="custom-full-width"> CA$100 <sup>00</sup></span>
+                        <span class="field-content btn-sm btn-tag-blue margin-right-8">New</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+            <div class="product-item">
+                <img src="/images/phone.png" alt="#" />
+                <div class="phone-card">
+                    <div class="phone-card-content">
+                        <h3>Google Pixel 3a</h3>
+                        <span class="custom-full-width"> CA$100 <sup>00</sup></span>
+                        <span class="field-content btn-sm btn-tag-blue margin-right-8">New</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+            <div class="product-item">
+                <img src="/images/phone.png" alt="#" />
+                <div class="phone-card">
+                    <div class="phone-card-content">
+                        <h3>Google Pixel 3a</h3>
+                        <span class="custom-full-width"> CA$100 <sup>00</sup></span>
+                        <span class="field-content btn-sm btn-tag-blue margin-right-8">New</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+            <div class="product-item">
+                <img src="/images/phone.png" alt="#" />
+                <div class="phone-card">
+                    <div class="phone-card-content">
+                        <h3>Google Pixel 3a</h3>
+                        <span class="custom-full-width"> CA$100 <sup>00</sup></span>
+                        <span class="field-content btn-sm btn-tag-blue margin-right-8">New</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    </div>
+    <!-- Main : Product List : End -->
+
+
+
+
+
+</main>
+<!-- Main : End -->
+
+{% include "organisms-pre-footer" %}
+{% include "organisms-footer" %}
+
+<style>
+@media (min-width: 1800px){
+    .container {
+        max-width: 1680px !important;
+    }
+}
+.banner-header {
+    padding: 65px 50px 50px 50px;
+    background: #baeafa;
+}
+.custom-banner{
+    width: 100%;
+    padding: 35px 0 115px 0;
+}
+#filter-heading{
+    padding: 30px 0;
+}
+#filter-heading h3{
+    color: #191919;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 36px;
+}
+#filter-content{
+    border: 1px solid #DCDCE6;
+    border-radius: 6px;
+    background-color: #F5F5FA;
+}
+
+#filter-content h4{
+    color: #191919;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 0.59px;
+    line-height: 26px;
+}
+
+.pt-30{
+    padding-top: 30px;
+}
+.pl-50{
+    padding-left: 50px;
+}
+
+/** Custom Select **/
+.center{
+    position: relative;
+    z-index: 888;
+    margin: 0 50px 0 0;
+    float: right;
+}
+.custom-select-wrapper {
+	position: relative;
+	display: inline-block;
+	user-select: none;
+}
+
+.custom-select-wrapper select {
+	display: none;
+}
+
+.custom-select {
+	position: relative;
+	display: inline-block;
+	padding: 0;
+	height: 50px;
+	border: 0 none;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333943;
+    line-height: 28px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.custom-select-trigger {
+	position: relative;
+	display: block;
+	width: 220px;
+	height: 50px;
+    padding: 10px 0 0 20px;
+	border: 1px solid #CFD0D7;
+	border-radius: 6px;
+	cursor: pointer;
+	background: #fff !important;
+}
+
+.custom-select-trigger:after {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 10px;
+	height: 10px;
+	top: 50%;
+	right: 25px;
+	margin-top: -3px;
+	border-bottom: 2px solid #191919;
+	border-right: 2px solid #191919;
+	transform: rotate(45deg) translateY(-50%);
+	transition: all .4s ease-in-out;
+	transform-origin: 50% 0;
+}
+
+.custom-select.opened {
+	background: #fff;
+	box-shadow: -2px -2px 46px 8px rgba(228, 228, 228, 1);
+}
+
+.opened .custom-select-trigger {
+	background: #fff;
+	border: 0 !important;
+	z-index: 9;
+	position: relative;
+}
+
+.custom-select .opened .custom-select-trigger {
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.custom-select.opened .custom-select-trigger:after {
+	margin-top: 3px;
+	transform: rotate(-135deg) translateY(-50%);
+}
+
+.custom-options {
+	position: absolute;
+	display: block;
+	top: 98%;
+	left: 0;
+	right: 0;
+	min-width: 100%;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	box-sizing: border-box;
+	box-shadow: -2px -2px 46px 8px rgba(228, 228, 228, 1);
+	background: #fff;
+	transition: all .4s ease-in-out;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transform: translateY(-15px);
+	padding: 20px 15px 15px 15px;
+}
+
+.custom-select.opened .custom-options {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+	transform: translateY(0);
+}
+
+.option-hover:before {
+	background: #f9f9f9;
+}
+
+.custom-option {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	padding: 15px;
+	font-size: 13px;
+	transition: all .4s ease-in-out;
+}
+
+.custom-option:first-of-type {
+	border-radius: 4px 4px 0 0;
+}
+
+.custom-option:last-of-type {
+	border-bottom: 0;
+	border-radius: 0 0 4px 4px;
+}
+
+.custom-option:hover,
+.custom-option.selection {
+	color: #3f28cf;
+	background: #eae9fa;
+	border-radius: 50px;
+}
+
+
+
+.oval {
+    height: 16px;
+    width: 16px;
+    background-color: #191919;
+    border-radius: 10px;
+    top: 20px;
+    right: 45px;
+    position: absolute;
+}
+#devices-list .check-item{
+    float: left;
+    width: 112px;
+    font-family: "Poppins", sans-serif;
+
+}
+
+#devices-list .check-item-full{
+    float: left;
+    width: 100%;
+
+}
+
+#devices-list input[type="checkbox"], input[type="radio"] {
+    display: none;
+}
+
+#devices-list label {
+    padding-left: 25px;
+    display: inline-block;
+    position: relative;
+    color: #424850;
+    font-size: 12px;
+
+}
+
+#devices-list input[type="checkbox"] + label:before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: #fff;
+    border-radius: 4px;
+}
+
+#devices-list input[type="checkbox"]:checked + label:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 5px;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 4px;
+    left: 3px;
+}
+#devices-list input[type="checkbox"]:checked + label:before {
+    content: '';
+    background: #3b25c3;
+}
+
+
+
+
+.product-item .btn{
+    width: 170px;
+    height: 56px;
+    color: #191919;
+    border-radius: 26px;
+    background-color: #00D672;
+    border: 1px solid #00D672;
+}
+
+.product-item .btn span{
+    display: inline-block;
+    color: #191919;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.37px;
+    line-height: 42px;
+
+}
+
+
+.product-item{
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 30px 0;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.15);
+}
+
+.product-item:hover{
+
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 6px;
+    background-color: #BAEAFA;
+    box-shadow: 0px 50px 60px 24px rgba(0,0,0,0.15);
+    transition: .5s ease-in-out;
+}
+
+.phone-card{
+    padding: 0 30px;
+}
+
+.phone-card-content{
+    width: 100%;
+    min-height: 0px !important;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+
+.product-item:hover .phone-card-content{
+    margin-top: -75px;
+    position: relative;
+    padding: 35px 0px;
+    min-height: 235px !important;
+
+}
+
+.product-item:hover .device-button{
+    display: inline-block;
+    margin: 15px 0 0 0;
+    height: 45px;
+    border-radius: 18px;
+    padding: 10px 25px;
+    color: #191919;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.37px;
+    line-height: 10px;
+    text-align: center;
+    border-radius: 26px;
+    background-color: #00D672;
+
+}
+
+.product-item:hover .field-content.btn-sm.btn-tag-blue.margin-right-8{
+    display: none;
+}
+
+.product-item .field-content.btn-sm.btn-tag-blue.margin-right-8{
+    width:60% ;
+}
+
+device-button {
+    padding-top: 18px !important;
+    padding-left: 36px !important;
+}
+
+.product-item img{
+    margin-bottom: 30px;
+    padding-top: 7px;
+}
+
+.product-item h3{
+    color: #191919;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 0.59px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.product-item span{
+    display: inline-block;
+    width: 60%;
+    color: #191919;
+    font-size: 41px;
+    font-weight: bold;
+    letter-spacing: 0.58px;
+    line-height: 49px;
+    text-align: center;
+    padding: 15px 0 0 0;
+}
+
+.product-item span sub{
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.58px;
+    line-height: 29px;
+    text-align: center;
+    position: relative;
+    top: -20px;
+}
+
+.product-item .field-content.btn-sm.btn-tag-blue.margin-right-8{
+    margin: 15px 0 0 0;
+    display: inline-block;
+    height: 30px;
+    border-radius: 18px;
+    background-color: #BAEAFA;
+    padding: 10px 25px;
+    color: #191919;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.37px;
+    line-height: 10px;
+    text-align: center;
+
+}
+.product-item .device-button{
+    display: none;
+    padding: 15px 0 !important;
+}
+#price-slider {
+    width: 300px;
+    height: 80px;
+    font-size: 14px;
+}
+
+#price-slider input {
+    width: 90px;
+    display: inline-block;
+    font-size: 12px;
+}
+
+#slider-range {
+    position: relative;
+    margin: auto;
+    height: 16px;
+    width: 302px;
+    border-radius: 20px;
+    background-color: #D6D6DC;
+    box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+#slider-range .ui-slider-handle {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border: 2px solid #FFFFFF;
+    background-color: #3259ED;
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+#slider-range .ui-corner-all {
+    border-radius: 100%;
+    outline: none;
+}
+.text-blue{
+    color: #3259ed;
+}
+.filter-position{
+    color: #6fc888;
+}
+
+
+span.ui-slider-handle.ui-corner-all.ui-state-default {
+    background: #3259ed;
+    border-radius: 10px;
+}
+
+.ui-slider-range.ui-corner-all.ui-widget-header {
+    background: #00d672;
+}
+
+
+
+</style>

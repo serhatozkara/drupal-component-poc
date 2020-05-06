@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ */
+#}
+{% extends "@layouts/footer/footer.twig" %}
+
+{% block top %}
+  {{ drupal_block('system_branding_block') }}
+{% endblock %}
+
+{% block bottom %}
+  {{ drupal_block('system_menu_block:footer') }}
+{% endblock %}

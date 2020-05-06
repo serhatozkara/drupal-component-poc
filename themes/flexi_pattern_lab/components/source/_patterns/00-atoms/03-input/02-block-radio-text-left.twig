@@ -1,0 +1,7 @@
+<div class="form-radio-block d-flex my-2 my-md-3">
+  <input class="sr-only" type="radio" name="radio{{ formId|default('Options') }}" id="radio{{inputNumber}}" value="option{{inputNumber}}">
+  <label class="align-self-center w-100 p-3" for="radio{{inputNumber}}">
+    <strong>{{ labelName|default('Quebec')|raw }}</strong>
+    {% include 'atoms-circle-icon-16' with { circleColor: 'electric-blue', icon: 'check', color: 'white'} %}
+  </label>
+</div>

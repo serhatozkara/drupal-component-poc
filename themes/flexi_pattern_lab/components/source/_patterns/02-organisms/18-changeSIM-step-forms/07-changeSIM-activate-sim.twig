@@ -1,0 +1,13 @@
+{% set priceReveal = 'no' %}
+{% set formLabel = 'Your SIM activation code' %}
+{% set collapseDefault = 'collapse' %}
+
+{% extends 'organisms-collapsible-form-container' %}
+
+{% block activationForm %}
+  {% include 'molecule-notification-high' with{icon:'alert-octagon',mobileText:'Oups!',notificationText:"Your SIM CARD seem's to be blocked! You need to re-order a new card!"}%}
+  <h1 class="text-center">Activation</h1>
+  <p class="text-center text-muted mb-50">Enter the activation code on your SIM card.</p>
+  <img src="/images/spot/sim-card-activation.png" width="250px" class="d-block mx-auto mb-2">
+  {% include 'atoms-input-number-appended-button-large' with { uniqueID: uuid } %}
+{% endblock %}

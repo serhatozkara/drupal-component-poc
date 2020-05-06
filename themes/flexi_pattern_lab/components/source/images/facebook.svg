@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="16px" viewBox="0 0 8 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>🕹Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M6.82929612,5.23075728 L5.15380097,5.23075728 L5.15380097,7.96574757 L6.82929612,7.96574757 L6.82929612,16 L10.0512379,16 L10.0512379,7.93157282 L12.2990825,7.93157282 L12.5383835,5.23075728 L10.0512379,5.23075728 L10.0512379,3.69231068 C10.0512379,3.05549515 10.1794709,2.80337864 10.7948107,2.80337864 L12.5383447,2.80337864 L12.5383447,0 L10.3076262,0 C7.91018932,0 6.82929612,1.05549515 6.82929612,3.07693204 L6.82929612,5.23075728 L6.82929612,5.23075728 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MyProfile/320-referral-steps" transform="translate(-68.000000, -778.000000)">
+            <g id="Bloc-02" transform="translate(0.000000, 482.000000)">
+                <g id="Choix" transform="translate(20.000000, 243.000000)">
+                    <g id="facebook">
+                        <g id="Button/primary/large/IconRight+label-Copy" transform="translate(21.000000, 31.000000)">
+                            <g id="Icon/Social/16x16/Facebook" transform="translate(22.000000, 22.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <use id="Mask" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                <g id="🎨Color" stroke-width="1" fill-rule="evenodd" mask="url(#mask-2)" fill="#FFFFFF">
+                                    <g id="UI/Color/Flat/White">
+                                        <rect id="Base" x="0" y="0" width="16" height="16"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

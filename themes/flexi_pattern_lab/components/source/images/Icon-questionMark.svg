@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>🕹Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="8" cy="8" r="8"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="userAccount/1440/subscription-center" transform="translate(-992.000000, -2128.000000)">
+            <g id="Group-2" transform="translate(404.000000, 905.000000)">
+                <g id="Input/mobile/normal-1-Copy-3" transform="translate(478.000000, 1201.000000)">
+                    <g id="Icon/16x16/info" transform="translate(110.000000, 22.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#C5C5C5" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <g id="UI/Color/Flat/ComplientGrey" mask="url(#mask-2)" fill="#73737D" fill-rule="evenodd">
+                            <rect id="Base" x="0" y="0" width="24" height="24"></rect>
+                        </g>
+                        <path d="M8.34139168,9.46013986 L7.00704055,9.46013986 L7.00704055,9.11328671 C7.00704055,8.66573427 7.1173175,8.33006993 7.37095449,8.06153846 C7.62459148,7.79300699 7.76795152,7.69230769 8.10981008,7.47972028 L8.57297328,7.17762238 C8.7494164,7.04335664 9.01408109,6.70769231 9.01408109,6.3048951 C9.01408109,5.8013986 8.60605636,5.3986014 7.82309,5.3986014 C6.97395746,5.3986014 6.51079426,5.89090909 6.45565578,6.88671329 L5,6.76363636 C5.04411078,5.0965035 6.01454797,4 7.86720078,4 C8.62811175,4 9.25669039,4.21258741 9.75293668,4.62657343 C10.249183,5.04055944 10.50282,5.56643357 10.50282,6.19300699 C10.50282,6.71888112 10.3815153,7.12167832 10.1278783,7.42377622 C9.87424132,7.72587413 9.6867705,7.86013986 9.34491195,8.07272727 C9.30080117,8.10629371 9.05819187,8.24055944 9.0030534,8.27412587 C8.95894261,8.30769231 8.7604441,8.43076923 8.70530562,8.48671329 C8.49577941,8.65454545 8.34139168,8.88951049 8.34139168,9.19160839 L8.34139168,9.46013986 Z M8.56194558,12 L6.91881898,12 L6.91881898,10.4111888 L8.56194558,10.4111888 L8.56194558,12 Z" id="?" fill="#FFFFFF" fill-rule="evenodd" mask="url(#mask-2)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

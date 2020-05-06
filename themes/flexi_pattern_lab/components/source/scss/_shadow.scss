@@ -1,0 +1,38 @@
+$mobile-box-shadow:           0px 2px 3px 0px rgba($black,0.5);
+$mobile-lifted-box-shadow:    0px 0px 60px 24px rgba($black, 0.15);
+$normal-box-shadow:           1px 1px 3px 0px rgba($black, 0.1);
+$hover-box-shadow:            2px 2px 12px 0px rgba($black, 0.1);
+$lifted-box-shadow:           30px 50px 60px 24px rgba($black, 0.1);
+
+.card-normal{
+  box-shadow: $mobile-box-shadow;
+}
+.card-mid{
+  box-shadow: $hover-box-shadow;
+}
+.card-lifted{
+  box-shadow: $mobile-lifted-box-shadow;
+}
+
+@include media-breakpoint-up(md) {
+  .card-normal{
+    box-shadow: $normal-box-shadow;
+  }
+  .card-lifted{
+    box-shadow: $lifted-box-shadow;
+  }
+  .card-normal:hover {
+    box-shadow: $hover-box-shadow;
+  }
+}
+
+.hover-lifted {
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+  box-shadow: 2px 2px 12px 0px rgba($black, 0.15);
+  &:hover {
+    box-shadow: 30px 50px 60px 24px rgba($black, 0.15);
+    transition: box-shadow 0.2s;
+    z-index: 1;
+  }
+}

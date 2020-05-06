@@ -1,0 +1,10 @@
+<div class="form-radio-block d-flex my-2 my-md-3">
+  <input class="sr-only" type="radio" name="radio{{ formId|default('Options') }}" id="radio{{inputNumber}}" value="option{{inputNumber}}">
+  <label class="align-self-center align-items-center w-100 p-3 d-flex" for="radio{{inputNumber}}">
+    <div class=" col-3 p-0 px-md-3 ">
+      {%  include 'atoms-icon' with { icon:'credit-card', size: '24' } %}
+    </div>
+    <span class="col-9"><strong>{{ labelName|default('Quebec') }}</strong></span>
+    {% include 'atoms-circle-icon-16' with { circleColor: 'electric-blue', icon: 'check', color: 'white'} %}
+  </label>
+</div>

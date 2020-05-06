@@ -1,0 +1,178 @@
+$i: 10;
+
+@while ($i <=45) {
+  .fs-#{$i} {
+    font-size: $i+px !important;
+  }
+
+  $i: $i+1;
+}
+
+$i: 1;
+
+@while ($i < 6) {
+  .z-index-#{$i} {
+    z-index: $i !important;
+  }
+
+  $i: $i+1;
+}
+
+$i: 1;
+
+@while ($i <=5) {
+  .flex-grow-#{$i} {
+    flex-grow: $i !important;
+  }
+
+  $i: $i+1;
+}
+
+.flex-grow-0 {
+  flex-grow: initial !important;
+}
+
+.border-radius-0 {
+  border-radius: 0px !important;
+}
+
+$i: 5;
+
+@while ($i < 26) {
+  .border-radius-#{$i} {
+    border-radius: $i+px !important;
+  }
+
+  $i: $i+5;
+}
+
+.border-radius-left-5 {
+  border-bottom-left-radius: 5px !important;
+  border-top-left-radius: 5px !important;
+}
+
+.border-radius-right-10 {
+  border-bottom-right-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+
+.h-46 {
+  height: 46px !important;
+}
+
+.h-70 {
+  height: 70px !important;
+}
+
+.text-muted-light {
+  color: #9a9a9a !important;
+}
+
+.font-weight-500 {
+  font-weight: 500 !important;
+}
+
+.d-contents {
+  display: contents;
+}
+
+.nowrap {
+  white-space: nowrap !important;
+}
+
+.border-dashed {
+  border-style: dashed !important;
+}
+
+.text-black {
+  color: $black !important;
+}
+
+.white-space-normal {
+  white-space: normal !important;
+}
+
+.line-height-initial {
+  line-height: initial;
+}
+
+.line-height-08 {
+  line-height: 0.8;
+}
+
+.text-decoration-none {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 576px) {
+  $i: 1;
+
+  @while ($i <=5) {
+    .flex-grow-sm-#{$i} {
+      flex-grow: $i !important;
+    }
+
+    $i: $i+1;
+  }
+
+  .flex-grow-sm-0 {
+    flex-grow: initial !important;
+  }
+
+  $i: 10;
+
+  @while ($i < 43) {
+    .fs-sm-#{$i} {
+      font-size: $i+px !important;
+    }
+
+    $i: $i+1;
+  }
+}
+
+@media (min-width: 768px) {
+  $i: 1;
+
+  @while ($i <=5) {
+    .flex-grow-md-#{$i} {
+      flex-grow: $i !important;
+    }
+
+    $i: $i+1;
+  }
+
+  .flex-grow-md-0 {
+    flex-grow: initial !important;
+  }
+}
+
+@media (min-width: 998px) {
+  $i: 1;
+
+  @while ($i <=5) {
+    .flex-grow-lg-#{$i} {
+      flex-grow: $i !important;
+    }
+
+    $i: $i+1;
+  }
+
+  .flex-grow-lg-0 {
+    flex-grow: initial !important;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .d-xs-none {
+    display: none !important;
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

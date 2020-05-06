@@ -1,0 +1,20 @@
+<div class="container">  
+  <div class="row">
+    <div class="col-12 col-md-9 col-lg-7 col-xl-6 mx-auto">
+      
+      <div class="text-center">
+        <h3 class="mb-20">Mobile</h3>
+        <p class="text-muted mb-30">1234 longstreetname</p>
+      </div>
+  
+      {% include 'atoms-gauge-dash' with { gaugeState: 'danger' } %}
+
+      <div class="text-center mt-30">
+        <h2 class="text-red mb-20">Don't be too greedy</h2>
+        <p class="text-muted mb-30">Lorem ipsum dolor sit amet</p>
+        {% include 'atoms-button' with { buttonColor: 'red', buttonLabel: 'Manage your plan' }  %}
+      </div>
+    
+    </div>
+  </div>
+</div>

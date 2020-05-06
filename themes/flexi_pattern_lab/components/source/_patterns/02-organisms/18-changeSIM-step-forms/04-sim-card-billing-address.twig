@@ -1,0 +1,25 @@
+{% set stepValueLabelStyle = 'small' %}
+{% set collapseDefault = 'collapse' %}
+{% set formLabel = 'Billing address' %}
+{% set stepValueLabel = 'Home Address' %}
+
+{% extends 'organisms-collapsible-form-container' %}
+
+{% block activationForm %}
+
+  <h4 data-form-scroll="yes">Billing Adress</h4>
+
+  <div class="row">
+    <div class="col-12 col-sm">
+      {% include 'atoms-block-radio-text-left' with { inputNumber: "billingHome", labelName: 'Same as Home' } %}
+    </div>
+    <div class="col-12 col-sm">
+      {% include 'atoms-block-radio-text-left' with { inputNumber: "billingOther", labelName: 'Other' } %}
+    </div>
+  </div>
+
+  <div class="text-center mt-50">
+    {% include 'atoms-button-icon-right' with { buttonLabel: 'Next', icon: 'arrow-right', uniqueID: uuid} %}
+  </div>
+
+{% endblock %}

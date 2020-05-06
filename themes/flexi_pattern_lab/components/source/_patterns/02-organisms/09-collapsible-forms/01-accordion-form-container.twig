@@ -1,0 +1,30 @@
+{% set uuid = random() %}
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6 ">
+      <div class="card card-accordion my-3">
+        <a class="collapsed" data-toggle="collapse" role="button" aria-expanded="false" data-target="#collapse{{ uuid }}" aria-controls="collapse{{ uuid }}">
+          <div class="accordion-header d-flex p-4 px-md-5 align-items-center">
+            <div class="col-11 p-0">
+              <p class="h5">{{ headerText }}</p>
+            </div>
+            <div class="col-1 p-0 text-center">
+              <div class="accordion-chevron-down">
+                {% include 'atoms-icon' with{ icon:'chevron-down', size:'32'} %}
+              </div>
+              <div class="accordion-chevron-up">
+                {% include 'atoms-icon' with{ icon:'chevron-up', size:'32'} %}
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="accordion-body collapse " id="collapse{{ uuid }}">
+          <div class="p-4 px-md-5">
+            {% block accordionBodyForm %}{% endblock %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.footer {
+  padding: 20px;
+  background: $light_blue_bg;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      a{
+        color: $text_white;
+        @include transition(all .3s ease);
+        &:hover, &:focus {
+          color: $link_h_color;
+        }
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  padding: 15px;
+  text-align: center;
+}

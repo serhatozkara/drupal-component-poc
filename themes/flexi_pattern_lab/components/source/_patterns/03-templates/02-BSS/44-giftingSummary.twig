@@ -1,0 +1,28 @@
+{% extends 'organisms-dashboard-container' %}
+{% block dashboardContent %}
+
+<div class="row">
+  <div class="col-lg-10 offset-lg-1">
+    <div class="p-4">
+      <span class="text-muted">Your gifting plan</span>
+      {% include 'atoms-activation-step-edit-button' %}
+    </div>
+    <div class="p-4">
+      <span class="text-muted">Your gifting contact</span>
+      {% include 'atoms-activation-step-edit-button' %}
+    </div>
+    <div class="p-4">
+      <span class="text-muted">Your amount gifted</span>
+      {% include 'atoms-activation-step-edit-button' %}
+    </div>
+    <div class="p-4">
+      <span class="text-muted">Your amount gifted</span>
+      {% include 'atoms-activation-step-edit-button' %}
+    </div>
+    <div class="col-12 mt-5 text-center">
+          {% include 'atoms-button-icon-right-large' with { buttonLabel: 'Send my message', icon: 'arrow-right', uniqueID: uuid} %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

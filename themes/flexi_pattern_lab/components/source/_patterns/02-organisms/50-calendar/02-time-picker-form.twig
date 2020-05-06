@@ -1,0 +1,8 @@
+<form class="row text-center pb-4 pb-lg-0 px-lg-5 timepicker-appointment">
+  {% for i in 0..6 %}
+    {% include 'organisms-time-fieldset' with { 
+      'date': date|date_modify("+" ~ i ~ " day"),
+      'dayOfWeek': dayOfWeek|date_modify("+" ~ i ~ " day")} 
+    %}
+  {% endfor %}
+</form>

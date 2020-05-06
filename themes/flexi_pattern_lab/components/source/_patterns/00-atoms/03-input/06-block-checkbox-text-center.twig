@@ -1,0 +1,7 @@
+<div class="form-checkbox-block d-flex my-2 my-md-3">
+  <input class="sr-only" type="checkbox" name="checkboxOptions" id="checkbox{{inputNumber}}" value="option{{inputNumber}}">
+  <label class="align-self-center w-100 py-3 py-sm-5 text-center" for="checkbox{{inputNumber}}">
+    <strong>{{ labelName|default('Quebec') }}</strong>
+    {% include 'atoms-circle-icon-16' with { circleColor: 'electric-blue', icon: 'check', color: 'white'} %}
+  </label>
+</div>

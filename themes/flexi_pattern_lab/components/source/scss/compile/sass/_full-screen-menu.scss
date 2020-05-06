@@ -1,0 +1,397 @@
+.full-screen-menu-wrapper {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  position: fixed;
+  visibility: hidden;
+  z-index: 100;
+}
+
+.full-screen-menu-layer-1 {
+  background: $green;
+}
+
+.full-screen-menu-layer-2 {
+  background: $dark-blue;
+}
+
+.full-screen-menu-content {
+  color: $white;
+  position: fixed;
+  width: 100%;
+}
+
+.small-screen-main-menu {
+  margin-top: 15vh;
+}
+
+.small-screen-search {
+  margin-top: 20vh;
+}
+
+// Menu Opens from Top-Right
+.full-screen-menu-wrapper.top-right {
+  .full-screen-menu-layer-1,
+  .full-screen-menu-layer-2 {
+    border-radius: 0 0 0 100%;
+    float: right;
+  }
+
+  .full-screen-menu-content {
+    left: 200vw;
+  }
+}
+
+.full-screen-menu-wrapper.top-right.open-menu {
+  visibility: visible;
+
+  .full-screen-menu-layer-1 {
+    animation: full-screen-menu-layer-1-open linear 0.4s forwards;
+  }
+  .full-screen-menu-layer-2 {
+    animation: full-screen-menu-layer-2-open linear 0.6s forwards;
+  }
+  .full-screen-menu-content {
+    animation: full-screen-menu-content-top-right-open ease 0.8s forwards;
+  }
+}
+
+.full-screen-menu-wrapper.top-right.close-menu {
+  visibility: visible;
+
+  .full-screen-menu-layer-1 {
+    animation: full-screen-menu-layer-1-close linear 0.8s forwards;
+  }
+  .full-screen-menu-layer-2 {
+    animation: full-screen-menu-layer-2-close linear 0.6s forwards;
+  }
+  .full-screen-menu-content {
+    animation: full-screen-menu-content-top-right-close ease 0.4s forwards;
+  }
+}
+
+// Menu Opens from Top-Left
+.full-screen-menu-wrapper.top-left {
+  .full-screen-menu-layer-1,
+  .full-screen-menu-layer-2 {
+    border-radius: 0 0 100% 0;
+    float: left;
+  }
+
+  .full-screen-menu-content {
+    left: -200vw;
+  }
+}
+
+.full-screen-menu-wrapper.top-left.open-menu {
+  visibility: visible;
+  .full-screen-menu-layer-1 {
+    animation: full-screen-menu-layer-1-open linear 0.4s forwards;
+  }
+  .full-screen-menu-layer-2 {
+    animation: full-screen-menu-layer-2-open linear 0.6s forwards;
+  }
+  .full-screen-menu-content {
+    animation: full-screen-menu-content-top-left-open ease 0.8s forwards;
+  }
+}
+
+.full-screen-menu-wrapper.top-left.close-menu {
+  visibility: visible;
+
+  .full-screen-menu-layer-1 {
+    animation: full-screen-menu-layer-1-close linear 0.8s forwards;
+  }
+  .full-screen-menu-layer-2 {
+    animation: full-screen-menu-layer-2-close linear 0.6s forwards;
+  }
+  .full-screen-menu-content {
+    animation: full-screen-menu-content-top-left-close ease 0.4s forwards;
+  }
+}
+
+// Animations for circular layers and horizontal menu slides
+@keyframes full-screen-menu-layer-1-open {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 270vw;
+    height: 270vw;
+  }
+}
+
+@keyframes full-screen-menu-layer-1-close {
+  0% {
+    width: 270vw;
+    height: 270vw;
+  }
+  25% {
+    width: 270vw;
+    height: 270vw;
+  }
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes full-screen-menu-layer-2-open {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  25% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 270vw;
+    height: 270vw;
+  }
+}
+
+@keyframes full-screen-menu-layer-2-close {
+  0% {
+    width: 270vw;
+    height: 270vw;
+  }
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes full-screen-menu-content-top-right-open {
+  0% {
+    left: 200vw;
+  }
+  50% {
+    left: 200vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes full-screen-menu-content-top-right-close {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 200vw;
+  }
+}
+
+@keyframes full-screen-menu-content-top-left-open {
+  0% {
+    left: -200vw;
+  }
+  50% {
+    left: -200vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes full-screen-menu-content-top-left-close {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    left: -200vw;
+  }
+}
+
+// Change z-index of Main Menu Items to on top when screen overlaps
+.main-menu-items-on-top {
+  z-index: 101;
+}
+
+// Change Color of Main Menu Items when Screen Overlaps
+.navbar-center {
+  li a.main-nav-link {
+    transition: color 150ms;
+  }
+  li:nth-child(1) a {
+    transition-delay: 0.8s;
+  };
+  li:nth-child(2) a {
+    transition-delay: 0.9s;
+  };
+  li:nth-child(3) a {
+    transition-delay: 1.0s;
+  };
+  li:nth-child(4) a {
+    transition-delay: 1.1s;
+  };
+  li:nth-child(5) a {
+    transition-delay: 1.2s;
+  };
+  &.full-screen-menu-top-right-open {
+    li:nth-child(1) a {
+      transition-delay: 0.8s;
+    };
+    li:nth-child(2) a {
+      transition-delay: 0.7s;
+    };
+    li:nth-child(3) a {
+      transition-delay: 0.6s;
+    };
+    li:nth-child(4) a {
+      transition-delay: 0.5s;
+    };
+    li:nth-child(5) a {
+      transition-delay: 0.4s;
+    };
+  }
+}
+
+// Change opacity and display of Second-Level Menu items when screen overlaps
+nav.main-menu-second-level {
+  a {
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s;
+    transition-delay: 1.1s;
+  }
+
+  &.full-screen-menu-top-left-open,
+  &.full-screen-menu-top-right-open, {
+    a {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 1s;
+    }
+  }
+}
+// Change opacity and display of Login and Search icon items when screen overlaps
+nav.navbar-right {
+  opacity: 1;
+  visibility: visible;
+  transition: all 1s;
+  transition-delay: 1.1s;
+
+  &.full-screen-menu-top-left-open {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+  }
+}
+
+// Change opacity and display of Site Logo when screen overlaps
+a.site-logo {
+  opacity: 1;
+  visibility: visible;
+  transition: all 1s;
+  transition-delay: 0.6s;
+
+  &.full-screen-menu-top-left-open {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+  }
+}
+
+// Change color of hamburger when Screen Overlaps
+.toggle-mobile-menu-top,
+.toggle-mobile-menu-bottom {
+  transition: background-color;
+}
+
+.full-screen-menu-top-right-open {
+  .toggle-mobile-menu-top,
+  .toggle-mobile-menu-bottom {
+    background-color: $white;
+    transition-delay: 0.8s;
+  }
+}
+
+
+.open-header{
+    background: #191c52;
+    box-shadow: 0 0.1rem 1rem rgba(0,0,0,0);
+}
+.open-header .section-header{
+    box-shadow: 0;
+}
+.open-header .navbar-nav .main-nav-link{
+    color: #fff !important;
+}
+.open-header .btn-outline-dark{
+    color: #161c1c;
+    background: #6cc680;
+    border-color: #6cc680;
+}
+.open-header .cr{
+    display: inline-block !important;
+    width: 32px;
+    height: 32px;
+    background: #212f54;
+    border-radius: 100%;
+    margin-top: -3px;
+}
+.open-header .cr svg{
+     display: inline-block;
+     margin: 4px 4px 0 0;
+     width: 24px !important;
+     height: 24px !important;
+}
+.open-header .list-inline-item.fi-circle.fi-circle-16.lang-size.custom-lang-button{
+    width: 32px !important;
+    height: 32px !important;
+    margin-top: -3px !important;
+    margin-right: 5px !important;
+}
+.open-header #block-languageswitcher-6 .language-link{
+    font-size: 12px !important;
+    margin-left: -25px;
+    line-height: 24px;
+}
+.open-header .lang-size{
+    margin-left: -10px !important;
+}
+@media (max-width: 568px){
+    .open-header .cr{
+        margin-top: -5px !important;
+    }
+}
+@media (max-width: 414px){
+    .open-header .cr{
+        margin-top: 2px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .open-header .cr{
+        float: right;
+        margin: 2px 0 0 30px !important;
+    }
+}
+@media (max-width: 320px) {
+    .open-header .cr{
+        float: right;
+        margin: -18px 0 0 30px !important;
+    }
+    #edit-open-modal:lang(fr){
+        padding: 0 8px !important;
+    }
+    .user-logged-in .open-header .cr{
+        margin: -3px 0 0 0 !important;
+    }
+
+
+
+
+
+}

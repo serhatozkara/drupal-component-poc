@@ -1,0 +1,55 @@
+{% extends 'organisms-dashboard-container' %}
+
+{% block dashboardContent %}
+  <div class="py-50 py-md-120 bg-lightest-gray">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-12 mb-5">
+          <a class="text-muted d-flex align-item-center" href="#">
+            {% include'atoms-icon-24' with {icon:'chevron-left',color:' text-muted'} %}Plans and Billing
+          </a>
+        </div>
+
+        <div class="col-12 text-center mb-4">
+          <h1>Usage</h1>
+          <p class="text-muted">See your daily consumption</p>
+        </div>
+
+        <div class="col-12 mb-5">
+          {% include 'molecule-time-navigation' %}
+        </div>
+
+        <div class="col-12 mb-5">
+          <div class="card p-4 mb-5">
+            <div class="col-12 text-center mb-4">
+              <h2 class="text-electric-blue">4 GB left</h2>
+              <p class="text-muted d-inline-flex">{% include'atoms-icon' with {icon:'clock', color: 'text-muted', classes: 'mx-1', size: '16'} %} 27 days left in this billing cycle</p>
+              <p><a href="#" class="link text-muted d-inline-flex">Show usage history</a></p>
+            </div>
+
+            <!-- This provides example with all data blocks height -->
+            <!-- First one as default, last one as maximun -->
+            {% include 'molecule-data-block' with { height: '100%', num_gigs: '1 GB', data_type: 'monthly plan' } %}
+            {% include 'molecule-data-block' with { height: '100%', amount_height: 'amount-2', num_gigs: '2 GB', data_type: 'monthly plan' } %}
+            {% include 'molecule-data-block' with { height: '100%', amount_height: 'amount-3', num_gigs: '3 GB', data_type: 'monthly plan' } %}
+            {% include 'molecule-data-block' with { height: '100%', amount_height: 'amount-4', num_gigs: '4 GB', data_type: 'monthly plan' } %}
+            {% include 'molecule-data-block' with { height: '100%', amount_height: 'amount-5', num_gigs: '5 GB', data_type: 'monthly plan' } %}
+            {% include 'molecule-data-block' with { height: '100%', amount_height: 'amount-6', num_gigs: '6 GB', data_type: 'monthly plan' } %}
+            {% include 'molecule-data-block' with { height: '100%', amount_height: 'amount-7', num_gigs: '7 GB', data_type: 'monthly plan' } %}
+            {% include 'molecule-data-block' with { height: '100%', amount_height: 'amount-8', num_gigs: '8 GB', data_type: 'monthly plan' } %}
+            {% include 'molecule-data-block' with { height: '100%', amount_height: 'amount-9', num_gigs: '9 GB', data_type: 'monthly plan' } %}
+            {% include 'molecule-data-block' with { height: '100%', amount_height: 'amount-10', num_gigs: '10 GB', data_type: 'and more' } %}
+
+
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}
+

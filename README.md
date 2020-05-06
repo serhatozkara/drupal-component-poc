@@ -1,1 +1,0 @@
-# drupal-component-poc

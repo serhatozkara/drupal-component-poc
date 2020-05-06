@@ -1,0 +1,39 @@
+{% extends "organisms-dashboard-container" %}
+
+{% block dashboardContent %}
+<div class="py-50 py-md-120 bg-lightest-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+
+        <div class="p-4 text-center bg-light-gray mb-5">
+          <img src="http://via.placeholder.com/60x60" class="rounded-circle mr-3">
+          <p>$10 for your new SIM Card</p>
+        </div>
+
+        <div class="p-4">
+          <span class="text-muted">SIM card change Reason</span>
+          {% include 'atoms-activation-step-edit-button' %}
+        </div>
+        <div class="p-4">
+          <span class="text-muted">SIM card change Reason</span>
+          {% include 'atoms-activation-step-edit-button' %}
+        </div>
+        <div class="p-4">
+          <span class="text-muted">SIM card change Reason</span>
+          {% include 'atoms-activation-step-edit-button' %}
+        </div>
+        <div class="p-4">
+          <span class="text-muted">SIM card change Reason</span>
+          {% include 'atoms-activation-step-edit-button' %}
+        </div>
+
+         <div class="p-4 mb-5">
+          {% include 'organisms-price-summary-changePlan' with {classes:'show'}%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

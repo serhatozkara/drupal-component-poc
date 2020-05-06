@@ -1,0 +1,20 @@
+uuid: 90c01801-abf2-4359-9ae5-9392daf9618e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - flexi_pattern_lab
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: flexi_pattern_lab_page_title
+theme: flexi_pattern_lab
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

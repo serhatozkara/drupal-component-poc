@@ -1,0 +1,69 @@
+{% set uuid = uniqueID|default(random()) %}
+  
+<div class="upgrade upgrade-overlay" data-toggle="modal" data-target="#modal-{{ uuid }}">
+  <span class="fs-12">In use</span>
+  <img src="/images/upgrades/upgrade.png" class="img-fluid card card-rounder hover-lifted">
+</div>
+
+<div class="modal fade" id="modal-{{ uuid }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="fi fi-32 fi-grey">
+              <use xlink:href="/images/icons/feather-sprite.svg#x" href="/images/icons/feather-sprite.svg#x"/>
+            </svg>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        
+        <div id="modal-carousel-{{ uuid }}" class="carousel slide slide-vertical" data-interval="false" data-keyboard="false" data-wrap="false">
+          <div class="carousel-inner">
+        
+            <div class="carousel-item active">
+              <div class="w-50 mx-auto mb-3">
+                <img src="/images/upgrades/upgrade.png" class="img-fluid card card-rounder">
+              </div>
+              <h4 class="text-center">{{ upgradeModalTitle|default('150 MB') }}</h4>
+              <p class="text-muted text-center">{{ upgradekModalDetails|default('Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus.') }}</p>
+              <div class="text-center">
+                <button type="button" class="btn btn-primary btn-xl " href="#modal-carousel-{{ uuid }}" role="button" data-slide-to="2">Remove</button>
+              </div>
+            </div>
+            
+            <div class="carousel-item">
+              <div class="w-50 mx-auto mb-3">
+                <img src="/images/upgrades/upgrade.png" class="img-fluid card card-rounder">
+              </div>
+              <h4 class="text-center">{{ upgradeModalTitle|default('150 MB') }}</h4>
+              <p class="text-muted text-center">This upgrade will be effective until your next billing cycle. It will then be available in your upgrade collection.</p>
+              <div class="text-center">
+                <button type="button" class="btn btn-outline-dark btn-xl " data-target="#modal-carousel-{{ uuid }}" data-slide-to="0" role="button" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+           
+            <div class="carousel-item">
+              <h4 class="text-center">{{ upgradeModalTitle|default('Remove upgrade?') }}</h4>    
+              <p class="text-center text-muted">Do you want to remove this upgrade from your device?</p>
+              <div class="w-50 mx-auto mb-3">
+                <img src="/images/upgrades/upgrade.png" class="img-fluid card card-rounder">
+              </div>
+              <p class="text-muted text-center">This upgrade will be effective until your next billing cycle. It will then be available in your upgrade collection.</p>
+              <div class="text-center">
+                <button type="button" class="btn btn-outline-dark btn-xl " data-target="#modal-carousel-{{ uuid }}" data-slide-to="0" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary btn-xl " href="#modal-carousel-{{ uuid }}" role="button" data-slide-to="1">Remove</button>
+              </div>
+            </div>            
+            
+          </div>
+          
+        </div>  
+
+      </div>
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,82 @@
+{% extends 'organisms-dashboard-container' %}
+
+{% block dashboardContent %}
+
+<div class="d-flex flex-row">
+  <h4>Bobby D.</h4>
+  {% include 'atoms-button-link' with { buttonLabel:'Users parameters', active:'active', classes: 'ml-2' } %}
+</div>
+
+{% include 'organisms-plan-internet' %}
+{% include 'organisms-plan-mobile-sms' %}
+{% include 'organisms-plan-mobile-sms-voice' %}
+{% include 'organisms-plan-internet-deactivated' %}
+{% include 'organisms-plan-internet-interrupted' %}
+{% include 'organisms-plan-mobile-sms-voice-distance' %}
+{% include 'organisms-plan-mobile-sms-voice-distance-deactivated' %}
+{% include 'organisms-plan-mobile-empty' %}
+
+
+<!--    SEPARATOR OF BLOCK    -->
+{#
+  <div class="card card-normal mb-50">
+    <div class="card-section card-header px-3 px-md-5 pt-4">
+      <div class="d-flex align-items-center justify-content-between justify-content-lg-start">
+
+        <div>
+          <h4>Mobile</h4>
+          <p class="text-muted">(514)423-4567</p>
+        </div>
+        <div class="pl-md-50">
+          <div class="d-flex flex-row align-items-center">
+            <h4>$35.00</h4>
+            <p class="text-muted mb-10 pl-1">/mounth + tx</p>
+          </div>
+          <p class="text-muted">
+            {% include 'atoms-icon-16' with { icon:'clock' } %}
+            <strong>3 days</strong> left
+          </p>
+        </div>
+        <div class="d-none d-lg-flex ml-auto">
+          {% include 'atoms-button-outline' with{ buttonLabel:'Invoices',buttonSize:'xl'} %}
+          {% include 'atoms-button' with{ buttonLabel:'Manage',buttonSize:'xl', classes:'ml-4'} %}
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card-section card-body px-3 px-md-5">
+      <div class="row">
+
+        <div class="col-lg py-4">
+          {% include 'organisms-progress-with-links' with { numberStatus:'warning', gradientcolor:'green', progressValueLabel:'6' ,progressValueProduct:'7 Gigs of data' } %}
+        </div>
+
+        <div class="col-lg py-4">
+          {% include 'organisms-progress-with-links' with { numberStatus:'ok', gradientcolor:'green',progressValueLabel:'100' ,progressValueProduct:'600 min.' } %}
+        </div>
+
+        <div class="col-lg py-4">
+          <div class="sms-unlimited-container py-3 text-center">
+              <h4 class="d-inline-flex text-blue">Unlimited</h4>
+              <p class="text-muted d-inline-block d-lg-block d-xl-inline-block"><span class="display-2">/</span>SMS</p>
+            <div class="text-center">
+              {% include'atoms-icon' with {size:'48', origin:'symetris-svg.svg',icon:'infinite', classes:'stroke-light-gray fill-light-gray'} %}
+              <div>
+                <a href="#" class="link">Usage</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card-section card-body px-2 px-md-5 d-flex d-lg-none justify-content-center align-items-center">
+      {% include 'atoms-button' with{ buttonLabel:'Manage',buttonSize:'xl', classes:'mx-2'} %}
+      {% include 'atoms-button-outline' with{ buttonLabel:'Invoices',buttonSize:'xl', classes:'mx-2'} %}
+    </div>
+  </div>
+
+  #}
+{% endblock %}

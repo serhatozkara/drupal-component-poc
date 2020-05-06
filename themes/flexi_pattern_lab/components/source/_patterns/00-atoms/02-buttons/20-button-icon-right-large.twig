@@ -1,0 +1,6 @@
+<button type="button" class="btn btn-primary {{size|default('btn-xxl')}} icon-right" data-toggle="collapse" data-action="next-step" data-target=".activation-collapse-{{ uniqueID|default('uniqueID')}}" aria-expanded="false">
+  <div class="d-flex">
+    <span>{{ buttonLabel }}</span>
+    {% include 'atoms-icon-16' %}
+  </div>
+</button>

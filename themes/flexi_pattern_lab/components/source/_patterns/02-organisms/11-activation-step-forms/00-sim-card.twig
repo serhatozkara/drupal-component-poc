@@ -1,0 +1,11 @@
+{% set priceReveal = 'no' %}
+{% set formLabel = 'Your SIM activation code' %}
+
+{% extends 'organisms-collapsible-form-container' %}
+
+{% block activationForm %}
+  <h1 class="text-center">Activation</h1>
+  <p class="text-center text-muted mb-50">Enter the activation code on your SIM card. {% include 'atoms-tooltip' with { margin:'ml-1', title: '<strong>What’s an activation code?</strong><br/ > It is a unique number on the back of every SIM card.'} %}</p>
+  <img src="/images/spot/sim-card-activation.png" width="250px" class="d-block mx-auto mb-2">
+  {% include 'atoms-input-number-appended-button-large' with { uniqueID: uuid } %}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% set uuid = uniqueID|default(random()) %}
+  
+<div class="upgrade" data-toggle="modal" data-target="#modal-{{ uuid }}">
+  <img src="/images/upgrades/upgrade.png" class="img-fluid card card-rounder hover-lifted">
+</div>
+
+<div class="modal fade" id="modal-{{ uuid }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="fi fi-32 fi-grey">
+              <use xlink:href="/images/icons/feather-sprite.svg#x" href="/images/icons/feather-sprite.svg#x"/>
+            </svg>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        <div class="w-50 mx-auto mb-3">
+          <img src="/images/upgrades/upgrade.png" class="img-fluid card card-rounder">
+        </div>
+        <h4 class="text-center">{{ upgradeModalTitle|default('150 MB') }}</h4>
+        <p class="text-muted text-center">{{ upgradekModalDetails|default('Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus.') }}</p>
+        <div class="text-center">
+          <button type="button" class="btn btn-primary btn-xl" data-dismiss="modal" aria-label="close" data-toggle="collapse" data-target=".upgradeCollectionPaneBody" aria-expanded="true" data-apply-upgrade>Apply</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>

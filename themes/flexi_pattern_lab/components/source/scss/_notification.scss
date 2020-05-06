@@ -1,0 +1,58 @@
+.alert {
+  color: $black;
+  font-weight: $font-weight-bold;
+  border-radius: 0 0 $card-border-radius $card-border-radius;
+  p{
+    width: 100%;
+  }
+  .icon {
+    display: none;
+  }
+  &.alert-dismissible {
+    padding-right: 1.55rem;
+    .close {
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
+.alert-dark {
+  color: $white;
+  p {
+    color: $gray;
+  }
+  .close:hover{
+    color:$white;
+  }
+}
+
+.alert-success-v2 {
+  background-color: #DCFADE;
+}
+
+.alert-warning-v2 {
+  background-color: #FEF4A8;
+}
+
+.alert-danger-v2 {
+  background-color: #ff6964;
+}
+
+@include media-breakpoint-up(md) {
+  .alert {
+    border-radius: $border-radius;
+    display: flex;
+    .icon {
+      display: inline-block;
+    }
+    p.alertmsg {
+      display: none;
+    }
+    &.alert-dismissible {
+      padding-right: 4.6rem;
+      .close {
+        padding: 1.55rem 1.55rem;
+      }
+    }
+  }
+}

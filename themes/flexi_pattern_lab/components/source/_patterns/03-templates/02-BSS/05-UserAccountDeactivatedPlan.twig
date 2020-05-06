@@ -1,0 +1,118 @@
+{% extends 'organisms-dashboard-container' %}
+
+{% block dashboardContent %}
+
+  <div class="card card-normal mb-50">
+    <div class="card-section card-header px-3 px-md-5 pt-4">
+      <div class="d-flex align-items-center justify-content-between justify-content-lg-start">
+        <div>
+          <h4>Internet</h4>
+          <p class="text-muted">123 longstreetname</p>
+        </div>   
+        <div class="pl-md-50">
+          <h4>$35.00</h4>
+          <p class="text-muted">
+            {% include 'atoms-icon-16' with { icon:'clock' } %}
+            <strong>3 days</strong> left
+          </p>
+        </div>
+        <div class="d-none d-lg-flex ml-auto">
+          {% include 'atoms-button-outline' with{ buttonLabel:'Invoices',buttonSize:'xl'} %}
+        </div>
+      </div>
+    </div>
+
+    <div class="card-section card-body d-flex px-2 px-md-5">
+      <div class="col-lg-8 py-4 mx-auto">
+        {% include 'organisms-Deactivated-progress-with-links' with { numberStatus:'warning', gradientcolor:'red',progressValueLabel:'0' ,progressValueProduct:'7 Gigs of data' } %}
+      </div>
+    </div>
+    <div class="card-section card-body d-flex px-2 px-md-5">
+      <div class="col-lg-8 py-4 mx-auto text-center">
+        <h4>Service Deactivated</h4>
+        <p class="text-muted">Your service was deactivated.</p>
+         {% include 'atoms-button-large' with{ buttonLabel:'Reactivate',buttonSize:'xl'} %}
+      </div>
+    </div>
+
+    <div class="card-section card-body px-2 px-md-5 d-flex d-lg-none justify-content-center align-items-center">
+      {% include 'atoms-button-outline' with{ buttonLabel:'Invoices',buttonSize:'xl'} %}
+    </div>
+  </div>
+
+  <div class="card card-normal mb-50">
+    <div class="card-section card-header px-3 px-md-5 pt-4">
+      <div class="d-flex align-items-center justify-content-between justify-content-lg-start">
+        <div>
+          <h4>Internet</h4>
+          <p class="text-muted">123 longstreetname</p>
+        </div>   
+        <div class="pl-md-50">
+          <h4>$35.00</h4>
+          <p class="text-muted">
+            {% include 'atoms-icon-16' with { icon:'clock' } %}
+            <strong>3 days</strong> left
+          </p>
+        </div>
+        <div class="d-none d-lg-flex ml-auto">
+          {% include 'atoms-button-outline' with{ buttonLabel:'Invoices',buttonSize:'xl'} %}
+        </div>
+      </div>
+    </div>
+
+    <div class="card-section card-body d-flex px-2 px-md-5">
+      <div class="col-lg-8 py-4 mx-auto">
+        {% include 'organisms-Deactivated-progress-with-links' with { numberStatus:'warning', gradientcolor:'red',progressValueLabel:'0' ,progressValueProduct:'7 Gigs of data' } %}
+      </div>
+    </div>
+    <div class="card-section card-body d-flex px-2 px-md-5">
+      <div class="col-lg-8 py-4 mx-auto text-center">
+        <h4 class="text-red">Service Interrupted</h4>
+        <p class="text-muted">Please check your payment information.</p>
+         {% include 'atoms-button-large' with{ buttonLabel:'pay', class:'btn-red text-white' ,buttonSize:'xl'} %}
+      </div>
+    </div>
+
+    <div class="card-section card-body px-2 px-md-5 d-flex d-lg-none justify-content-center align-items-center">
+      {% include 'atoms-button-outline' with{ buttonLabel:'Invoices',buttonSize:'xl'} %}
+    </div>
+  </div>
+
+  <div class="card card-normal mb-50">
+    <div class="card-section card-header px-3 px-md-5 pt-4">
+      <div class="d-flex align-items-center justify-content-between justify-content-lg-start">
+        <div>
+          <h4>Internet</h4>
+          <p class="text-muted">123 longstreetname</p>
+        </div>   
+        <div class="pl-md-50">
+          <h4>$35.00</h4>
+          <p class="text-muted">
+            {% include 'atoms-icon-16' with { icon:'clock' } %}
+            <strong>3 days</strong> left
+          </p>
+        </div>
+        <div class="d-none d-lg-flex ml-auto">
+          {% include 'atoms-button-outline' with{ buttonLabel:'Invoices',buttonSize:'xl'} %}
+        </div>
+      </div>
+    </div>
+
+    <div class="card-section card-body d-flex px-2 px-md-5">
+      <div class="col-lg-8 py-4 mx-auto">
+        {% include 'organisms-progress-with-links' with { numberStatus:'warning', gradientcolor:'red',progressValueLabel:'6.5' ,progressValueProduct:'7 Gigs of data', progressValue:'90' } %}
+      </div>
+    </div>
+    <div class="card-section card-body d-flex px-2 px-md-5">
+      <div class="col-lg-8 py-4 mx-auto text-center">
+        <h4 class="text-red">You're using a lot!</h4>
+        <p class="text-muted">At this rythm you're going to need more juice</p>
+         {% include 'atoms-button-large' with{ buttonLabel:'Use an add-on', class:'btn-red text-white' ,buttonSize:'xl'} %}
+      </div>
+    </div>
+
+    <div class="card-section card-body px-2 px-md-5 d-flex d-lg-none justify-content-center align-items-center">
+      {% include 'atoms-button-outline' with{ buttonLabel:'Invoices',buttonSize:'xl'} %}
+    </div>
+  </div>
+{% endblock %}

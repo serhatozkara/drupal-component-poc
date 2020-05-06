@@ -1,0 +1,41 @@
+<fieldset id="{{ date|date("Y-m-j") }}" class="col">
+  {% include 'molecule-time-picker-header' %}
+  
+  {% set range = range(0, 1) %}
+  
+  {% for i in 0..2 %}
+    
+    {% if i == 0 %}
+      
+      {% set state = random(range) %}
+        
+      {% if state == 0 %}
+        {% include 'molecule-time-picker-option-disabled' with { slot: 'morning', slotAbbreviation: 'AM' } %}
+      {% else %}
+        {% include 'molecule-time-picker-option' with { slot: 'morning', slotAbbreviation: 'AM' } %}
+      {% endif %}
+    
+    {% elseif i == 1 %}
+    
+      {% set state = random(range) %}
+    
+      {% if state == 0 %}
+        {% include 'molecule-time-picker-option-disabled' with { slot: 'afternoon', slotAbbreviation: 'PM' } %}
+      {% else %}
+        {% include 'molecule-time-picker-option' with { slot: 'afternoon', slotAbbreviation: 'PM' } %}
+      {% endif %}
+      
+    {% elseif i == 2 %}
+      
+      {% set state = random(range) %}
+      
+      {% if state == 0 %}
+        {% include 'molecule-time-picker-option-disabled' with { slot: 'evening', slotAbbreviation: 'EVE' } %}
+      {% else %}
+        {% include 'molecule-time-picker-option' with { slot: 'evening', slotAbbreviation: 'EVE' } %}
+      {% endif %}
+    {% endif %}
+    
+  {% endfor %}
+  
+</fieldset>

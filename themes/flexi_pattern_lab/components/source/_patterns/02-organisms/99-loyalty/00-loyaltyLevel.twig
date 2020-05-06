@@ -1,0 +1,30 @@
+<div class="card card-normal card-sidebar">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item p-4 d-flex flex-column">
+      <div class="d-flex h3">
+        <span class="text-green">Level {{ level|default('7') }}</span>
+      </div>
+      {% include 'atoms-progress-slider' with{gradientcolor:'green',classes:'progress-small'} %}
+    </li>
+    <li class="list-group-item p-4 px-md-0 px-xl-4 d-flex align-items-center justify-content-between">
+      <div>
+        <div class="d-flex justify-content-center">
+          {% include 'atoms-numbers-stroke' with { color:'green',strokeColor:'green', number:'10' } %}
+        </div>
+        <span class="text-gray mb-0"><strong>Upgrades</strong></span>
+      </div>
+      <div>
+        <div class="d-flex justify-content-center">
+        {% include 'atoms-numbers-stroke' with { color:'green',strokeColor:'green', number:'12' } %}
+        </div>
+        <span class="text-gray mb-0"><strong>Badges</strong></span>
+      </div>
+      <div>
+        <div class="d-flex justify-content-center">
+          {% include 'atoms-numbers-stroke' with { color:'green',strokeColor:'green', number:'9' } %}
+        </div>
+        <span class="text-gray mb-0"><strong>Rewards</strong></span>
+      </div>
+    </li>
+  </ul>
+</div>

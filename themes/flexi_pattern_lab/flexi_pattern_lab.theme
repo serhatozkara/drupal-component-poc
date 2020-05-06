@@ -1,0 +1,13 @@
+<?php
+/**
+ * @file
+ * HTML template functions.
+ */
+
+
+function flexi_pattern_lab_preprocess_node(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node) {
+    $variables['title'] = $node->getTitle();
+  }
+}

@@ -1,0 +1,5 @@
+<div class="container accordion-list py-5">
+  {% for listItem in listItems.three %}
+    {% include "molecule-accordion-item" with { titleLong: listItem.titleLong, inlineAnchor: listItem.inlineAnchor } %}
+  {% endfor %}
+</div>

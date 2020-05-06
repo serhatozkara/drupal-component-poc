@@ -1,0 +1,29 @@
+{% include "organisms-top-navigation-logged-in" %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 col-lg-3 dashboard-sidebar bg-white">
+      <div class="dashboard-sidebar-nav">
+
+        <div class="dashboard-user-name bg-lightest-gray d-none d-md-block px-md-5 py-3">
+          <h4>John D.</h4>
+        </div>
+
+        {% include 'organisms-dashboard-main-nav' %}
+        <div class="d-none d-md-block mx-4 pt-2 pb-4">
+          {% include 'organisms-loyaltyLevel' %}
+        </div>
+        {% include 'organisms-dashboard-actions' %}
+      </div>
+    </div>
+
+    <div class="col-md-8 col-lg-9 ml-sm-auto d-flex flex-column justify-content-between dashboard-content">
+      <div class="py-5 px-md-5">
+        {% block dashboardContent %}{% endblock %}
+      </div>
+
+      {% include 'organisms-footer' %}
+
+    </div>
+  </div>
+</div>

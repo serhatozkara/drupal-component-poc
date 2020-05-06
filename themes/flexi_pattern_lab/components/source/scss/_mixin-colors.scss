@@ -1,0 +1,39 @@
+
+@each $color, $value in $colors {
+  // This allows us to create a list of background colors from the $colors map.
+  @include bg-variant(".bg-#{$color}", $value);
+  // class .text-$color
+  .text-#{$color},.text-#{$color} a { color: $value};
+  // Icon Stroke Color
+  svg.fi-#{$color} {stroke: $value};
+  svg.stroke-#{$color} {stroke: $value};
+  svg.fill-#{$color} {fill: $value};
+  .numbers-stroke.numbers-stroke-#{$color}{border-color:$value};
+}
+
+// Manually created list of limited gradient choices
+.bg-gradient-dark-blue {
+  background: linear-gradient(#191c52, #323778);
+}
+
+.bg-gradient-blue {
+  background: linear-gradient(#001cc3, #2382ff);
+}
+
+.bg-gradient-light-blue {
+  // background: linear-gradient(#f5faff, #bef0ff);
+  background: linear-gradient(#fff, #baeafa);
+}
+
+// Fills the colors of SVGs
+@each $color, $value in $colors {
+  .svg-fill-#{$color} path {
+    fill: #{$value};
+  }
+}
+
+@each $color, $value in $colors {
+  .svg-fill-#{$color} g {
+    fill: #{$value};
+  }
+}

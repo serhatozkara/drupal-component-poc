@@ -1,0 +1,40 @@
+{% extends 'organisms-dashboard-container' %}
+
+{% block dashboardContent %}
+  <div class="py-50 py-md-120 bg-lightest-gray">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-12 mb-5">
+          <a class="text-muted d-flex align-item-center" href="#">
+            {% include'atoms-icon-24' with {icon:'chevron-left',color:' text-muted'} %}Plans and Billing
+          </a>
+        </div>
+
+        <div class="col-12 text-center mb-4">
+          <h1>Usage</h1>
+          <p class="text-muted">See your daily consumption</p>
+        </div>
+
+        <div class="col-12 mb-5">
+          {% include 'molecule-time-navigation' %}
+        </div>
+
+        <div class="col-12 mb-5">
+          <div class="card p-4 mb-4">
+            <div class="col-12 text-center mb-4">
+              <h2 class="text-electric-blue">4 GB left</h2>
+              <p class="text-muted d-inline-flex">{% include'atoms-icon' with {icon:'clock', color: 'text-muted', classes: 'mx-1', size: '16'} %} 27 days left in this billing cycle</p>
+              <p><a href="#" class="link text-muted d-inline-flex">Show usage history</a></p>
+            </div>
+            {% include 'organisms-data-blocks' %}
+            <div class="col-12 mb-5 col-lg-4 offset-lg-4 mt-5 text-center">
+              {% include 'atoms-button' with{ buttonLabel:'History',buttonSize:'l', classes:'btn-block'} %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

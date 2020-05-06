@@ -1,0 +1,35 @@
+.sidebar-right {
+	h2.block__title {
+		font-size: 1.250em;
+    border-bottom: 2px solid rgb(155, 196, 81);
+    color: #000;
+    padding: 5px 0;
+    text-transform: capitalize
+	}
+	.block {
+		margin: 0 0 25px;
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+			li {
+				margin: 0;
+				padding: 5px 0;
+				border-bottom: 1px dotted #ccc;
+				&:last-child {
+					border-bottom: none;
+				} span
+				p, span{
+					font-weight: 500;
+					font-size: 0.850em;
+					line-height: 18px;
+				}
+				a {
+					font-size:1em;
+					line-height: 18px;
+					display: block;
+				}
+			}
+		}
+	}
+}

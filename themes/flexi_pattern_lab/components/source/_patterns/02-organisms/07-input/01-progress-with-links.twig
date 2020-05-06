@@ -1,0 +1,12 @@
+<div class="progress-with-links-container">
+  <h4 class="d-inline-block alert-numbers">{{ progressValueLabel|default(6) }}</h4>
+  <p class="text-muted d-inline-block">/ {{ progressValueProduct|default('x Gigs of data') }}</p>
+  <div class="d-flex">
+    {% include 'atoms-progress-slider' with { direction:'descending' } %}
+  </div>
+  <div class="d-flex justify-content-center justify-content-xl-start mt-3 mt-sm-4">
+    {% include 'atoms-button-link' with { buttonLabel:'Usage', active:'active', classes:'mr-10-percent' } %}
+    {% include 'atoms-button-link' with { buttonLabel:'Add-on', classes:'mr-10-percent' } %}
+    {% include 'atoms-button-link' with { buttonLabel:'Give', classes:'mr-10-percent' } %}
+  </div>
+</div>

@@ -1,0 +1,40 @@
+{% set uuid = uniqueID|default(random()) %}
+  
+<div class="upgrade upgrade-overlay" data-toggle="modal" data-target="#modal-{{ uuid }}">
+  <span class="fs-12">Swapping</span>
+  <img src="/images/upgrades/upgrade.png" class="img-fluid card card-rounder hover-lifted">
+</div>
+
+<div class="modal fade" id="modal-{{ uuid }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="fi fi-32 fi-grey">
+              <use xlink:href="/images/icons/feather-sprite.svg#x" href="/images/icons/feather-sprite.svg#x"/>
+            </svg>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        <h4 class="text-center">Upgrade swap</h4>
+        
+        <div class="d-flex justify-content-around my-3">
+          
+          <div><img src="/images/upgrades/upgrade.png" class="img-fluid card card-rounder"></div>
+          <div class="mx-3 align-self-center">with</div>
+          <div><img src="/images/upgrades/upgrade.png" class="img-fluid card card-rounder"></div>
+          
+        </div>
+
+        <p class="text-muted text-center">{{ upgradekModalDetails|default('Would you like a different Upgrade? You’ll see the change at the beginning of your next billing cycle.') }}</p>
+        <div class="text-center">
+          <button type="button" class="btn btn-outline-dark btn-xl" data-dismiss="modal" aria-label="Cancel">Cancel</button>
+          <button type="button" class="btn btn-primary btn-xl" data-dismiss="modal" aria-label="Swap">Swap</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>

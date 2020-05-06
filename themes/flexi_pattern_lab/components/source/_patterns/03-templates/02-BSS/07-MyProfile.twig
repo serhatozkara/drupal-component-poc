@@ -1,0 +1,317 @@
+{% extends 'organisms-dashboard-container' %}
+
+{% block dashboardContent %}
+
+<h2 class="text-center">My Profile</h2>
+
+<h4>Actions</h4>
+
+<div class="card p-4 mb-5">
+  <ul class="list-unstyled mb-0 dashboard-actions">
+    <div class="row">
+      <div class="col-md-6">
+        <li>
+          <a class="flex-fill text-center text-md-left d-flex align-items-center mb-3" href="#">
+            {% include 'atoms-icon-24' with { icon: 'users' } %}
+            <span class="ml-3">Invite friends</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="flex-fill text-center text-md-left d-flex align-items-center mb-3" href="#">
+            {% include 'atoms-icon-24' with { icon: 'trending-up' } %}
+            <span class="ml-3">Referral bonuses</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="flex-fill text-center text-md-left d-flex align-items-center mb-3" href="#">
+            {% include 'atoms-icon-24' with { icon: 'gift' } %}
+            <span class="ml-3">Gift data</span>
+          </a>
+        </li>
+      </div>
+      <div class="col-md-6">
+        <li>
+          <a class="flex-fill text-center text-md-left d-flex align-items-center mb-3" href="#">
+            {% include 'atoms-icon-24' with { icon: 'log-in' } %}
+            <span class="ml-3">Social logins</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="flex-fill text-center text-md-left d-flex align-items-center mb-3" href="#">
+            {% include 'atoms-icon-24' with { icon: 'book' } %}
+            <span class="ml-3">Manage contacts</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="flex-fill text-center text-md-left d-flex align-items-center mb-3" href="#">
+            {% include 'atoms-icon-24' with { icon: 'clipboard' } %}
+            <span class="ml-3">Order history</span>
+          </a>
+        </li>
+      </div>
+    </div>
+  </ul>
+
+</div>
+
+<h4>Information</h4>
+
+<div class="card p-4 mb-5">
+
+  <h5>Main Information</h5>
+
+  <form class="mb-5">
+    <div class="form-row">
+      <div class="col-12 col-lg-6">
+        {% include 'atoms-input-with-label-top' with { formLabel: 'Name', placeholder: 'John Doe' } %}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-12 col-lg-4">
+        {% include 'atoms-input-with-label-top' with { formLabel: 'Birth date', placeholder: '13 / 11 / 1974' } %}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-12 col-lg-6">
+        {% include 'atoms-input-with-label-top' with { formLabel: 'Email address', placeholder: 'bookmark@gmail.com' } %}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-12 col-lg-6">
+        {% include 'atoms-input-with-label-top' with { formLabel: 'Password', placeholder: '•••••••••' } %}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-12 col-lg-8">
+        {% include 'atoms-input-with-label-top' with { formLabel: 'Security question: What is your mother\s birth name?', placeholder: 'Tremblant' } %}
+      </div>
+    </div>
+  </form>
+
+  <h5>Shipping Information</h5>
+
+  <form class="mb-5">
+    <div class="form-row">
+      <div class="col-12">
+        {% include 'atoms-input-with-label-top' with { formLabel: 'Shipping address 1', placeholder: '660 9e Avenue, Lachine, Montreal, Quebec, H8S3C4, Canada' } %}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="col-12">
+        {% include 'atoms-input-with-label-top' with { formLabel: 'Shipping address 2', placeholder: '660 9e Avenue, Lachine, Montreal, Quebec, H8S3C4, Canada' } %}
+      </div>
+    </div>
+  </form>
+
+  <h5>Payment Information</h5>
+
+  {% include 'atoms-link-arrow' with { text: 'See my payment information' } %}
+
+  <h5 class="mt-5">Legal permission (optional)</h5>
+
+  <p class="text-muted">This information will allow us the identify your trust person.<br> Please fill the following inputs about the person your want to give access to.</p>
+
+  <form class="mb-5">
+    <div class="form-row">
+      <div class="col-12 col-lg-6">
+        {% include 'atoms-input' with { placeholder: 'Full name' } %}
+      </div>
+
+      <div class="col-12">
+        {% include 'atoms-input-with-label-top' with { formLabel: 'Date of birth', placeholder: 'DD / MM / YYYY' } %}
+      </div>
+    </div>
+
+    <p class="text-muted">What is their mother's birth name?</p>
+
+    <div class="form-row">
+      <div class="col-12">
+        {% include 'atoms-input' with { placeholder: 'Maiden name' } %}
+      </div>
+    </div>
+  </form>
+
+  <div class="mx-auto">
+    {% include 'atoms-button-outline-large' with { buttonLabel: 'Cancel', classes: 'mr-2' } %}
+    {% include 'atoms-button-large' with { buttonLabel: 'Save' } %}
+  </div>
+
+</div>
+
+<h4>Settings</h4>
+
+<div class="py-4 mb-5">
+  <div class="settings-drawer row no-gutters">
+
+    <div class="settings-nav col-12 col-lg-5">
+      <div class="list-group" id="myList" role="tablist">
+        <a class="list-group-item list-group-item-action d-flex justify-content-between active" data-toggle="list" href="#language" role="tab">
+          Language
+          {% include 'atoms-icon-24' with { icon: 'chevron-right' } %}
+        </a>
+        <a class="list-group-item list-group-item-action d-flex justify-content-between" data-toggle="list" href="#communication" role="tab">
+          Account communication preferences
+          {% include 'atoms-icon-24' with { icon: 'chevron-right' } %}
+        </a>
+        <a class="list-group-item list-group-item-action d-flex justify-content-between" data-toggle="list" href="#usage" role="tab">
+          Usage alerts
+          {% include 'atoms-icon-24' with { icon: 'chevron-right' } %}
+        </a>
+        <a class="list-group-item list-group-item-action d-flex justify-content-between" data-toggle="list" href="#privacy" role="tab">
+          Privacy
+          {% include 'atoms-icon-24' with { icon: 'chevron-right' } %}
+        </a>
+        <a class="list-group-item list-group-item-action d-flex justify-content-between" data-toggle="list" href="#rewardsmobile" role="tab">
+          Rewards mobile
+          {% include 'atoms-icon-24' with { icon: 'chevron-right' } %}
+        </a>
+      </div>
+    </div>
+
+
+    <div class="settings-content col-12 col-lg-7 bg-white">
+      <div class="tab-content">
+
+        <div class="tab-pane bg-white active fade show" id="language" role="tabpanel">
+          <div class="p-3 p-md-5">
+            <form class="mb-5">
+              {% include 'atoms-block-radio-text-center-small' with { labelName: 'English', inputNumber: 'english' } %}
+              {% include 'atoms-block-radio-text-center-small' with { labelName: 'Francais', inputNumber: 'francais' } %}
+            </form>
+
+            <div class="text-center">
+              {% include 'atoms-button-outline-large' with { buttonLabel: 'Cancel changes', classes: 'mr-2' } %}
+              {% include 'atoms-button-large' with { buttonLabel: 'Save changes' } %}
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane bg-white fade" id="communication" role="tabpanel">
+          <div class="p-3 p-md-5">
+            <form id="communication-preference">
+              <div class="custom-control custom-radio">
+                <input type="radio" id="communication-preference-sms" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="communication-preference-sms">By text message</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="communication-preference-email" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="communication-preference-email">By email</label>
+              </div>
+            </form>
+
+            <div class="mb-5">
+              {% include 'organisms-text-toggle' with { inputContainerID: 'newsAlerts', checkedStatus: 'checked', productName: 'News alerts', productDescription: 'I want to be first to know about new features and events.' } %}
+              {% include 'organisms-text-toggle' with { inputContainerID: 'myRewards', checkedStatus: 'checked', productName: 'My rewards', productDescription: 'I want to be notified about my progress.' } %}
+              {% include 'organisms-text-toggle' with { inputContainerID: 'referral', checkedStatus: 'checked', productName: 'Referral bonuses', productDescription: 'Alert me when I earn referral bonuses, or when a bonus is unlocked.' } %}
+              {% include 'organisms-text-toggle' with { inputContainerID: 'creditCard', checkedStatus: 'checked', productName: 'Credit card reminder', productDescription: 'Send a heads-up before my credit card expires — I don’t want to find out the hard way.' } %}
+            </div>
+
+            <div class="text-center">
+              {% include 'atoms-button-outline-large' with { buttonLabel: 'Cancel changes', classes: 'mr-2' } %}
+              {% include 'atoms-button-large' with { buttonLabel: 'Save changes' } %}
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tab-pane bg-white fade" id="usage" role="tabpanel">
+          <div class="p-3 p-md-5">
+            <form id="usage-preference">
+              <div class="custom-control custom-radio">
+                <input type="radio" id="usage-preference-sms" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="usage-preference-sms">By text message</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="usage-preference-email" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="usage-preference-email">By email</label>
+              </div>
+            </form>
+
+            <p>Tell me when I've used up:</p>
+
+            <form id="usage-amount">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="usage-amount-75">
+                <label class="custom-control-label" for="usage-amount-75">75%</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="usage-amount-90">
+                <label class="custom-control-label" for="usage-amount-90">90%</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="usage-amount-100" disabled checked>
+                <label class="custom-control-label" for="usage-amount-100">100%</label>
+              </div>
+              <p class="text-muted">You will always be alerted at 100%</p>
+            </form>
+
+            <div class="mb-5">
+              {% include 'organisms-text-toggle' with { inputContainerID: 'transactionAlert', checkedStatus: 'checked', productName: 'Transaction confirmations & failures', productDescription: 'Always send me my transaction details.' } %}
+
+              {% include 'organisms-text-toggle' with { inputContainerID: 'walletAlert', checkedStatus: 'checked', productName: 'Wallet', productDescription: 'Update me about activity in my wallet.' } %}
+
+              {% include 'organisms-text-toggle' with { inputContainerID: 'roamingAlert', checkedStatus: 'checked', productName: 'Roaming text alerts', productDescription: 'Text me when I leave my service area and switch to roaming.' } %}
+
+              {% include 'organisms-text-toggle' with { inputContainerID: 'smarterDataAlert', checkedStatus: 'checked', productName: 'Smarter data', productDescription: 'I want personalized recommendations on how to best manage my data, plans, gifting options, etc.' } %}
+          </div>
+
+            <div class="text-center">
+              {% include 'atoms-button-outline-large' with { buttonLabel: 'Cancel changes', classes: 'mr-2' } %}
+              {% include 'atoms-button-large' with { buttonLabel: 'Save changes' } %}
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tab-pane bg-white fade" id="privacy" role="tabpanel">
+          <div class="p-3 p-md-5">
+
+            <form id="privacy-settings" class="mb-5">
+              {% include 'atoms-block-radio-text-center-small' with { labelName: 'The full experience', inputNumber: 'privacy-default' } %}
+              {% include 'atoms-block-radio-text-center-small' with { labelName: 'Private membership', inputNumber: 'privacy-private' } %}
+              {% include 'atoms-block-radio-text-center-small' with { labelName: 'Incognito', inputNumber: 'privacy-incognito' } %}
+            </form>
+
+            <div class="text-center">
+              {% include 'atoms-button-outline-large' with { buttonLabel: 'Cancel changes', classes: 'mr-2' } %}
+              {% include 'atoms-button-large' with { buttonLabel: 'Save changes' } %}
+            </div>
+
+          </div>
+        </div>
+
+          <div class="tab-pane bg-white fade" id="rewardsmobile" role="tabpanel">
+            <div class="p-3 p-md-5">
+
+              <form id="rewards-mobile" class="mb-5">
+                {% include 'atoms-block-radio-text-center-small' with { labelName: 'John Doe - 514 759 5017', inputNumber: 'rewards1' } %}
+                {% include 'atoms-block-radio-text-center-small' with { labelName: 'Lisa Doe - 514 585 9596', inputNumber: 'rewards2' } %}
+              </form>
+
+              <div class="text-center">
+                {% include 'atoms-button-outline-large' with { buttonLabel: 'Cancel changes', classes: 'mr-2' } %}
+                {% include 'atoms-button-large' with { buttonLabel: 'Save changes' } %}
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+{% endblock %}

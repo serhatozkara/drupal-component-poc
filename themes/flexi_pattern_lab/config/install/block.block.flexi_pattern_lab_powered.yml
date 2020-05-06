@@ -1,0 +1,22 @@
+uuid: d3575a68-152f-4db0-b745-330c59bc602b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - flexi_pattern_lab
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: flexi_pattern_lab_powered
+theme: flexi_pattern_lab
+region: footer_bottom
+weight: -6
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

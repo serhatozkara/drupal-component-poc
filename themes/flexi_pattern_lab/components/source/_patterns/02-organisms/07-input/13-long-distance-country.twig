@@ -1,0 +1,23 @@
+<div id="viewPayAsYouGo" class="row {{ collapse|default('collapse') }}">
+  <div class="col-12">
+    <div class="list-group mb-4">
+      <div class="list-group-item list-group-item-action">
+        <h6>Germany</h6>
+        <div>
+          <a href class="link" data-toggle="modal" data-target="#modalzone1">Zone 1</a>
+        </div>
+        <small>Pay per usage price is for all countries in Zone 1!</small>
+        <p><strong>$0,03</strong> / per minutes</p>
+      </div>
+
+      <div class="list-group-item list-group-item-footer d-flex">
+        <div class="pr-2">
+          {% include 'atoms-icon' with{ color:'gray', size:'24',icon:'info' } %}
+        </div>
+        <p>{{ footerNote|default('Note: You can also add money to your wallet to Pay As You Go for additional long distance not in your plan.') }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include 'organisms-modal-zone-info' with{zoneNumber:'1'} %}

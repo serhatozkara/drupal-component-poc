@@ -1,0 +1,32 @@
+.nav-tab a {
+  font-family: "Bookmark";
+  font-weight: bold;
+
+  &:not(.active) {
+    color: $gray;
+  }
+
+  &.active,
+  &:hover {
+    color: $black;
+    text-decoration: none;
+    border-bottom: 3px solid $green;
+    padding-bottom: 6px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    font-size: 1.2em;
+  }
+}
+
+.tab-content form,
+.tab-content .scrollbar {
+  label:hover {
+    cursor: pointer;
+    background: $green;
+  }
+
+  input:checked+label {
+    background: $green;
+  }
+}

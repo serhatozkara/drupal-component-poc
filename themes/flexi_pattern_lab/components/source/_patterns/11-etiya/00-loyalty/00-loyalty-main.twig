@@ -1,0 +1,997 @@
+{% extends 'organisms-dashboard-container' %} {% block dashboardContent %}
+
+<div id="loyalty" class="bg-lightest-gray">
+    <div class="container">
+        <div class="col-lg-9 col-md-12 col-sm-12">
+
+            <div class="row">
+                <div class="col-12 mb-50">
+                    <a class="text-muted d-flex align-item-center" href="#" title="#">{% include'atoms-icon-24' with {icon:'chevron-left',color:' text-muted'} %}Overview</a>
+                </div>
+                <div class="col-12 text-center mb-30">
+                    <h3>Loyalty</h3></div>
+                <div class="col-12 mb-50"><h4>Perks</h4></div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="d-inline-block">John D.</h4>
+                    <p class="text-muted d-inline-block ml-3">438 921 1104</p>
+                </div>
+
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col col-4 text-center align-middle">
+                            <div class="d-flex my-2 my-md-3 perks-box align-items-center">
+                                <div class="col">
+                                    <div class="col-12"><img src="/images/perks-phone.svg" class="img-fluid d-block mx-auto mb-3"></div>
+                                    <div class="col-12">
+                                        <h6 class="text-center">Text Message</h6>
+                                        <p class="text-center text-muted">Unlimited</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-4 text-center align-middle">
+                            <div class="d-flex my-2 my-md-3 perks-box align-items-center">
+                                <div class="col">
+                                    <div class="col-12"><img src="/images/perks-plus.svg" class="img-fluid d-block mx-auto mb-3"></div>
+                                    <div class="col-12">
+                                        <p class="text-center text-muted">Add a perk here</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-4 text-center align-middle">
+                            <div class="d-flex my-2 my-md-3 perks-box-locked align-items-center">
+                                <div class="col">
+                                    <div class="col-12"><img src="/images/perks-lock.svg" class="img-fluid d-block mx-auto mb-3"></div>
+                                    <div class="col-12">
+                                        <p class="text-center text-muted">Perks locked</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 mt-30">
+                        <div class="text-center">
+                            <button type="button" class="btn btn-primary">Manage your perks</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-50">
+                    <h4 class="d-inline-block">John D.</h4>
+                    <p class="text-muted d-inline-block ml-3">438 921 1104</p>
+                </div>
+
+                <div class="col-12">
+
+                    <div class="row">
+                        <div class="col col-4 text-center align-middle">
+                            <div class="d-flex my-2 my-md-3 perks-box align-items-center">
+                                <div class="col">
+                                    <div class="col-12"><img src="/images/perks-phone.svg" class="img-fluid d-block mx-auto mb-3"></div>
+                                    <div class="col-12">
+                                        <h6 class="text-center">Text Message</h6>
+                                        <p class="text-center text-muted">Unlimited</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-4 text-center align-middle">
+                            <div class="d-flex my-2 my-md-3 perks-box align-items-center">
+                                <div class="col">
+                                    <div class="col-12"><img src="/images/perks-plus.svg" class="img-fluid d-block mx-auto mb-3"></div>
+                                    <div class="col-12">
+                                        <p class="text-center text-muted">Add a perk here</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-4 text-center align-middle">
+                            <div class="d-flex my-2 my-md-3 perks-box-locked align-items-center">
+                                <div class="col">
+                                    <div class="col-12"><img src="/images/perks-lock.svg" class="img-fluid d-block mx-auto mb-3"></div>
+                                    <div class="col-12">
+                                        <p class="text-center text-muted">Perks locked</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-12">
+
+                    <div class="col-12 mt-4">
+                        <div class="text-center">
+                            <button type="button" class="btn btn-primary">Manage your perks</button>
+                        </div>
+                    </div>
+
+                    <div class="row mt-50">
+                        <div class="col-lg-3">
+                            <h4>Rewards</h4></div>
+                        <div class="col-lg-9 text-right pt-1 mobile-text-left">
+                            <span class="text-red pt-1"><img src="/images/loyalty-warning.svg" class="mr-3" />Some rewards are about to expire</span>
+                        </div>
+                    </div>
+
+                    <ul class="nav nav-tabs mt-30 custom-nav-tabs" role="tablist">
+                        <li class="nav-item"><a class="nav-link show active" href="#inUse" role="tab" data-toggle="tab" aria-selected="true"><h5>In Use</h5></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#unlocked" role="tab" data-toggle="tab" aria-selected="false"><h5>Unlocked</h5></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#expired" role="tab" data-toggle="tab" aria-selected="false"><h5>Expired</h5></a></li>
+                    </ul>
+
+                    <div class="tab-content custom-tab-content mb-50">
+                        <div role="tabpanel" class="tab-pane fade in  active show" id="inUse">
+                            <div class="row">
+                                <div class="container">
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="flip-card gift-card black">
+                                                <div class="card-front">
+                                                    <div class="row">
+                                                        <div class="col-12 logo"><img src="/images/uber.svg" alt=""></div>
+                                                        <div class="col-6 title text-white">-$10 on your next ride</div>
+                                                        <div class="col-6 date text-gray">14 hours left</div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-back">
+                                                    <div class="row">
+                                                        <h4 class="col-12 back-title">Free Taxi Ride</h4>
+                                                        <h6 class="col-12 color-gray">Get a cab right now!</h6>
+                                                        <p class="col-12 pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                                        <div class="col-4"><small>4 days left</small></div>
+                                                        <div class="col-8 text-right">
+                                                            <button class="btn btn-outline-dark">Give</button>
+                                                            <button class="btn btn-primary">Use</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="flip-card gift-card">
+                                                <div class="card-front">
+                                                    <div class="row">
+                                                        <div class="col-12 logo"><img src="/images/hm.svg" alt=""></div>
+                                                        <div class="col title">15% off on your order</div>
+                                                        <div class="col date text-gray">Valid until
+                                                            <br>22.03.2018</div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-back">
+                                                    <div class="row">
+                                                        <h4 class="col-12 back-title">Free Taxi Ride</h4>
+                                                        <h6 class="col-12 color-gray">Get a cab right now!</h6>
+                                                        <p class="col-12 pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                                        <div class="col-4"><small>4 days left</small></div>
+                                                        <div class="col-8 text-right">
+                                                            <button class="btn btn-outline-dark">Give</button>
+                                                            <button class="btn btn-primary">Use</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="flip-card gift-card">
+                                                <div class="card-front">
+                                                    <div class="row">
+                                                        <div class="col-12 logo"><img src="/images/stm.svg" alt=""></div>
+                                                        <div class="col title">Free pass for a ride</div>
+                                                        <div class="col date text-gray">1 week left</div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-back">
+                                                    <div class="row">
+                                                        <h4 class="col-12 back-title">Free Taxi Ride</h4>
+                                                        <h6 class="col-12 color-gray">Get a cab right now!</h6>
+                                                        <p class="col-12 pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                                        <div class="col-4"><small>4 days left</small></div>
+                                                        <div class="col-8 text-right">
+                                                            <button class="btn btn-outline-dark">Give</button>
+                                                            <button class="btn btn-primary">Use</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="flip-card gift-card">
+                                                <div class="card-front">
+                                                    <div class="row">
+                                                        <div class="col-12"><img class="logo-reset" src="/images/mask.svg" alt=""></div>
+                                                        <div class="col title-reset text-white">Free pass for a ride</div>
+                                                        <div class="col date-reset text-gray">1 week left</div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-back">
+                                                    <div class="row">
+                                                        <h4 class="col-12 back-title">Free Taxi Ride</h4>
+                                                        <h6 class="col-12 color-gray">Get a cab right now!</h6>
+                                                        <p class="col-12 pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                                        <div class="col-4"><small>4 days left</small></div>
+                                                        <div class="col-8 text-right">
+                                                            <button class="btn btn-outline-dark">Give</button>
+                                                            <button class="btn btn-primary">Use</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="unlocked">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="flip-card gift-card dark-blue">
+                                        <div class="card-front">
+                                            <div class="row">
+                                                <div class="col-12 logo"><img src="/images/newlook.svg" alt=""></div>
+                                                <div class="col title text-white">Free consultation</div>
+                                                <div class="col date text-gray">Valid until tomorrow</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-back">
+                                            <div class="row">
+                                                <h4 class="col-12 back-title">Free Taxi Ride</h4>
+                                                <h6 class="col-12 color-gray">Get a cab right now!</h6>
+                                                <p class="col-12 pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                                <div class="col-4"><small>4 days left</small></div>
+                                                <div class="col-8 text-right">
+                                                    <button class="btn btn-outline-dark">Give</button>
+                                                    <button class="btn btn-primary">Use</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="flip-card gift-card">
+                                        <div class="card-front">
+                                            <div class="row">
+                                                <div class="col-12"><img class="logo-reset" src="/images/mask.svg" alt=""></div>
+                                                <div class="col title-reset text-white">Free pass for a ride</div>
+                                                <div class="col date-reset text-gray">1 week left</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-back">
+                                            <div class="row">
+                                                <h4 class="col-12 back-title">Free Taxi Ride</h4>
+                                                <h6 class="col-12 color-gray">Get a cab right now!</h6>
+                                                <p class="col-12 pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                                <div class="col-4"><small>4 days left</small></div>
+                                                <div class="col-8 text-right">
+                                                    <button class="btn btn-outline-dark">Give</button>
+                                                    <button class="btn btn-primary">Use</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="flip-card gift-card dark-red">
+                                        <div class="card-front">
+                                            <div class="row">
+                                                <div class="col-12 logo"><img src="/images/five.svg" alt=""></div>
+                                                <div class="col title text-white">French fries offered</div>
+                                                <div class="col date text-white">Valid until
+                                                    <br />18.15.2018</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-back">
+                                            <div class="row">
+                                                <h4 class="col-12 back-title">Free Taxi Ride</h4>
+                                                <h6 class="col-12 color-gray">Get a cab right now!</h6>
+                                                <p class="col-12 pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                                <div class="col-4"><small>4 days left</small></div>
+                                                <div class="col-8 text-right">
+                                                    <button class="btn btn-outline-dark">Give</button>
+                                                    <button class="btn btn-primary">Use</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="expired">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-12 expired">
+                                    <div class="flip-card gift-card">
+                                        <div class="row">
+                                            <div class="col-12 logo"><img src="/images/uber.svg" alt=""></div>
+                                            <div class="col title">-$10 on your next ride</div>
+                                            <div class="col date text-gray">14 hours left</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Badges</h4>
+                    <ul class="nav nav-tabs mt-30 custom-nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active show" href="#superBadges" role="tab" data-toggle="tab" aria-selected="true">
+                                <h5>Super Badges</h5>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#actionBadges" role="tab" data-toggle="tab" aria-selected="false">
+                                <h5>Action Badges</h5>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content custom-tab-content mb-50">
+                        <div role="tabpanel" class="tab-pane fade active show" id="superBadges">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-4 col-6 mb-30 new"><img src="/images/ticket.svg" class="img-fluid" alt=""></div>
+                                    <div class="col-lg-2 col-md-4 col-6 mb-30 new"><img src="/images/umbrella.svg" class="img-fluid" alt=""></div>
+                                    <div class="col-lg-2 col-md-4 col-6 mb-30"><img src="/images/daredevil.svg" class="img-fluid" alt=""></div>
+                                    <div class="col-lg-2 col-md-4 col-6 mb-30"><img src="/images/talk.svg" class="img-fluid" alt=""></div>
+                                    <div class="col-lg-2 col-md-4 col-6 mb-30"><img src="/images/greenBadges.svg" class="img-fluid" alt=""></div>
+                                    <div class="col-lg-2 col-md-4 col-6 mb-30"><img src="/images/daredevil.svg" class="img-fluid" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane fade mt-5" id="actionBadges">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-6 col-6 mb-30 text-center new"><img src="/images/ticket.svg" class="img-fluid" alt=""></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 col-6 mb-30 text-center new"><img src="/images/umbrella.svg" class="img-fluid" alt=""></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 col-6 mb-30 text-center"><img src="/images/daredevil.svg" class="img-fluid" alt=""></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 col-6 mb-30 text-center"><img src="/images/talk.svg" class="img-fluid" alt=""></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 col-6 mb-30 text-center"><img src="/images/greenBadges.svg" class="img-fluid" alt=""></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 col-6 mb-30 text-center"><img src="/images/daredevil.svg" class="img-fluid" alt=""></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 col-6 mb-30 text-center locked"><figure><img src="/images/talk.svg" alt="#" /></figure></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 col-6 mb-30 text-center locked"><figure><img src="/images/greenBadges.svg" class="img-fluid" alt=""></figure></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 col-6 mb-30 text-center locked"><figure><img src="/images/daredevil.svg" class="img-fluid" alt=""></figure></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 col-6 mb-30 text-center locked"><figure><img src="/images/daredevil.svg" class="img-fluid" alt=""></figure></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 col-6 mb-30 text-center locked"><figure><img src="/images/greenBadges.svg" class="img-fluid" alt=""></figure></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-6 col-6 mb-30 text-center locked"><figure><img src="/images/greenBadges.svg" alt="#" /></figure></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+            <div id="management">
+                <div class="title">
+                    <div class="row">
+                        <div class="col-12"><img class="mt-3 arrow-up" src="/images/perks-arrow-down.svg" alt="#" /></div>
+                        <div class="col-12 mt-2"><span>Perk collection</span></div>
+                    </div>
+                </div>
+                <div class="content">
+
+                    <div class="row">
+                    <div class="col-12">
+                        <ul class="nav nav-tabs custom-nav-tabs margin-reset" role="tablist">
+                            <li class="nav-item"><a class="nav-link show active" href="#perkMobile" role="tab" data-toggle="tab" aria-selected="true"><h5>Mobile (16)</h5></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#perkInternet" role="tab" data-toggle="tab" aria-selected="false"><h5>Internet (0)</h5></a></li>
+                        </ul>
+                        </div>
+                    </div>
+
+                        <div class="row">
+                        <div class="col-12">
+                        <div class="tab-content custom-tab-content">
+                            <div role="tabpanel" class="tab-pane fade in  active show" id="perkMobile">
+                                <div class="items">
+                                    <div class="item align-items-center note"><img src="/images/perks-phone.svg" alt="#" /><span>In Use</span></div>
+                                    <div class="item align-items-center note"><img src="/images/perks-phone.svg" alt="#" /><span>Swapping</span></div>
+                                    <div class="item align-items-center note" data-toggle="modal" data-target="#modalNew"><img src="/images/perks-phone.svg" alt="#" /><span>100 MB</span></div>
+                                    <div class="item align-items-center note" data-toggle="modal" data-target="#modalReplace"><img src="/images/perks-phone.svg" alt="#" /><span>100 MB</span></div>
+                                    <div class="item align-items-center note" data-toggle="modal" data-target="#modalRemove"><img src="/images/perks-phone.svg" alt="#" /><span>100 MB</span></div>
+                                    <div class="item align-items-center"><img src="/images/perks-phone.svg" alt="#" /></div>
+                                    <div class="item align-items-center"><img src="/images/perks-phone.svg" alt="#" /></div>
+                                    <div class="item align-items-center"><img src="/images/perks-phone.svg" alt="#" /></div>
+                                    <div class="item align-items-center"><img src="/images/perks-phone.svg" alt="#" /></div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="perkInternet">
+                                <div class="no-items">
+
+                                <div class="col-12">
+                                    <div class="item-big text-center"><img src="/images/perks-phone.svg" alt="#" /></div>
+                                </div>
+                                <p class="col-12 text-center">You have no perks for now!</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+            </div>
+
+
+
+
+<!-- Modal #1 : Start -->
+<div class="modal fade" id="modalNew" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="col text-center mb-30"><img src="/images/perks-phone.svg" alt="#" /></div>
+                <h4 class="text-center">Perk name two lines!</h4>
+                <p class="text-center">+100 MB datas</p>
+                <p class="text-gray text-center">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+                <div class="col text-center"><button type="button" class="d-inline btn btn-primary btn-lg">Apply</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal #1 : End -->
+
+
+
+
+<!-- Modal #2 : Start -->
+<div class="modal fade" id="modalReplace" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4 class="text-center">Replace perk?</h4>
+                <p class="text-center">Do you want to swap?</p>
+                <div class="row">
+                    <div class="col"><img src="/images/perks-phone.svg" width="53" alt="#" /></div>
+                    <div class="col">by</div>
+                    <div class="col"><img src="/images/perks-phone.svg" width="53" alt="#" /></div>
+                </div>
+                <p class="text-gray text-center mt-30">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+                <div class="col text-center">
+                    <button type="button" class="d-inline btn btn-outline-dark btn-lg">Cancel</button>
+                    <button type="button" class="d-inline btn btn-primary btn-lg">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal #2 : End -->
+
+
+<!-- Modal #2 : Start -->
+<div class="modal fade" id="modalRemove" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4 class="text-center">Remove perk?</h4>
+                <p class="text-center">Do you want to remove perk from (device name)?</p>
+                <div class="col text-center"><img src="/images/perks-phone.svg" width="53" alt="#" /></div>
+                <p class="text-gray text-center mt-30">Lorem Ipsum is simply dummy text of the printing and typesetting.</p>
+                <div class="col text-center">
+                    <button type="button" class="d-inline btn btn-outline-dark btn-lg">Cancel</button>
+                    <button type="button" class="d-inline btn btn-primary btn-lg">Remove</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal #2 : End -->
+
+
+<h1>MERHABAAA</h1>
+
+
+
+
+
+
+<style>
+    #loyalty .perks-box {
+        width: 100%;
+        height: 265px;
+        background: #fff;
+        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+    }
+
+    #loyalty .perks-box-locked {
+        width: 100%;
+        height: 265px;
+        background: transparent;
+        border: 2px dotted #DFDFE4;
+        border-radius: 12px;
+    }
+
+    #loyalty .custom-nav-tabs {
+        border: 0;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #loyalty .custom-nav-tabs .nav-item .nav-link {
+        color: #D6D6DC;
+        transition: color .3s ease;
+        border: 0;
+        padding: 0;
+        margin-right: 35px;
+    }
+
+    #loyalty .custom-nav-tabs .nav-item .nav-link.active,
+    #loyalty .custom-nav-tabs .nav-item .nav-link:hover {
+        border: 0;
+        border-bottom: 3px solid #00d672;
+        background-color: transparent;
+    }
+
+    #loyalty .custom-nav-tabs .nav-item .nav-link.active h5,
+    #loyalty .custom-nav-tabs .nav-item .nav-link:hover h5 {
+        color: #3c3c46;
+    }
+
+    #loyalty .custom-nav-tabs .nav-item .nav-link h5 {
+        margin: 0;
+        color: #D6D6DC;
+        padding-bottom: 10px;
+    }
+
+    #loyalty .gift-card {
+        position: relative;
+        width: 100%;
+        min-height: 250px;
+        margin: 0 0 30px 0;
+        background: #fff;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.14583);
+        border-radius: 12px;
+    }
+
+    #loyalty .gift-card .logo {
+        float: left;
+        width: 100%;
+        margin: 50px 0 30px 0;
+        padding: 0 0 0 50px;
+    }
+
+    #loyalty .gift-card .title {
+        padding: 0 0 0 40px;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 31px;
+    }
+
+    #loyalty .gift-card .date {
+        padding: 30px 40px 0 0;
+        text-align: right;
+    }
+
+    #loyalty .gift-card .title-reset,
+    #loyalty .gift-card .date-reset {
+        margin: -20% 0 0 0;
+    }
+
+    #loyalty .gift-card .title-reset {
+        padding: 0 0 0 40px;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 31px;
+    }
+
+    #loyalty .gift-card .date-reset {
+        padding: 30px 40px 0 0;
+        text-align: right;
+    }
+
+    #loyalty .gift-card.black {
+        background-color: #000;
+    }
+
+    #loyalty .gift-card.dark-blue {
+        background-color: #00246C;
+    }
+
+    #loyalty .gift-card.dark-red {
+        background-color: #BB333F;
+    }
+
+    #loyalty .card-back {
+        background: #fff;
+        padding: 40px;
+        border-radius: 11px;
+    }
+
+    #loyalty .card-back h4 {
+        font-size: 1.75rem;
+    }
+
+    #loyalty .card-back h6 {
+        font-size: 12px;
+    }
+
+    #loyalty .card-back p {
+        font-size: 11px;
+        color: #73737d;
+    }
+
+    #loyalty .card-back small {
+        display: inline-block;
+        padding-top: 8px;
+    }
+
+    #loyalty .logo-reset {
+        border-top-left-radius: 13px;
+        border-bottom-left-radius: 13px;
+    }
+
+    #loyalty .expired img,
+    #loyalty .expired .title,
+    #loyalty .expired .date {
+        opacity: 0.3;
+    }
+    #loyalty .new{
+        position: relative;
+    }
+    #loyalty .new::after{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -35px;
+        color: #ff6363;
+        content: 'New';
+        font-weight: 700;
+        text-align: center;
+    }
+    #loyalty .new:before{
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        content: '';
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        margin-top: -5%;
+        background: #ff6363;
+        border-radius: 100%;
+        display: inline-block;
+    }
+    #loyalty .locked,
+    #loyalty .locked img{
+        width: 75px;
+        height: 75px;
+        margin:0;
+        position:relative;
+    }
+
+    #loyalty .locked::after {
+        content:'';
+        display: inline-block;
+        position:absolute;
+        width: 75px;
+        height: 75px;
+        left: 0%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.6) url('/images/lock.svg') center center no-repeat;
+        z-index:1;
+        border-radius: 100%;
+    }
+
+    #loyalty .collection-button {
+        position: fixed;
+        right: 25%;
+        height: 65px;
+        text-align: center;
+        line-height: 65px;
+        bottom: 0;
+        width: 200px;
+        color: #fff;
+        background: #122C48;
+        box-shadow: 2px -20px 30px 0 rgba(0, 0, 0, 0.09);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    #management {
+        position: fixed;
+        bottom: -457px;
+        right: 15%;
+        width: 310px;
+        height: 522px;
+        background: #fff;
+        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 10px 10px 0 0;
+        z-index: 1048;
+    }
+
+    #management .title {
+        display: inline-block;
+        width: 100%;
+        height: 65px;
+        color: #fff;
+        text-align: center;
+        background: #122C48;
+        border-radius: 10px 10px 0 0;
+    }
+
+    #management .content {
+        padding: 10px;
+        padding-left: 20px;
+    }
+
+    .margin-reset {
+        margin: 0 !important;
+    }
+
+    #management h5 {
+        padding: 5px;
+        padding-top: 10px;
+        font-size: 100%;
+        font-weight: normal;
+    }
+
+    .items {
+        margin-top: 30px;
+        padding: 0;
+    }
+
+    .item {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        margin: 0 10px 10px 0;
+        padding: 10px 0 0 0;
+        list-style-type: none;
+        background: #FFFFFF;
+        text-align: center;
+        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+    }
+
+    .item img {
+        display: inline-block;
+        position: relative;
+        width: 35px;
+        height: 55px;
+        z-index: 1;
+    }
+
+    .item span {
+        display: none;
+    }
+
+    .note {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        margin-top: -80px;
+        background: #fff;
+        border-radius: 12px;
+        z-index: 9999;
+    }
+
+    .note img {
+        opacity: 0.2;
+    }
+
+    .note span {
+        display: block;
+        float: left;
+        width: 100%;
+        margin-top: -35px;
+        font-size: 85%;
+        text-align: center;
+    }
+
+    .no-items {
+        padding-top: 35%;
+        text-align: center;
+    }
+
+    .item-big {
+        display: inline-block;
+        width: 120px;
+        height: 120px;
+        margin: 0 10px 10px 0;
+        padding: 10px 0 0 0;
+        list-style-type: none;
+        background: #FFFFFF;
+        text-align: center;
+        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+    }
+
+    .item-big img {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        margin-top: 10px;
+    }
+
+    #management .arrow-up {
+        transform: rotate(180deg);
+    }
+
+    .opened {
+        bottom: 0 !important;
+        transition: all .5s ease 0s;
+    }
+
+    .opened .title img {
+        transform: rotate(0deg) !important;
+        transition: all .8s ease 0s;
+    }
+
+    #actionBadges img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .bottom-btn {
+        float: left;
+        width: 100%;
+        display: inline-block;
+    }
+    /*-----------------------------------------------------------------------------*/
+    @media (max-width: 1170px) {
+        #loyalty .perks-box h6,
+        #loyalty .perks-box p,
+        #loyalty .perks-box-locked p {
+            display: none;
+        }
+        #loyalty .perks-box,
+        #loyalty .perks-box-locked {
+            height: auto;
+            padding: 10% 0 0 0;
+        }
+        #loyalty .perks-box img,
+        #loyalty .perks-box-locked img {
+            width: 48px;
+            height: 48px;
+        }
+        .mobile-text-left {
+            text-align: left !important;
+        }
+        #loyalty .gift-card .title{
+            font-size: 110%;
+        }
+    }
+    /*-----------------------------------------------------------------------------*/
+
+    @media (max-width: 544px) {
+        #loyalty .custom-nav-tabs .nav-item {
+            width: 100%;
+            padding: 0 0 15px 0;
+        }
+    }
+    /*-----------------------------------------------------------------------------*/
+
+
+    .flip-card {
+        position: relative;
+    }
+
+    .flip-card .card-front,
+    .flip-card .card-back {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: transform 500ms;
+        backface-visibility: hidden;
+        overflow: hidden;
+    }
+
+    .flip-card .card-front {
+        transform: perspective(300) rotateY(0);
+        z-index: 900;
+    }
+
+    .flip-card .card-back {
+        transform: rotateY(-180deg);
+        z-index: 800;
+    }
+
+    .flip-card:hover .card-front {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card:hover .card-back {
+        z-index: 950;
+        transform: rotateY(0deg);
+        transform: perspective(300) rotateY(0deg);
+    }
+
+    .flip-card {
+        cursor: pointer;
+        float: left;
+    }
+
+    .flip-card .card-front,
+    .flip-card .card-back {
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .flip-card .card-front {
+        box-sizing: border-box;
+        *zoom: 1;
+    }
+
+    .flip-card .card-back {
+        *zoom: 1;
+    }
+    .modal{
+        z-index: 99999 !important;
+    }
+</style>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

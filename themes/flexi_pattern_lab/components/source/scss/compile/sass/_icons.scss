@@ -1,0 +1,492 @@
+/*
+ * === Icons ===
+ */
+
+
+$placeholder-icon-url: url("../images/favicon_16x16.jpg");
+$placeholder-icon-url: url("../images/favicon_16x16.jpg");
+$loading-white-icon-url: url("../images/favicon_16x16.jpg");
+$loading-black-icon-url: url("../images/favicon_16x16.jpg");
+$loading-gray-icon-url: url("../images/favicon_16x16.jpg");
+$check-icon-url: url("../images/favicon_16x16.jpg");
+$cross-small-icon-url: url("../images/favicon_16x16.jpg");
+$cross-big-icon-url: url("../images/favicon_16x16.jpg");
+$burger-icon-url: url("../images/favicon_16x16.jpg");
+$download-icon-url: url("../images/favicon_16x16.jpg");
+$arrow-left-icon-url: url("../images/favicon_16x16.jpg");
+$arrow-right-icon-url: url("../images/favicon_16x16.jpg");
+$arrow-up-icon-url: url("../images/favicon_16x16.jpg");
+$arrow-down-icon-url: url("../images/favicon_16x16.jpg");
+$dropdown-down-icon-url: url("../images/favicon_16x16.jpg");
+$dropdown-up-icon-url: url("../images/favicon_16x16.jpg");
+$edit-icon-url: url("../images/favicon_16x16.jpg");
+$facebook-icon-url: url("../images/favicon_16x16.jpg");
+$instagram-icon-url: url("../images/favicon_16x16.jpg");
+$linkedin-icon-url: url("../images/favicon_16x16.jpg");
+$pinterest-icon-url: url("../images/favicon_16x16.jpg");
+$twitter-icon-url: url("../images/favicon_16x16.jpg");
+$vimeo-icon-url: url("../images/favicon_16x16.jpg");
+$slack-icon-url: url("../images/favicon_16x16.jpg");
+$google-plus-icon-url: url("../images/favicon_16x16.jpg");
+$email-icon-url: url("../images/favicon_16x16.jpg");
+$play-icon-url: url("../images/favicon_16x16.jpg");
+$simcard-icon-url: url("../images/favicon_16x16.jpg");
+$sipping-icon-url: url("../images/favicon_16x16.jpg");
+$info-icon-url: url("../images/favicon_16x16.jpg");
+$search-icon-url: url("../images/favicon_16x16.jpg");
+$lock-icon-url: url("../images/favicon_16x16.jpg");
+$upload-icon-url: url("../images/favicon_16x16.jpg");
+$check-outline-icon-url: url("../images/favicon_16x16.jpg");
+$add-outine-icon-url: url("../images/favicon_16x16.jpg");
+$bell-icon-url: url("../images/favicon_16x16.jpg");
+$user-icon-url: url("../images/favicon_16x16.jpg");
+$search-icon-url: url("../images/favicon_16x16.jpg");
+$close-icon-url: url("../images/favicon_16x16.jpg");
+$bill-icon-url: url("../images/favicon_16x16.jpg");
+$phone-icon-url: url("../images/favicon_16x16.jpg");
+$logo-icon-url: url("../images/favicon_16x16.jpg");
+$burger-Menu-icon-url: url("../images/favicon_16x16.jpg");
+$save-icon-url: url("../images/favicon_16x16.jpg");
+$post-icon-url: url("../images/favicon_16x16.jpg");
+$post-copy-icon-url: url("../images/favicon_16x16.jpg");
+$info-outline-icon-url: url("../images/favicon_16x16.jpg");
+$more-icon-url: url("../images/favicon_16x16.jpg");
+$less-icon-url: url("../images/favicon_16x16.jpg");
+$warning-sign-icon-url: url("../images/favicon_16x16.jpg");
+$stop-sign-icon-url: url("../images/favicon_16x16.jpg");
+$simcard-nano-icon-url: url("../images/favicon_16x16.jpg");
+$chatbot-icon-url: url("../images/favicon_16x16.jpg");
+$gift-icon-url: url("../images/favicon_16x16.jpg");
+$devices-icon-url: url("../images/favicon_16x16.jpg");
+$rewards-icon-url: url("../images/favicon_16x16.jpg");
+$ebill-icon-url: url("../images/favicon_16x16.jpg");
+$rewards2-icon-url: url("../images/favicon_16x16.jpg");
+$sun-icon-url: url("../images/favicon_16x16.jpg");
+$laptop-icon-url: url("../images/favicon_16x16.jpg");
+$browser-icon-url: url("../images/favicon_16x16.jpg");
+$tablet-icon-url: url("../images/favicon_16x16.jpg");
+$placeholder-icon-url-16: url("../images/favicon_16x16.jpg");
+$placeholder-icon-url-24: url("../images/favicon_24x24.jpg");
+$placeholder-icon-url-32: url("../images/favicon_32x32.jpg");
+$bolt-icon-url: url("../images/bolt.png");
+$search-icon-url: url("../images/search.png");
+
+.icon-left .icon:before{ margin-right: 0.25rem;}
+.icon-right .icon:before{ margin-left: 0.25rem;}
+
+.icon-right {
+  i, span {
+    float:right;
+  }
+}
+
+.icon{
+  display: inline-block;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  &:before{
+    content:' ';
+    display: inline-block;
+    background-repeat: no-repeat;
+    margin: 0 0 -3px 0;
+  }
+  &.icon-placeholder:before {
+    background-image: $placeholder-icon-url-16;
+  }
+  &.icon-16:before{
+    width: 16px;
+    height: 16px;
+    background-image: $placeholder-icon-url-16;
+  }
+  &.icon-24:before{
+    width: 24px;
+    height: 24px;
+    background-image: $placeholder-icon-url-24;
+  }
+  &.icon-32:before{
+    width: 32px;
+    height: 32px;
+    background-image: $placeholder-icon-url-32;
+  }
+  &.icon-64:before{
+    width: 64px;
+    height: 64px;}
+
+  &.icon-placeholder:before {
+    background-image: $placeholder-icon-url;
+    }
+  &.icon-loading-white:before {
+    background-image: $loading-white-icon-url;
+    }
+  &.icon-loading-black:before {
+    background-image: $loading-black-icon-url;
+    }
+  &.icon-loading-gray:before {
+    background-image: $loading-gray-icon-url;
+    }
+  &.icon-check:before {
+    background-image: $check-icon-url;
+    }
+  &.icon-cross-small:before {
+    background-image: $cross-small-icon-url;
+    }
+  &.icon-cross-big:before {
+    background-image: $cross-big-icon-url;
+    }
+  &.icon-burger:before {
+    background-image: $burger-icon-url;
+    }
+  &.icon-download:before {
+    background-image: $download-icon-url;
+    }
+  &.icon-arrow-left:before {
+    background-image: $arrow-left-icon-url;
+    }
+  &.icon-arrow-right:before {
+    background-image: $arrow-right-icon-url;
+    }
+  &.icon-arrow-up:before {
+    background-image: $arrow-up-icon-url;
+    }
+  &.icon-arrow-down:before {
+    background-image: $arrow-down-icon-url;
+    }
+  &.icon-dropdown-down:before {
+    background-image: $dropdown-down-icon-url;
+    }
+  &.icon-dropdown-up:before {
+    background-image: $dropdown-up-icon-url;
+    }
+  &.icon-edit:before {
+    background-image: $edit-icon-url;
+    }
+  &.icon-facebook:before {
+    background-image: $facebook-icon-url;
+    }
+  &.icon-instagram:before {
+    background-image: $instagram-icon-url;
+    }
+  &.icon-linkedin:before {
+    background-image: $linkedin-icon-url;
+    }
+  &.icon-pinterest:before {
+    background-image: $pinterest-icon-url;
+    }
+  &.icon-twitter:before {
+    background-image: $twitter-icon-url;
+    }
+  &.icon-vimeo:before {
+    background-image: $vimeo-icon-url;
+    }
+  &.icon-slack:before {
+    background-image: $slack-icon-url;
+    }
+  &.icon-google-plus:before {
+    background-image: $google-plus-icon-url;
+    }
+  &.icon-email:before {
+    background-image: $email-icon-url;
+    }
+  &.icon-play:before {
+    background-image: $play-icon-url;
+    }
+  &.icon-simcard:before {
+    background-image: $simcard-icon-url;
+    }
+  &.icon-sipping:before {
+    background-image: $sipping-icon-url;
+    }
+  &.icon-info:before {
+    background-image: $info-icon-url;
+    }
+  &.icon-search:before {
+    background-image: $search-icon-url;
+    }
+  &.icon-lock:before {
+    background-image: $lock-icon-url;
+    }
+  &.icon-upload:before {
+    background-image: $upload-icon-url;
+    }
+  &.icon-check-outline:before {
+    background-image: $check-outline-icon-url;
+    }
+  &.icon-add-outine:before {
+    background-image: $add-outine-icon-url;
+    }
+  &.icon-bell:before {
+    background-image: $bell-icon-url;
+    }
+  &.icon-user:before {
+    background-image: $user-icon-url;
+    }
+  &.icon-search:before {
+    background-image: $search-icon-url;
+    }
+  &.icon-close:before {
+    background-image: $close-icon-url;
+    }
+  &.icon-bill:before {
+    background-image: $bill-icon-url;
+    }
+  &.icon-phone:before {
+    background-image: $phone-icon-url;
+    }
+  &.icon-logo:before {
+    background-image: $logo-icon-url;
+    }
+  &.icon-burger-Menu:before {
+    background-image: $burger-Menu-icon-url;
+    }
+  &.icon-save:before {
+    background-image: $save-icon-url;
+    }
+  &.icon-post:before {
+    background-image: $post-icon-url;
+    }
+  &.icon-post-copy:before {
+    background-image: $post-copy-icon-url;
+    }
+  &.icon-info-outline:before {
+    background-image: $info-outline-icon-url;
+    }
+  &.icon-more:before {
+    background-image: $more-icon-url;
+    }
+  &.icon-less:before {
+    background-image: $less-icon-url;
+    }
+  &.icon-warning-sign:before {
+    background-image: $warning-sign-icon-url;
+    }
+  &.icon-stop-sign:before {
+    background-image: $stop-sign-icon-url;
+    }
+  &.icon-simcard-nano:before {
+    background-image: $simcard-nano-icon-url;
+    }
+  &.icon-chatbot:before {
+    background-image: $chatbot-icon-url;
+    }
+  &.icon-gift:before {
+    background-image: $gift-icon-url;
+    }
+  &.icon-devices:before {
+    background-image: $devices-icon-url;
+    }
+  &.icon-rewards:before {
+    background-image: $rewards-icon-url;
+    }
+  &.icon-ebill:before {
+    background-image: $ebill-icon-url;
+    }
+  &.icon-rewards2:before {
+    background-image: $rewards2-icon-url;
+    }
+  &.icon-sun:before {
+    background-image: $sun-icon-url;
+    }
+  &.icon-laptop:before {
+    background-image: $laptop-icon-url;
+    }
+  &.icon-browser:before {
+    background-image: $browser-icon-url;
+    }
+  &.icon-tablet:before {
+    background-image: $tablet-icon-url;
+    }
+  &.icon-bolt:before {
+    background-image: $bolt-icon-url;
+  }
+  &.icon-search:before {
+    background-image: $search-icon-url;
+  }
+}
+
+// Feather Icon Setup
+
+.fi {
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.fi-16 {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.fi-24 {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.fi-32 {
+  width: 32px !important;
+  height: 32px !important;
+}
+
+.fi-48 {
+  width: 48px !important;
+  height: 48px !important;
+}
+
+.fi-64 {
+   width: 64px !important;
+   height: 64px !important;
+
+}
+.fi-128 {
+    width: 128px !important;
+    height: 128px !important;
+}
+.fi-160 {
+    width: 160px !important;
+    height: 160px !important;
+}
+.fi-192 {
+    width: 192px !important;
+    height: 192px !important;
+}
+
+
+// If Feather Icon is inside an <a> tag, use initial black color
+a > .fi {
+  color: initial;
+}
+// Icon Fill Color
+.fi-fill-white {
+  stroke: none;
+  fill: $white;
+}
+
+// Circle Icons
+.fi-circle {
+  // Default Circle Icon Color
+  background-color: $gray;
+  display: inline-block;
+  position: relative;
+
+  > svg {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+  }
+}
+
+.fi-circle-16 {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+}
+
+.fi-circle-24 {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+}
+
+.fi-circle-32 {
+  height: 48px;
+  width: 48px;
+  border-radius: 24px;
+}
+
+.fi-circle-48 {
+  height: 64px;
+  width: 64px;
+  border-radius: 32px;
+}
+
+// Circle Icon Background Colors
+.fi-circle-electric-blue {
+  background: $electric-blue;
+}
+
+.fi-circle-facebook {
+  background: #3b5998;
+}
+
+.fi-circle-instagram {
+  background: #ad0017;
+}
+
+.fi-circle-linkedin {
+  background: #0077B5;
+}
+
+.fi-circle-twitter {
+  background: #1dcaff;
+}
+
+// Custom icon
+.icon-custom-laptop {
+  position: relative;
+  margin-left: 30px;
+
+  &:before {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    content: '';
+    background-image: url('../images/icons/icon-laptop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 25px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+
+    &:before { display: none; }
+  }
+}
+
+.icon-custom-mobile {
+  position: relative;
+  margin-left: 22px;
+
+  &:before {
+    position: absolute;
+    left: -25px;
+    top: 2px;
+    content: '';
+    background-image: url('../images/icons/icon-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 20px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+
+    &:before { display: none; }
+  }
+}
+
+.footer-chevron{
+    a{
+        width: 100%;
+    }
+    svg{
+        float: right;
+        display: none;
+    }
+    [aria-expanded="true"] svg {
+      transform: rotate(-180deg);
+    }
+    [aria-expanded="false"] svg {
+      transform: rotate(0deg);
+    }
+
+}
+@media (max-width: 768px){
+    .footer-chevron svg{
+        display: block;
+    }
+}

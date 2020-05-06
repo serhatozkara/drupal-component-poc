@@ -1,0 +1,14 @@
+{% extends "organisms-dashboard-container" %}
+
+{% block dashboardContent %}
+
+  <h1 class="text-center pt-5">Adjust your plan</h1>
+  <h2 class="text-center text-muted">lorem ipsum</h2>
+  <p class="text-center text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+
+  {% include 'organisms-changePlan-menu' with {formContainerPadding:'py-4'}%}
+  {% include 'organisms-plan' with {formContainerPadding:'py-4 pb-120'}%}
+  {% include 'organisms-price-summary-changePlan' with {classes:'pb-120'}%}
+  {% include 'organisms-price-status' %}
+
+{% endblock %}

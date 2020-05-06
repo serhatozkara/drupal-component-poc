@@ -1,0 +1,4 @@
+<div>
+  <input type="radio" id="{{ date|date("Y-m-j") }}-{{ slot|default('morning') }}" class="radio-timepicker-appointment" value="{{ date|date("Y-m-j") }}-{{ slot|default('morning') }}" name="appointment-date-time" disabled>
+  <label for="{{ date|date("Y-m-j") }}-{{ slot|default('morning') }}">{{ slotAbbreviation|default("A.M.") }}</label>
+</div>

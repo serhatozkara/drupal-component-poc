@@ -1,0 +1,27 @@
+{% set stepValueLabelStyle = 'small' %}
+{% set stepValueLabel = '5631 Boul Saint-Michel<br>Montreal QC H1Y 2E3<br>Canada' %}
+{% set collapseDefault = 'collapse' %}
+{% set formLabel = 'Ship my SIM card order to' %}
+{% set uniqueID= 'shipping-address' %}
+
+{% extends 'organisms-collapsible-form-container' %}
+
+{% block activationForm %}
+
+  <h4 data-form-scroll="yes">Shipping Address</h4>
+
+  {% include 'organisms-radio-list-left' %}
+
+  <div id="add-shipping-address">
+    {% include 'atoms-input' with { placeholder: 'Enter a shipping address'} %}
+  </div>
+
+  <div class="add-shipping-address-link add-address-link">
+    {% include 'atoms-link-element' with {text: '+ Add another shipping address'} %}
+  </div>
+
+  <div class="text-center mt-50">
+    {% include 'atoms-button-icon-right-large' with { buttonLabel: 'Save', icon: 'arrow-right', uniqueID: uuid} %}
+  </div>
+
+{% endblock %}

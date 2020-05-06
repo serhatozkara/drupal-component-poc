@@ -1,0 +1,24 @@
+<div class="col-12 border-bottom mb-3">
+  <div class="row pb-3">
+    <div class="col-12 col-xl-5 ml-2 ml-md-0">
+      <div class="media">
+        <img src="http://via.placeholder.com/60x60" class="rounded-circle mr-3 my-auto">
+        <div class="media-body mt-2">
+          <span class="font-weight-bold small mb-0">01/01/2018 at 9h45</span>
+          <h5 class="mb-0">Service Call</h5>
+          <span class="font-weight-bold small mb-0 text-blue">Scheduled</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-xl-7">
+      <div class="row mt-4">
+        <div class="col-6">
+          {% include 'atoms-button' with{ buttonLabel:'Reschedule',buttonSize:'l', classes:'btn-block btn-small'} %}
+        </div>
+        <div class="col-6">
+          {% include 'atoms-button-outline' with{ buttonLabel:'Cancel',buttonSize:'l', classes:'btn-block btn-small'} %}
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>

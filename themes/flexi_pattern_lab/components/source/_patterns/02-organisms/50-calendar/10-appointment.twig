@@ -1,0 +1,21 @@
+<div class="card mb-3">
+  <div class="card-header text-center">
+    <h4>Our next available appointment is</h4>
+  </div>
+
+  <div class="card-body">
+    {% include 'organisms-time-picker-form' %}
+  </div>
+  <div class="card-footer text-center border-top-0 my-3">
+    Choose another date. {% include 'organisms-date-picker' %}
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-center">
+      <p class="text-vibrant-blue font-bookmark">Thursday, August 21st <br>9 AM - 10 AM</p>
+      {% include 'atoms-icon-24' with { icon: 'clock' } %}
+    </div>
+  </div>
+</div>

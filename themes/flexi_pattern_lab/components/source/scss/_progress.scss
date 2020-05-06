@@ -1,0 +1,125 @@
+.progress{
+  width: 100%;
+ &.progress-small{
+   height: 1rem;
+ }
+}
+
+.progress-bar {
+  border-radius: $progress-border-radius;
+  transition: width $progress-bar-animation-timing;
+}
+
+.progress-bar-ascending {
+  // animation: progress-bar-ascending $progress-bar-animation-timing;
+  width: 0;
+}
+
+.progress-bar-descending {
+  // animation: progress-bar-descending $progress-bar-animation-timing;
+  width: 100%;
+}
+//
+// @keyframes progress-bar-ascending {
+//   0% {
+//     width: 0%;
+//   }
+// }
+//
+// @keyframes progress-bar-descending {
+//   0% {
+//     width: 100%;
+//   }
+// }
+
+.gradient-blue-gauge {
+  @include gradient-x(#8ca0fa, $link-blue);
+}
+
+.gradient-purple-gauge {
+  @include gradient-x($link-blue, $purple);
+}
+
+.gradient-red-gauge {
+  @include gradient-x($purple, $red);
+}
+
+.gradient-green-gauge {
+  background-color: $green;
+}
+
+
+// Gauge
+.gauge-wrapper {
+  width: 100%;
+}
+// Padding Hack for IE 11
+// https://tympanus.net/Tutorials/ResponsiveSVGs/index4.html
+// The padding-top is equal to (svg height / svg width) * width-value
+// The size of the SVG from the viewbox is used.
+// (235 / 350) * 100 = 67.14
+.gauge-wrapper-ph {
+  height: 0;
+  padding-top: 67.14%;
+  position: relative;
+}
+
+.svg-responsive {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gauge-fill {
+  transition: stroke-dasharray 2s ease;
+}
+
+.needle-path {
+  transform: translate(167px, 0px) rotate(-110deg);
+  transform-origin: 8px 105px;
+  transition: transform 2s ease;
+}
+
+.needle-path-green path {
+  animation: needle-color-green 2s;
+  animation-fill-mode: forwards;
+  fill: $green;
+}
+
+.needle-path-yellow path {
+  animation: needle-color-yellow 2s;
+  animation-fill-mode: forwards;
+  fill: $yellow;
+}
+
+.needle-path-red path {
+  animation: needle-color-red 2s;
+  animation-fill-mode: forwards;
+  fill: $red;
+}
+
+.needle-path-dark path {
+  animation: needle-color-dark 2s;
+  animation-fill-mode: forwards;
+  fill: $black;
+}
+
+@keyframes needle-color-green {
+  0% { fill: #DDDEE9; }
+  100% { fill: $green; }
+}
+
+@keyframes needle-color-yellow {
+  0% { fill: #DDDEE9; }
+  100% { fill: $yellow; }
+}
+
+@keyframes needle-color-red {
+  0% { fill: #DDDEE9; }
+  100% { fill: $red; }
+}
+
+@keyframes needle-color-dark {
+  0% { fill: $black }
+  100% { fill: $black; }
+}

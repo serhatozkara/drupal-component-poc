@@ -1,0 +1,25 @@
+{% extends 'organisms-dashboard-container-with-step-progress' %}
+{% block dashboardContent %}
+
+  <h1 class="text-center">Replace SIM Card</h1>
+  <h2 class="text-center text-muted">by yourself</h2>
+
+  {% include 'organisms-sim-card-change' with {formContainerPadding:'py-4'}%}
+
+  {% include 'organisms-sim-card-reason' %}
+  {% include 'organisms-subscription-service-address' %}
+  {% include 'organisms-subscription-shipping-address' %}
+  {% include 'organisms-subscription-shipping-method' %}
+  {% include 'organisms-sim-card-billing-address' %}
+  {% include 'organisms-subscription-payment' %}
+  {% include "organisms-price-summary" with{ classes:'pb-120'} %}
+  {% include 'organisms-price-status' %}
+
+  {% include 'organisms-sim-card-activate' with {formContainerPadding:'py-4'}%}
+
+  {% include "organisms-changeSIM-activate-sim"%}
+  {% include "organisms-changeSIM-activate-sim-confirm" with {formContainerPadding:' '}%}
+
+
+
+{% endblock %}

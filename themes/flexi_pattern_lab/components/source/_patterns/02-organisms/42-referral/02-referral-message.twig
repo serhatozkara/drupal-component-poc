@@ -1,0 +1,28 @@
+{% set stepValueLabelStyle = 'small' %}
+{% set stepValueLabel = 'I wanted to share this sweet deal with you... activate a plan at BM and get a $25 credit in your wallet :)' %}
+{% set formLabel = 'Your message' %}
+{% set collapseDefault = 'collapse' %}
+
+{% extends 'organisms-dashboard-collapsible-form-container' %}
+
+{% block activationForm %}
+
+<div class="card p-4 mb-50 mb-md-100">
+  <h4 data-form-scroll="yes">Here’s what your invitation will look like. </h4>
+  <p class="text-muted">Feel free to pimp it however you like.</p>
+  {% include 'molecule-message' %}
+</div>
+
+<div class="text-center mt-5">
+  
+  <button type="button" class="btn btn-primary btn-lg icon-right" onclick="$('.referral-submit-button').removeClass('d-none')" data-toggle="collapse" data-action="next-step" data-target=".activation-collapse-{{ uuid }}" aria-expanded="true">
+    <div class="d-flex">
+      <span>Submit</span>
+      <svg class="fi fi-16 fi-">
+        <use xlink:href="/images/icons/feather-sprite.svg#arrow-right" href="/images/icons/feather-sprite.svg#arrow-right"></use>
+      </svg>
+    </div>
+  </button>
+</div>
+
+{% endblock %}

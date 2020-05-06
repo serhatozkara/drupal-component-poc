@@ -1,0 +1,48 @@
+<div class="modal fade show" id="modalNeedSIMCard" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" style="padding-right: 17px; display: block; ">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width:460px !important;">
+        <div class="modal-content">
+
+            <!-- Modal Header : Start -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><svg class="fi fi-24 fi-black"><use xlink:href="/images/icons/feather-sprite.svg#x" href="/images/icons/feather-sprite.svg#x"></use></svg></button>
+            </div>
+            <!-- Modal Header : End -->
+
+            <!-- Modal Body : Start -->
+            <div class="modal-body text-center" style="padding-bottom: 50px;">
+                <h4>Almost there!</h4>
+                <p class="text-center text-muted pt-3"><small>Now that you created your plan, you'll need a Fizz SIM card to enjoy it.</small></p>
+                <div data-twig-suggestion="modal-need-sim-card-form--YaDdjpT_-Qk" data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--hk-Aqk2LZKw">
+                    <input class="use-ajax btn btn-outline-dark button js-form-submit form-submit form-control" data-drupal-selector="submit-no" type="submit" id="submit-no" name="op" value="Order my SIM" style="display: block; width: 0px; height: 0px; padding: 0px; border: 0px; overflow: hidden;">
+                    <input class="use-ajax btn btn-outline-dark button js-form-submit form-submit form-control" data-drupal-selector="submit-yes" type="submit" id="submit-yes" name="op" value="Activate my SIM" style="display: block; width: 0px; height: 0px; padding: 0px; border: 0px; overflow: hidden;">
+                </div>
+
+                <a href="/en/modal_login?workflow=subscribe" class="btn btn-outline-dark use-ajax button login_modal_no" style="color:#000 !important; display:none;" data-twig-suggestion="modal-need-sim-card-form--YaDdjpT_-Qk" data-drupal-selector="edit-login-modal-no" id="edit-login-modal-no--GB7U0V1eJ3M">Commander ma carte SIM</a>
+                <a href="/en/modal_login?workflow=activate" class="btn btn-outline-dark use-ajax button login_modal_yes" style="color:#000 !important; display:none;" data-twig-suggestion="modal-need-sim-card-form--YaDdjpT_-Qk" data-drupal-selector="edit-login-modal-yes" id="edit-login-modal-yes--HwNlp2R_zT8">Activate my SIM</a>
+
+                <div class="row text-center">
+
+                    <div class="col-12"><button id="submit-button-link-no" type="button" class="btn btn-outline-dark btn-lg">Commander ma carte SIM</button></div>
+                    <div class="col-12"><button id="submit-button-link-yes" type="button" class="btn btn-primary btn-lg ">Activer ma carte SIM</button></div>
+
+                </div>
+            </div>
+            <!-- Modal Body : End -->
+
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+#submit-button-link-yes,
+#submit-button-link-no{
+    width: 100%;
+    height: 50px;
+}
+#submit-button-link-no{
+    border: 2px solid #000;
+}
+.modal-content{
+    border: 0 none;
+}
+</style>

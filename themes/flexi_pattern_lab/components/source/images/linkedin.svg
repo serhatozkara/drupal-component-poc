@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>🕹Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M1.22667695,5.64864865 L4.13030069,5.64864865 L4.13030069,15 L1.22667695,15 L1.22667695,5.64864865 Z M2.68388589,1 C3.61218196,1 4.36777178,1.75675676 4.36777178,2.68648649 C4.36777178,3.61621622 3.61218196,4.37297297 2.68388589,4.37297297 C1.75019275,4.37297297 1,3.61621622 1,2.68648649 C1,1.75675676 1.75019275,1 2.68388589,1 Z M5.95451041,5.64864865 L8.73400154,5.64864865 L8.73400154,6.92972973 L8.77178103,6.92972973 C9.16037008,6.19459459 10.1048574,5.42162162 11.5188897,5.42162162 C14.4548959,5.42162162 15,7.35675676 15,9.87567568 L15,15 L12.1017733,15 L12.1017733,10.4540541 C12.1017733,9.36756757 12.0855821,7.97297297 10.5959907,7.97297297 C9.0848111,7.97297297 8.85813416,9.15675676 8.85813416,10.372973 L8.85813416,15 L5.95990748,15 L5.95990748,5.64864865 L5.95451041,5.64864865 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MyProfile/320-referral-steps" transform="translate(-66.000000, -1015.000000)">
+            <g id="Bloc-02" transform="translate(0.000000, 482.000000)">
+                <g id="Choix" transform="translate(20.000000, 243.000000)">
+                    <g id="linkedin" transform="translate(1.000000, 234.000000)">
+                        <g id="Button/primary/large/IconRight+label-Copy-8" transform="translate(20.000000, 31.000000)">
+                            <g id="Icon/Social/16x16/Linkedin" transform="translate(24.000000, 24.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="Linkedin"></g>
+                                <g id="🎨Color" stroke-width="1" fill-rule="evenodd" mask="url(#mask-2)" fill="#FFFFFF">
+                                    <g id="UI/Color/Flat/White">
+                                        <rect id="Base" x="0" y="0" width="16" height="16"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

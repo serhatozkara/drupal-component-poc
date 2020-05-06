@@ -1,0 +1,275 @@
+{% set stepValueLabelStyle = 'small' %}
+{% set stepValueLabel = '<strong>Andy Serrano</strong><br/>Andy.serrano@gmail.com' %}
+{% set priceReveal = 'yes' %}
+{% set formLabel = 'Your gifting contact' %}
+
+{% extends 'organisms-dashboard-collapsible-form-container' %}
+
+{% block activationForm %}
+
+  <h4 data-form-scroll="yes">Gift to...</h4>
+  <p class="text-muted">Choose between friends and charities</p>
+  
+  <a href="{{ attribute(link, 'templates-giftingSummary') }}" class="btn btn-green btn-gift-top btn-lg">Gift to someone new</a>
+  
+  <div class="card p-3 my-3">
+    <ul class="nav nav-tab pb-3 border-bottom d-flex justify-content-around" id="myTab" role="tablist">
+      <li>
+        <a class="active show" id="contacts-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Contacts (12)</a>
+      </li>
+      <li>
+        <a id="charities-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Charities (5)</a>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="contacts-tab">
+
+        <div class="text-center border-bottom  mr-3">
+          <div class="input-group col-md-6 offset-md-3">
+            {% include 'atoms-dropdown' with { classes: 'border-0', selected: 'Sort contacts by' } %}
+          </div>
+        </div>
+
+        <form class="scrollbar scroll-green pr-3">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item p-0">
+              <input class="sr-only" type="radio" id="optionContact1" name="giftContacts">
+              <label class="w-100 px-3 py-4 mb-0" for="optionContact1">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    Marie-Pierre Primeau<br>
+                    <span class="text-muted">438 902 6556</span>
+                  </div>
+                  <div>
+                    <small class="text-muted">Family</small>
+                  </div>
+                </div>
+              </label>  
+            </li>
+            
+            <li class="list-group-item p-0">
+              <input class="sr-only" type="radio" id="optionContact2" name="giftContacts">
+              <label class="w-100 px-3 py-4 mb-0" for="optionContact2">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    Marie-Pierre Primeau<br>
+                    <span class="text-muted">438 902 6556</span>
+                  </div>
+                  <div>
+                    <small class="text-muted">Family</small>
+                  </div>
+                </div>
+              </label>  
+            </li>
+            
+            <li class="list-group-item p-0">
+              <input class="sr-only" type="radio" id="optionContact3" name="giftContacts">
+              <label class="w-100 px-3 py-4 mb-0" for="optionContact3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    Marie-Pierre Primeau<br>
+                    <span class="text-muted">438 902 6556</span>
+                  </div>
+                  <div>
+                    <small class="text-muted">Family</small>
+                  </div>
+                </div>
+              </label>  
+            </li>
+            
+            <li class="list-group-item p-0">
+              <input class="sr-only" type="radio" id="optionContact4" name="giftContacts">
+              <label class="w-100 px-3 py-4 mb-0" for="optionContact4">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    Marie-Pierre Primeau<br>
+                    <span class="text-muted">438 902 6556</span>
+                  </div>
+                  <div>
+                    <small class="text-muted">Family</small>
+                  </div>
+                </div>
+              </label>  
+            </li>
+            
+            <li class="list-group-item p-0">
+              <input class="sr-only" type="radio" id="optionContact5" name="giftContacts">
+              <label class="w-100 px-3 py-4 mb-0" for="optionContact5">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    Marie-Pierre Primeau<br>
+                    <span class="text-muted">438 902 6556</span>
+                  </div>
+                  <div>
+                    <small class="text-muted">Family</small>
+                  </div>
+                </div>
+              </label>  
+            </li>
+            
+            <li class="list-group-item p-0">
+              <input class="sr-only" type="radio" id="optionContact6" name="giftContacts">
+              <label class="w-100 px-3 py-4 mb-0" for="optionContact6">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    Marie-Pierre Primeau<br>
+                    <span class="text-muted">438 902 6556</span>
+                  </div>
+                  <div>
+                    <small class="text-muted">Family</small>
+                  </div>
+                </div>
+              </label>  
+            </li>
+            
+            <li class="list-group-item p-0">
+              <input class="sr-only" type="radio" id="optionContact7" name="giftContacts">
+              <label class="w-100 px-3 py-4 mb-0" for="optionContact7">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    Marie-Pierre Primeau<br>
+                    <span class="text-muted">438 902 6556</span>
+                  </div>
+                  <div>
+                    <small class="text-muted">Family</small>
+                  </div>
+                </div>
+              </label>  
+            </li>
+            
+            <li class="list-group-item p-0">
+              <input class="sr-only" type="radio" id="optionContact8" name="giftContacts">
+              <label class="w-100 px-3 py-4 mb-0" for="optionContact8">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    Marie-Pierre Primeau<br>
+                    <span class="text-muted">438 902 6556</span>
+                  </div>
+                  <div>
+                    <small class="text-muted">Family</small>
+                  </div>
+                </div>
+              </label>  
+            </li>
+            
+            <li class="list-group-item p-0">
+              <input class="sr-only" type="radio" id="optionContact9" name="giftContacts">
+              <label class="w-100 px-3 py-4 mb-0" for="optionContact9">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    Marie-Pierre Primeau<br>
+                    <span class="text-muted">438 902 6556</span>
+                  </div>
+                  <div>
+                    <small class="text-muted">Family</small>
+                  </div>
+                </div>
+              </label>  
+            </li>
+            
+            <li class="list-group-item p-0">
+              <input class="sr-only" type="radio" id="optionContact10" name="giftContacts">
+              <label class="w-100 px-3 py-4 mb-0" for="optionContact10">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    Marie-Pierre Primeau<br>
+                    <span class="text-muted">438 902 6556</span>
+                  </div>
+                  <div>
+                    <small class="text-muted">Family</small>
+                  </div>
+                </div>
+              </label>  
+            </li>
+            
+            <li class="list-group-item p-0">
+              <input class="sr-only" type="radio" id="optionContact11" name="giftContacts">
+              <label class="w-100 px-3 py-4 mb-0" for="optionContact11">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    Marie-Pierre Primeau<br>
+                    <span class="text-muted">438 902 6556</span>
+                  </div>
+                  <div>
+                    <small class="text-muted">Family</small>
+                  </div>
+                </div>
+              </label>  
+            </li>
+            
+            <li class="list-group-item p-0">
+              <input class="sr-only" type="radio" id="optionContact12" name="giftContacts">
+              <label class="w-100 px-3 py-4 mb-0" for="optionContact12">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    Marie-Pierre Primeau<br>
+                    <span class="text-muted">438 902 6556</span>
+                  </div>
+                  <div>
+                    <small class="text-muted">Family</small>
+                  </div>
+                </div>
+              </label>  
+            </li>
+
+          </ul>
+        </form>
+      </div>
+    
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="charities-tab">
+        <form>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item p-0">
+            <input class="sr-only" type="radio" id="optionCharity1" name="giftCharities">
+            <label class="w-100 px-3 py-4 mb-0" for="optionCharity1">
+              Oxfam Quebec<br>
+              <span class="text-muted">www.oxfam.qc.ca</span>
+            </label>  
+          </li>
+          
+          <li class="list-group-item p-0">
+            <input class="sr-only" type="radio" id="optionCharity2" name="giftCharities">
+            <label class="w-100 px-3 py-4 mb-0" for="optionCharity2">
+              Oxfam Quebec<br>
+              <span class="text-muted">www.oxfam.qc.ca</span>
+            </label>  
+          </li>
+          
+          <li class="list-group-item p-0">
+            <input class="sr-only" type="radio" id="optionCharity3" name="giftCharities">
+            <label class="w-100 px-3 py-4 mb-0" for="optionCharity3">
+              Oxfam Quebec<br>
+              <span class="text-muted">www.oxfam.qc.ca</span>
+            </label>  
+          </li>
+          
+          <li class="list-group-item p-0">
+            <input class="sr-only" type="radio" id="optionCharity4" name="giftCharities">
+            <label class="w-100 px-3 py-4 mb-0" for="optionCharity4">
+              Oxfam Quebec<br>
+              <span class="text-muted">www.oxfam.qc.ca</span>
+            </label>  
+          </li>
+          
+          <li class="list-group-item p-0">
+            <input class="sr-only" type="radio" id="optionCharity5" name="giftCharities">
+            <label class="w-100 px-3 py-4 mb-0" for="optionCharity5">
+              Oxfam Quebec<br>
+              <span class="text-muted">www.oxfam.qc.ca</span>
+            </label>  
+          </li>
+          
+        </ul>
+        <form>
+      </div>
+    
+    </div>
+  </div>  
+  
+  <div class="text-center">
+    {% include 'atoms-button-icon-right-large' with { buttonLabel: 'Next', icon: 'arrow-right', uniqueID: uuid } %}
+  </div>
+
+{% endblock %}

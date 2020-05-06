@@ -1,0 +1,58 @@
+.modal-slider .slick-dots li button
+{
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 10px !important;
+}
+
+.modal-slider .slick-dots li.slick-active button:before
+{
+    color: white;
+}
+
+.modal-slider {
+    display: block!important;
+    height: 0;
+    opacity: 0;
+    &.show {
+        height: auto !important;
+        opacity: 1 !important;
+    }
+}
+
+.prev-modal-slider-button {
+    cursor: pointer;
+    position: absolute; 
+    z-index: 5; 
+    top: 50%; 
+    transform: translateY(-50%);    
+}
+
+.next-modal-slider-button {
+    cursor: pointer;
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    right: 0;    
+}
+
+.long-distance-modal { 
+    max-width: 860px; 
+}
+
+.border-solid-black-1 {
+  border: 1px solid #000;
+}
+
+.background-none {
+  background: none;
+}
+
+@media (max-width: 605px) {
+  .prev-modal-slider-button {
+      display: none !important;
+  }
+  .next-modal-slider-button {
+      display: none !important;
+  }
+}

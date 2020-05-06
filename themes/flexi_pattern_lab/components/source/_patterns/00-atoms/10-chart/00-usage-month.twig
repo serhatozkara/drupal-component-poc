@@ -1,0 +1,86 @@
+<div class="ct-chart"></div>
+
+<script>
+
+var data = {
+  labels: ["jul 1", "jul 2", "jul 3", "jul 4", "jul 5", "jul 6", "jul 7", "jul 8", "jul 9", "jul 10", "jul 11", "jul 12", "jul 13", "jul 14", "jul 15", "jul 16", "jul 17", "jul 18", "jul 19", "jul 20", "jul 21", "jul 22", "jul 23", "jul 24", "jul 25", "jul 26", "jul 27", "jul 28", "jul 29", "jul 30", "jul 31"],
+  series: [
+    [130, 380, 75, 292, 122, 32, 98, 130, 200, 75, 112, 600, 32, 98, 130, 200, 75, 112, 122, 32, 98, 130, 200, 75, 112, 0, 0, 0, 0, 0, 0]
+  ]
+};
+
+var options = {
+  low: 0,
+  axisX: {
+    offset: 30,
+    showGrid: false,
+    labelOffset: {
+      x: 0,
+      y: 10
+    },
+  },
+  axisY: {
+    showGrid: false,
+    showLabel: false,
+    offset: -10
+  },
+  width: '200vw',
+  height: '50vh',
+  chartPadding: {
+    top: 30,
+  },
+  
+  plugins: [
+    // https://github.com/gionkunz/chartist-plugin-accessibility
+    Chartist.plugins.ctAccessibility({
+      caption: 'This period\'s data usage',
+      seriesHeader: 'Data usage',
+      summary: 'This chart shows how much data has been used',
+      valueTransform: function(value) {
+        return value + ' megabytes';
+      }
+    }),
+    
+    // https://github.com/mtgibbs/chartist-plugin-barlabels
+    Chartist.plugins.ctBarLabels({
+      labelOffset: {
+        x: 0,
+        y: -15
+      },
+      labelInterpolationFnc: function(value) {
+        return value + ' MB';
+      }
+    })
+  ]
+};
+
+var responsiveOptions = [
+  ['screen and (max-width: 540px)', {
+    width: '500vw',
+  }],
+  
+  ['screen and (min-width: 540px) and (max-width: 960px)', {
+    width: '250vw',
+  }],
+  
+  ['screen and (min-width: 1200px)', {
+    width: '150vw',
+  }],
+];
+
+var chart = new Chartist.Bar('.ct-chart', data, options, responsiveOptions);
+
+chart.on('draw', function(event) {
+  // If the draw event is for labels on the x-axis
+  if(event.type === 'label' && event.axis.units.pos === 'x') {
+    // If foreign object is NOT supported, we need to fallback to text-anchor and event.width / 2 offset.
+    if(!chart.supportsForeignObject) {
+      event.element.attr({
+        x: event.x + event.width / 2,
+        'style': 'text-anchor: middle'
+      });
+    }
+  }
+});
+
+</script>

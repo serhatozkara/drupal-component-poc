@@ -1,0 +1,122 @@
+.data-block {
+  position: relative;
+  border-top: 2px dashed $gray;
+  line-height: 1.1;
+
+  &:last-child {
+    border-bottom: 2px dashed $gray;
+  }
+}
+
+.usage-amount {
+  color: $electric-blue;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.unactive {
+  .usage-amount,
+  .usage-status {
+    color: $gray;
+  }
+}
+
+.usage-grade {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: calc(100% + 2px);
+  width: 10px;
+  background: $gray;
+}
+
+@include media-breakpoint-up(md) {
+  .usage-grade {
+    width: 38px;
+  }
+}
+
+@keyframes usage-grade {
+  0% {
+    height: 0;
+  }
+}
+
+.usage-grade-level {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $electric-blue;
+  animation: usage-grade $progress-bar-animation-timing;
+}
+
+.current .usage-grade-level:after {
+  position: absolute;
+  top: -8px;
+  right:-25px;
+  display: block;
+  content: '';
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid $electric-blue;
+}
+
+.data-block {
+  &:first-child {
+    .usage-grade,
+    .usage-grade-level {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+  }
+
+  &:last-child {
+    .usage-grade,
+    .usage-grade-level {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+}
+
+.amount-2 {
+  height: 130px;
+}
+
+.amount-3 {
+  height: 160px;
+}
+
+.amount-4 {
+  height: 190px;
+}
+
+.amount-5 {
+  height: 220px;
+}
+
+.amount-6 {
+  height: 250px;
+}
+
+.amount-7 {
+  height: 280px;
+}
+
+.amount-8 {
+  height: 310px;
+}
+
+.amount-9 {
+  height: 340px;
+}
+
+.amount-10 {
+  height: 370px;
+}
+
+
+
+

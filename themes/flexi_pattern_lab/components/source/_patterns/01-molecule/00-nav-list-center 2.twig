@@ -1,0 +1,15 @@
+<nav id="main-menu" class="navbar navbar-center navbar-expand-lg">
+  <ul class="navbar-nav list-inline text-center mr-auto ml-auto">
+    {{ dump() }}
+    amk
+    {% block content %}
+    bmk
+    {% for listItem in listItems %}
+      <li class="nav-item">
+        {% include "@atoms/04-anchor-tags/04-link-main-nav.twig" with { menuTitle: listItem.menuTitle } %}
+
+      </li>
+    {% endfor %}
+    {% endblock %}
+  </ul>
+</nav>

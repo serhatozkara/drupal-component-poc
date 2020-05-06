@@ -1,0 +1,22 @@
+uuid: c0a98002-06b3-4761-9ace-45aca4d98062
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - flexi_pattern_lab
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: flexi_pattern_lab_messages
+theme: flexi_pattern_lab
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

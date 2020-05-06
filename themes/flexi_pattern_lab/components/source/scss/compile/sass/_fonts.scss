@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Bookmark';
+  src:  url('../fonts/Bookmark-Medium.woff2') format('woff2'),
+        url('Bookmark-Medium.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Bookmark';
+  src:  url('../fonts/Bookmark-Bold.woff2') format('woff2'),
+        url('Bookmark-Bold.woff2') format('woff');
+  font-weight: bold;
+}

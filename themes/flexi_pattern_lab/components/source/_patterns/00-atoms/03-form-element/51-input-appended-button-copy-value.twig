@@ -1,0 +1,6 @@
+<div class="input-group">
+  <input type="text" class="form-control" id="inputCopy" value="{{ value|default('5A722') }}" aria-label="{{ placeholder|default('Referral code') }}" aria-describedby="{{ describedby|default('referralCode') }}" readonly>
+  <div class="input-group-append">
+    <button class="btn btn-primary" type="button" onclick="copyInputValue()">{{ buttonText }}</button>
+  </div>
+</div>

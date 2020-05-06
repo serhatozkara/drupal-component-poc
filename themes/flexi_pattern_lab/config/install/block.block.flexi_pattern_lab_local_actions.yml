@@ -1,0 +1,20 @@
+uuid: e8b84a5e-62f5-4236-874d-8f45b72f9c33
+langcode: en
+status: true
+dependencies:
+  theme:
+    - flexi_pattern_lab
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: flexi_pattern_lab_local_actions
+theme: flexi_pattern_lab
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

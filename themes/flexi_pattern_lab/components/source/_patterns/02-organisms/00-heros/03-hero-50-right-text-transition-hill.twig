@@ -1,0 +1,24 @@
+<div class="hero-wrapper hero-transition hero-transition-hill position-relative position-relative">
+  <div class="d-flex">
+    <div class="hero {{ herobgcolor|default('bg-fizz-light-grey') }} hero-50-right-text d-flex w-100 pt-5">
+      <div class="container d-flex w-100">
+        <div class="row w-100 mx-auto">
+          <div class="col-lg-5 order-lg-2 text-center text-lg-left d-flex align-items-center">
+            <div class="transition-hill-text">
+              <h2>Setting up your box is that easy</h2>
+              <p>Here you can find out how to set up your phone and SIM so that you can start making calls, sending texts, and using the internet.</p>
+              <a href="#" class="btn btn-success">Live chat for help</a>
+            </div>
+          </div>
+          <div class="col-md col-lg-7 order-md-2 pb-4 pb-md-0 d-none d-md-block">
+            <img src="/images/sample/hero-headstand.png" class="img-fluid d-block mx-auto">
+          </div>
+          <div class="col-md col-lg-7 order-md-2 pb-4 pb-md-0 d-block d-md-none">
+            {% include "atoms-hero-half-square" %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include "atoms-transition-hill" %}
+</div>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MyProfile/320-referral-steps" transform="translate(-63.000000, -892.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Bloc-02" transform="translate(0.000000, 482.000000)">
+                <g id="Choix" transform="translate(20.000000, 243.000000)">
+                    <g id="messenger" transform="translate(1.000000, 114.000000)">
+                        <g transform="translate(42.000000, 53.000000)" id="Combined-Shape">
+                            <path d="M10,0 C15.5225,0 20,4.145 20,9.26 C20,14.37375 15.5225,18.51875 10,18.51875 C9.0025,18.51875 8.04,18.3825 7.13125,18.13125 L3.72625,20 L3.72625,16.46875 C1.45375,14.77125 0,12.1725 0,9.25875 C0,4.145 4.4775,0 10,0 Z M10.5258546,13 L16,7 L11.0854117,9.80870315 L8.4728936,7 L3,13 L7.97592682,10.1912969 L10.5258546,13 Z"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

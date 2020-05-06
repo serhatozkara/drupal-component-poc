@@ -1,0 +1,21 @@
+{% set headerText = 'Long Distance' %}
+
+{% extends 'organisms-accordion-form-container' %}
+
+{% block accordionBodyForm %}
+
+  <p class="text-muted">Enter the country you want to call to discover the rates.</p>
+
+  {% include 'atoms-global-search-colored' with { placeholder:'Select a country'} %}
+
+  <p class="py-3"><strong>Choose an Add-On</strong></p>
+
+  {% include 'organisms-check-list-long-distanceAddOn' %}
+
+  <p class="py-3"><strong>Or view Pay As You Go rates</strong></p>
+
+  {% include 'organisms-long-distance-country' with {collapse:' '} %}
+
+  <p class="text-muted">Note: These will expire on <span>Feb. 28,2018</span></p>
+
+{% endblock %}

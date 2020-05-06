@@ -1,0 +1,45 @@
+{% set stepValueLabelStyle = 'small' %}
+{% set formLabel = 'Your Current Plan' %}
+{% set stepValueLabel = 'Data 6gb, Message Illimited, voice 500minutes , CANADA Coverage' %}
+
+{% extends 'organisms-collapsible-form-container-no-edit' %}
+
+{% block activationForm %}
+
+
+
+  <div id="changePlan">
+    <div class="d-flex">
+      <div class="pr-3">
+        {% include 'atoms-icon' with { size:'48',color:'green',icon:'settings'}  %}
+      </div>
+      <div class="">
+        <h4 class="">Change your plan</h4>
+        <p class="">Your modification will be activated at your next billing cycle</p>
+      </div>
+    </div>
+    <div class="">
+      <div class="text-center my-50">
+        {% include 'atoms-button-collapse' with { buttonLabel: 'Change my plan', uniqueID: uuid} %}
+      </div>
+    </div>
+  </div>
+
+  <div id="changePlan">
+    <div class="d-flex">
+      <div class="pr-3">
+        {% include 'atoms-icon' with { size:'48',color:'green',icon:'plus-circle'}  %}
+      </div>
+      <div class="">
+        <h4 class="">Buy add-ons</h4>
+        <p class="">You will be able to enjoy your add-ons right away after purchased it</p>
+      </div>
+    </div>
+    <div class="">
+      <div class="text-center mt-50">
+        {% include 'atoms-button' with { buttonLabel: 'Add add-ons'} %}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

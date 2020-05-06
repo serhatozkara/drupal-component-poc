@@ -1,0 +1,313 @@
+// Letter Spacing
+body, input, textarea, select, button {
+  letter-spacing: 0.5px;
+  word-spacing: 0.5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+
+
+
+// Responsive Typography Scaling
+
+
+@include media-breakpoint-up(sm) {
+  h1 {
+    font-size: $font-size-base * 3.75;
+  }
+  h2 {
+      font-size: $font-size-base * 3.25;
+  }
+  h3 {
+      font-size: $font-size-base * 2.75;
+  }
+  h4 {
+      font-size: $font-size-base * 1.75;
+  }
+  h5 {
+      font-size: $font-size-base * 1.375;
+  }
+  h6 {
+      font-size: $font-size-base * 1.125;
+
+  }
+}
+
+
+
+
+p.no-br-xxl br {
+  @include media-breakpoint-down(xl) { display: none; }
+}
+
+p.sm-smaller-p {
+  @include media-breakpoint-down(sm) { font-size: 12px; }
+}
+
+span.xl-smaller-dash {
+  @include media-breakpoint-down(xl) { font-size: 16px; }
+}
+
+i{font-style: normal;}
+
+// Paragraph spacing style
+.paragraph_spacing {
+  width: 100%;
+  display: block;
+  padding-top: 15px;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 30px;
+  }
+}
+
+.small-spot-img img {
+  @include media-breakpoint-down(sm) {
+    max-width: 150px;
+    height: auto;
+  }
+}
+
+// Paragraph 50-50 text background
+.paragraph--type--50-50-text-bg {
+
+  .hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+
+    @include media-breakpoint-down(md) { background: none !important; min-height: 50vh; }
+  }
+
+  .hero-50-right-text { background-position: left center; }
+  .hero-50-left-text { background-position: right center; }
+
+  .mobile-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+  }
+
+}
+
+.paragraph-formatter .paragraph-info {display: none;}
+
+.link{
+  //font-size:0.875rem; // 14px
+  font-size: 12px;
+  font-weight:600; // semi-bold
+  text-decoration: underline;
+  color:$compliment-gray;
+}
+.body-small{
+  font-size:0.875rem; // 14px
+  line-height:1.5rem; // 24px
+  font-weight: normal;
+}
+.list{
+  font-size:0.8125rem; // 13px
+  line-height:1rem; // 16px
+  font-weight:600; // semi-bold
+}
+.caption{ font-size:0.75rem; // 12px
+  line-height:1.375rem; // 22px
+  font-weight: normal;
+}
+.caption-tiny{
+  font-size:0.6875rem; // 11px
+  line-height:1.25rem; // 20px
+  font-weight: normal;
+}
+
+.font-bookmark{
+  font-family: $headings-font-family;
+}
+
+blockquote {
+  border-left: 8px solid $green;
+  color: $green;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  a,
+  a:hover {
+    color: $black;
+  }
+}
+
+*[data-target]{
+  cursor:pointer;
+}
+
+a.main-nav-link{
+  display: inline-block;
+  color: $white;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-bottom: 0.4em;
+  margin: 0.6em 1.6em;
+
+  &:hover,
+  &.is-active,&.active {
+    text-decoration: none;
+    border-bottom: 2px solid $green;
+    margin-bottom: calc(0.6em - 2px);
+  }
+}
+a.pane-nav-link {
+  display: inline-block;
+  font-weight: bold;
+  padding-bottom: 0.4em;
+  margin: 0.6em;
+  color: $dark;
+  font-size: 1.0em;
+
+  @include media-breakpoint-up(sm) {
+    margin: 0.6em 1.6em;
+  }
+
+  &:hover,
+  &.is-active,&.active {
+    text-decoration: none;
+    border-bottom: 2px solid $green;
+    margin-bottom: calc(0.6em - 2px);
+  }
+}
+
+.nav.nav-perks a.pane-nav-link:not(.active){
+  color : $compliment-gray;
+}
+
+.link-arrow {
+  font-size: 0.857em;
+  &:after {
+    content: "\279E";
+    padding: 0.5rem;
+    display: inline-block;
+    font-weight: normal;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  a.main-nav-link {
+    color: $dark;
+    font-size: 1.0em;
+  }
+}
+
+a.language-switcher {
+  color: $white;
+  font-size: 1.4em;
+}
+
+footer.bg-green a { color: #fff !important; }
+
+footer .language-switcher {
+
+  a,
+  button {
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+a.collapse-toggle {
+  display: inline-block;
+  color: $black;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+a.pre-footer-nav-link {
+  display: inline-block;
+  color: $compliment-gray;
+  font-size: 0.857em;
+  padding: 0.5em 0;
+}
+
+a.footer-nav-link {
+  color: $white;
+  text-decoration: underline;
+  font-size: 0.75rem;
+}
+
+// Lists
+ul.checklist {
+  list-style-type: none;
+  padding-left: 1em;
+  overflow: auto;
+
+  @include media-breakpoint-up(md) {
+    padding-left: 0;
+  }
+
+  li {
+    background: url(../images/icons/check.png) no-repeat left center;
+    background-size: 18px 13px;
+    padding-left: 1.6em;
+  }
+}
+
+ul.two-column {
+  @include media-breakpoint-up(md) {
+    li {
+      width: 50%;
+      float: left;
+    }
+  }
+}
+
+// Fix for links on darker backgrounds
+.bg-dark-red,
+.bg-black,
+.bg-dark-brown,
+.bg-dark-blue,
+.bg-darkest-gray,
+.bg-darker-gray,
+.bg-fizz-green,
+.bg-fizz-black,
+.bg-fizz-blue,
+.bg-fizz-red,
+.bg-fizz-purple,
+.bg-fizz-dark-blue,
+.bg-fizz-dark-green {
+  a {
+    color: #fff;
+  }
+
+  // we want color of the button to be black if they are on one if these background-color
+  a.btn { color: #000; }
+}
+
+.bg-green {
+  color: #191919;
+
+  .spot.spot-small a, a, .link-arrow, p, h1, h2, h3, h4, h5, h6 { color: #191919 !important; }
+
+  .btn-white {
+    border-color: #fff !important;
+    color: #fff;
+    background: transparent !important;
+
+    &:hover {
+      background: #fff !important;
+      color:#191919;
+    }
+  }
+}

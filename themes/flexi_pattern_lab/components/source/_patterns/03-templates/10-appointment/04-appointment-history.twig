@@ -1,0 +1,28 @@
+{% extends "organisms-dashboard-container" %}
+
+{% block dashboardContent %}
+
+  <div class="row">
+
+    <div class="col-12 col-lg-8 offset-lg-2">
+      <div class="col col-lg-8 offset-lg-2">
+        <p class="text-left text-sm-center text-muted">History of appointments</p>
+      </div>
+    </div>
+
+    <div class="card col-12 col-lg-8 offset-lg-2">
+      <div class="row py-4">
+
+        {% include 'organisms-appointment-history'%}
+        {% include 'organisms-appointment-history'%}
+        {% include 'organisms-appointment-history'%}
+
+        <div class="col-12 text-center">
+          <a href="#">View older appointments</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

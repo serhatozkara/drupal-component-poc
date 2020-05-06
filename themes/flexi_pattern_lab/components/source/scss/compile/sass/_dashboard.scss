@@ -1,0 +1,161 @@
+@include media-breakpoint-up(md) {
+
+  .dashboard-sidebar,
+  .dashboard-content {
+    height: calc(100vh - 65px);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .dashboard-sidebar {
+    position: fixed;
+    padding: 0;
+    border-right: 1px solid $light-gray;
+  }
+
+  .dashboard-sidebar-nav {
+    top: 65px;
+  }
+}
+
+// Dashboard Footer
+.dashboard-content {
+  .page-footer {
+    margin: 0 -15px;
+  }
+}
+
+// User Name
+.dashboard-user-name {
+  word-wrap: break-word;
+}
+
+// Navigation
+.nav-dashboard-main,
+.nav-dashboard-actions {
+  a {
+    color: $black;
+    font-weight: bold;
+    font-family: "Bookmark", sans-serif;
+  }
+
+  a.active,
+  a:hover {
+    color: $green;
+    text-decoration: none;
+  }
+
+  a.active svg,
+  a:hover svg {
+    stroke: $green;
+  }
+
+  svg {
+    display: none;
+  }
+
+  @include media-breakpoint-up(md) {
+    svg {
+      display: block;
+    }
+  }
+}
+
+
+.nav-dashboard-actions {
+  a {
+    font-size: 0.8rem;
+  }
+}
+
+// Dashboard Actions Widget
+ul.dashboard-actions {
+  a {
+    color: $black;
+  }
+}
+
+
+// Settings Drawer
+
+.settings-drawer {
+  box-shadow: 1px 1px 3px 0px rgba(25, 25, 25, 0.15);
+  border-radius: 6px;
+
+  a.list-group-item {
+    padding: 2em;
+    background: transparent;
+  }
+
+  a.list-group-item:hover,
+  a.list-group-item.active {
+    background: $white;
+    color: $black;
+    border-top: 1px solid rgba(25, 25, 25, 0.125);
+    border-bottom: 1px solid rgba(25, 25, 25, 0.125);
+    border-left: 8px solid $green;
+    border-right: none;
+    padding-left: calc(2em - 7px);
+  }
+
+  a.list-group-item.active {
+    border-bottom: 0;
+  }
+
+  .settings-content,
+  .tab-pane {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  a.list-group-item svg {
+    transform: rotate(90deg);
+  }
+
+  .tab-pane {
+    display: none;
+  }
+
+  .tab-pane.active {
+    display: block;
+  }
+
+  .settings-drawer {
+    .tab-pane {
+      &.active {
+        border-left: 8px solid $green;
+      }
+    }
+  }
+}
+
+
+@include media-breakpoint-up(lg) {
+  .settings-drawer {
+    .list-group-item:first-child {
+      border-top-right-radius: 0;
+
+      &.active,
+      &:hover {
+        border-top: 1px solid $white;
+      }
+    }
+
+    .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+
+      &.active,
+      &:hover {
+        border-bottom: 1px solid $white;
+      }
+    }
+
+    .settings-content,
+    .tab-pane {
+      border-top-right-radius: 6px;
+    }
+
+  }
+}

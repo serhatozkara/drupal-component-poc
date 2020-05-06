@@ -1,0 +1,22 @@
+uuid: c2c25f6b-3f2e-4221-aea3-48864e99e804
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - flexi_pattern_lab
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: flexi_pattern_lab_content
+theme: flexi_pattern_lab
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

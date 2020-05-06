@@ -1,0 +1,46 @@
+{% set stepValueLabelStyle = 'small' %}
+{% set stepValueLabel = '<strong>2.5 GB of data</strong><br/>January 24, 2018' %}
+{% set priceReveal = 'yes' %}
+{% set collapseDefault = 'collapse' %}
+{% set formLabel = 'Your amount gifted' %}
+
+{% extends 'organisms-dashboard-collapsible-form-container' %}
+
+{% block activationForm %}
+
+  <h4 data-form-scroll="yes">What amount of data do you want to give?</h4>
+  
+  <div class="row">
+    <div class="text-center order-2 order-lg-1 col-6 col-lg-3 mb-5 my-lg-5">
+      <span class="text-green text-uppercase d-block">Minumum</span>
+      <span class="text-muted d-block">0.5 GB</span>
+    </div>
+
+    <div class="order-1 order-lg-2 col-12 col-lg-6 my-5">
+      <select class="custom-select custom-select-lg">
+        <option selected>Choose amount</option>
+        <option value="1">0.5 GB</option>
+        <option value="2">1.0 GB</option>
+        <option value="3">1.5 GB</option>
+        <option value="4">2.0 GB</option>
+        <option value="5">2.5 GB</option>
+        <option value="6">3.0 GB</option>
+        <option value="7">3.5 GB</option>
+        <option value="8">4.0 GB</option>
+      </select>
+    </div>
+    
+    <div class="text-center order-3 order-lg-3 col-6 col-lg-3 mb-5 my-lg-5">
+      <span class="text-green text-uppercase d-block">Maximum</span>
+      <span class="text-muted d-block">6.0 GB</span>
+    </div>
+    
+  </div>
+
+
+  
+  <div class="text-center">
+    {% include 'atoms-button-icon-right-large' with { buttonLabel: 'Next', icon: 'arrow-right', uniqueID: uuid } %}
+  </div>
+
+{% endblock %}

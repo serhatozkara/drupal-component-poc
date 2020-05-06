@@ -1,0 +1,22 @@
+uuid: b869a5f5-6e31-438f-be8a-80601658fcef
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - flexi_pattern_lab
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: flexi_pattern_lab_help
+theme: flexi_pattern_lab
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

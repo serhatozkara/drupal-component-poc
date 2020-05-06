@@ -1,0 +1,10 @@
+<div class="py-5 bg-lightest-blue">
+  <div class="container">
+    <h3 class="text-center">Featured Articles</h2>  {#  <--- Dinamik alanlar .yml veya json içinde tanımlanmalı örnek yml paylaşıyorum #}
+    <h3 class="text-center">{{ featured_articles_title }}</h2>  {#  <--- Doğru kullanım, değer .yml ya da .json dosyasından geliyor #}
+      <div class="card-deck justify-content-center pt-5 pb-3">
+      {{ view_area }}
+      </div>
+    {% include "@atoms/02-buttons/12-button-outline-large.twig" with {'buttonLabel': 'More subjects', 'classes': 'd-block mx-auto'}%}
+  </div>
+</div>

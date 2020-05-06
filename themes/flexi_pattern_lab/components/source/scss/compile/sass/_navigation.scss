@@ -1,0 +1,528 @@
+.header-row {
+  .navbar {
+    padding: 0;
+  }
+
+  .navbar-brand-logo {
+    justify-content: flex-start;
+  }
+
+  .btn-toggle-mobile-menu {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    float: left;
+  }
+
+  .toggle-mobile-menu-top,
+  .toggle-mobile-menu-bottom {
+    position: absolute;
+    height: 2px;
+    left: 0;
+    background: #3c3c46;
+    content: '';
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .15s ease-in-out;
+    -moz-transition: .15s ease-in-out;
+    -o-transition: .15s ease-in-out;
+    transition: .15s ease-in-out;
+    -webkit-transform-origin: right center;
+    -moz-transform-origin: right center;
+    -o-transform-origin: right center;
+    transform-origin: right center;
+  }
+
+  .toggle-mobile-menu-top {
+    width: 22px;
+    top: 7px;
+  }
+
+  .btn-toggle-mobile-menu .toggle-mobile-menu-bottom {
+    bottom: 7px;
+    width: 16px;
+  }
+
+  .btn-toggle-mobile-menu.active {
+    z-index: 101;
+  }
+
+  .btn-toggle-mobile-menu.active .toggle-mobile-menu-top {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 3px;
+    left: 0;
+    width: 22px;
+    background: $white;
+  }
+
+  .btn-toggle-mobile-menu.active .toggle-mobile-menu-bottom {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    bottom: 3px;
+    left: 0;
+    width: 22px;
+    background: $white;
+  }
+
+  .site-logo {
+    margin: 0 10px;
+  }
+
+  .navbar-right {
+    width: auto;
+    .nav-link {
+      color: $gray-500;
+      font-weight: 400;
+      display: block;
+      padding: .5rem .5rem;
+      font-size: 13px;
+    }
+  }
+}
+
+// To make the content (such as Heros and their backgrounds) appear 'behind' the navbar
+.navbar-hang {
+
+  // If a Hero is directly below the Navbar Hang, then add some extra padding-top
+  +.hero {
+    padding-top: 5rem !important;
+  }
+}
+
+.navbar-hang.fixed-top {
+
+  // If a Hero is directly below the Navbar Hang, then add some extra padding-top
+  +.hero {
+    padding-top: 8rem !important;
+  }
+}
+
+// Fixed navbar
+.nav-logged-in.fixed-top {
+  background: $white;
+}
+
+body.navbar-fixed-top {
+  padding-top: 65px;
+}
+
+// Scrolled Menu
+.navbar-center,
+.main-menu-second-level {
+  bottom: 0;
+  transition: bottom 0.2s;
+}
+
+.navbar-center.scroll-navbar-up {
+  bottom: 60px;
+}
+
+.main-menu-second-level {
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    width: 40%;
+    margin-left: 30%;
+  }
+}
+
+.main-menu-second-level.scroll-navbar-up {
+  bottom: 64px;
+}
+
+// Author Social Links
+.laurel {
+  border-top: 1px solid $light-gray;
+  top: 24px;
+}
+
+// element separator
+.text-laurel {
+  border-top: 1px solid $light-gray;
+  top: 18px;
+}
+
+.text-laurel+div p {
+  margin: 0;
+  line-height: 1.375rem;
+}
+
+.section-header {
+  background: $white;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .15);
+}
+
+
+.lang-size{
+   height: 22px!important;
+   width: 22px!important;
+   font-size: 10px!important;
+   background-color: #000!important;
+   color: #fff!important;
+   text-align: center!important;
+   text-decoration: none;
+   padding-top: 3px!important;
+   font-family: 'Roboto', sans-serif;
+}
+
+
+// Fix bug with stick header and admin menu
+// body.toolbar-tray-open {
+//   padding-top: 200px!important;
+// }
+
+// body.toolbar-tray-open .section-header.fixed-top {
+//   top:80px;
+//   z-index: 10!important;
+// }
+
+body:not(.user-logged-in) .toggle-full-screen-menu-search{
+    position: relative;
+    //z-index: 99999999 !important;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: -15px 0 0 20px;
+}
+body:not(.user-logged-in) .lang-size{
+    margin-top: 7px;
+}
+.user-logged-in .lang-size{
+    margin-top: 1px;
+}
+@media (max-width: 568px){
+    body:not(.user-logged-in) .lang-size{
+        display: none !important;
+  }
+  body:not(.user-logged-in) .toggle-full-screen-menu-search{
+      margin: 5px 0 0 30px;
+  }
+}
+@media (max-width: 320px){
+    nav .list-inline-item:not(:last-child) {
+        margin-right: 5px !important;
+    }
+    .navbar-right{
+        margin-right: 10px !important;
+    }
+    .navbar-login{
+        margin-right: 30px !important;
+    }
+}
+
+//  body:not(.user-logged-in) .toggle-full-screen-menu-search {
+//    margin: -15px 0px 0px 10px;
+//  }
+//}
+//@media (max-width: 375px){
+//    body:not(.user-logged-in) .toggle-full-screen-menu-search{
+//        margin: 3px 0 0 30px;
+//    }
+//}
+//@media (max-width: 375px) {
+//    body:not(.user-logged-in) .lang-size{
+//        float: right;
+//        margin: 5px 0 0 0 !important;
+//    }
+//}
+
+
+#searchCloseButton{
+    margin: 45px 0 0 65px;
+}
+@media (max-width: 768px){
+    #searchCloseButton{
+        margin: 45px 0 0 0;
+    }
+}
+@media (max-width: 568px){
+    #searchCloseButton{
+        margin: 30px;
+    }
+}
+@media (max-width: 375px){
+    #searchCloseButton{
+        margin: 30px 0 0 0;
+    }
+}
+
+
+
+
+
+body:not(.user-logged-in) #block-languageswitcher-6 .language-link{
+        margin-left: -22px;
+        line-height: 17px;
+}
+
+#block-languageswitcher-6 .language-link{
+    margin-left: -21px;
+    line-height: 17px;
+}
+
+#block-languageswitcher-6 .links{
+    float: left !important;
+    width: 0px;
+}
+
+
+#menuAccordion a {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+#menuAccordion .dropdown-item {
+  font-size: 1em;
+  color: #dcd2d2;
+}
+#menuAccordion .panel-heading a:hover {
+  text-decoration: none;
+  border-bottom: 2px solid #00d672;
+  margin-bottom: calc(0.6em - 2px);
+  padding-bottom: 0.4em;
+  text-decoration-color: initial;
+  border-bottom-color: rgb(0, 212, 113);
+}
+#menuAccordion a.main-heading-link {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-bottom: 0.4em;
+  margin: 0.6em 1.6em;
+}
+#menuAccordion .dropdown-item:hover, .dropdown-item:focus {
+  background: none;
+}
+
+
+@media(min-width:376px) and (max-width:414px){
+    .language-switcher-language-url .links.mb-0 {
+        padding-left: 50px;
+    }
+}
+@media(max-width:375px) and (min-width:325px){
+        .language-switcher-language-url .links.mb-0 {
+        padding-left: 40px;
+    }
+}
+@media(max-width:324px){
+    .language-switcher-language-url .links.mb-0 {
+        padding-left: 28px;
+    }
+}
+/* Iphone 5 BEGIN */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+     .language-switcher-language-url .links.mb-0 {
+       padding-left: 91px !important;
+       }
+}
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+     nav.navbar-brand-logo div#closeButton {
+          margin-left: 0 !important;
+      }
+}
+/* Iphone 5 END */
+/* Iphone 6/7/8 BEGIN */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+     .language-switcher-language-url .links.mb-0 {
+       padding-left: 140px;
+       }
+}
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+      nav.navbar-brand-logo div#closeButton {
+          margin-left: -60px;
+      }
+}
+/* Iphone 6/7/8 END */
+/* Iphone 6+/7+/8+ BEGIN */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+     .language-switcher-language-url .links.mb-0 {
+       padding-left: 178px !important;
+       }
+}
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+      nav.navbar-brand-logo div#closeButton {
+          margin-left: -90px !important;
+      }
+}
+/* Iphone 6+/7+/8+ END */
+/* Iphone X BEGIN */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+.language-switcher-language-url .links.mb-0 {
+       padding-left: 170px;
+       }
+}
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+nav.navbar-brand-logo div#closeButton {
+    margin-left: -40px;
+}
+}
+/* Iphone X END */
+
+.js input.form-autocomplete {
+  font-family: bookmark !important;
+}
+ul[data-sa-theme="bookmark"] .ui-autocomplete-fields>*:first-child {
+  font: 20px/32px Roboto,sans-serif;
+}
+ul[data-sa-theme="bookmark"]>li.ui-menu-item:hover .ui-autocomplete-fields>* {
+  font: 20px/32px Roboto,sans-serif;
+}
+
+.autocomplete-suggestion-label {
+  font-family: Roboto !important;
+}
+
+i.icon.icon-32.icon-bolt {
+    margin-top: 5px !important;
+    margin-left: 1px !important;
+}
+@media(max-width:767px){
+    .custom-dimelo-header {
+        margin-left: -4px !important;
+    }
+    .custom-dimelo-text {
+        margin-left: -4px !important;
+    }
+}
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : landscape) {
+    .custom-dimelo-header {
+        margin-left: 8.7%;
+    }
+    .custom-dimelo-text {
+        margin-left: 8.7%;
+    }
+}
+@media(min-width:768px) and (max-width:1023px){
+    .custom-dimelo-header {
+        margin-left: 8.7%;
+    }
+    .custom-dimelo-text {
+        margin-left: 8.7%;
+    }
+}
+@media(min-width:1024px){
+    .custom-dimelo-header {
+        margin-left: 17%;
+    }
+    .custom-dimelo-text {
+        margin-left: 17%;
+    }
+}
+
+
+
+body:not(.user-logged-in) .open-header .lang-size{
+    width: 32px !important;
+    height: 32px !important;
+    margin-top: 2px !important;
+    margin-left: 0 !important;
+}
+
+
+.open-header .language-link{
+    margin-left: -31px !important;
+    line-height: 28px !important;
+}
+
+
+
+
+ul[data-sa-theme="bookmark"] .ui-autocomplete-fields>*:first-child{
+    font: 14px/28px 'Roboto', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 568px){
+    ul[data-sa-theme="bookmark"] .ui-autocomplete-fields>*:first-child{
+        width: 60% !important;
+    }
+}
+@media (max-width: 414px){
+    ul[data-sa-theme="bookmark"] .ui-autocomplete-fields>*:first-child{
+        width: 40% !important;
+    }
+}
+@media (max-width: 375px){
+    ul[data-sa-theme="bookmark"] .ui-autocomplete-fields>*:first-child{
+        width: 35% !important;
+    }
+}
+
+@media (max-width: 320px){
+    ul[data-sa-theme="bookmark"] .ui-autocomplete-fields>*:first-child{
+        width: 30% !important;
+    }
+}
+
+
+
+
+@media (max-width: 568px){
+    ul[data-sa-theme="bookmark"] .ui-autocomplete-fields>*:first-child:lang(en){
+        width: 60% !important;
+    }
+}
+@media (max-width: 414px){
+    ul[data-sa-theme="bookmark"] .ui-autocomplete-fields>*:first-child:lang(en){
+        width: 60% !important;
+    }
+}
+@media (max-width: 375px){
+    ul[data-sa-theme="bookmark"] .ui-autocomplete-fields>*:first-child:lang(en){
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 320px){
+    ul[data-sa-theme="bookmark"] .ui-autocomplete-fields>*:first-child:lang(en){
+        width: 40% !important;
+    }
+}

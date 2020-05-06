@@ -1,0 +1,18 @@
+{% set stepValueLabelStyle = 'large' %}
+{% set stepValueLabel = '5A722' %}
+{% set formLabel = 'Ta-dah! Your Referral Code is' %}
+
+{% extends 'organisms-dashboard-collapsible-form-container' %}
+
+{% block activationForm %}
+
+  <h4 class="text-center" data-form-scroll="yes">Ta-dah! Your Referral Code is</h4>
+  <p class="text-muted text-center">Invite your friends to Bookmark and you'll both get to enjoy $25 off your next bill.</p>
+  
+  {% include 'atoms-input-appended-button-copy-value' with { buttonText: 'Copy code' } %}
+  
+  <div class="text-center mt-5">
+    {% include 'atoms-button-icon-right-large' with { buttonLabel: 'Next', icon: 'arrow-right', uniqueID: uuid } %}
+  </div>
+
+{% endblock %}

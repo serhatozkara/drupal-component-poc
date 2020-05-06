@@ -1,0 +1,62 @@
+<div class="full-screen-menu-wrapper top-left">
+  <div class="full-screen-menu-layer-1">
+    <div class="full-screen-menu-layer-2">
+      <div class="full-screen-menu-content">
+        <div class="container pt-3">
+          <div class="row">
+            <div class="col-6 offset-3 text-center">
+              <a href="#" class="home-lightning"><i class="icon icon-32 icon-bolt"></i></a>
+            </div>
+            <div class="col-3 text-right">  
+              {% include "atoms-language-switcher" %}
+            </div>
+          </div>
+        </div>
+        <div id="small-screen-main-menu-container" class="container small-screen-main-menu">
+          {% include "molecule-nav-list-center-dropdown" %}
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="full-screen-menu-wrapper top-right">
+  <div class="full-screen-menu-layer-1">
+    <div class="full-screen-menu-layer-2">
+      <div class="full-screen-menu-content">
+        <div class="container small-screen-search">
+          <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+              {% include 'atoms-global-search' %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section-header">
+  <div class="container">
+    <div class="row header-row pt-3 no-gutters">
+      <div class="col-6 col-lg-3">
+        <nav class="navbar navbar-left navbar-brand-logo">
+          <div class="btn-toggle-mobile-menu d-lg-none">
+            <span class="toggle-mobile-menu-top"></span>
+            <span class="toggle-mobile-menu-bottom"></span>
+          </div>
+          {% include "atoms-logo-green" %}
+        </nav>
+      </div>
+      <div id="large-screen-main-menu-container" class="col-lg-6 d-none d-lg-block"></div>
+      <div class="col-6 col-lg-3">
+        <nav class="navbar navbar-right float-right navbar-login">
+          <ul class="list-inline">
+            <li class="list-inline-item">{% include 'atoms-button-outline-medium' %}</li>
+            <li class="list-inline-item"><a href="#" class="toggle-full-screen-menu-search align-middle">{% include "atoms-icon-24" %}</i></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

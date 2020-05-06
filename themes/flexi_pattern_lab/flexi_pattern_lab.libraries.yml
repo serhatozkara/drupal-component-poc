@@ -1,0 +1,11 @@
+global:
+  css:
+    theme:
+      components/source/css/style.css: {}
+  js:
+    components/source/js/libs/libs.min.js: {}
+    components/source/js/script.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once

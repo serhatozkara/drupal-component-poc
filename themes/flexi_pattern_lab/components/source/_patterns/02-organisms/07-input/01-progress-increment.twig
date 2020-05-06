@@ -1,0 +1,8 @@
+<div class="progress-input-container">
+  <h4 class="d-inline-block">{{ progressValueLabel|default(6) }}</h4>
+  <p class="text-muted d-inline-block">{{ progressValueProduct|default('GB of data') }}</p>
+  <div class="d-flex">
+    {% include 'atoms-progress-slider' %}
+    {% include 'molecule-increment-buttons' %}
+  </div>
+</div>

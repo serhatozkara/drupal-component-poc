@@ -1,0 +1,17 @@
+.jiggle {
+  animation-name: jiggle;
+  animation-iteration-count: infinite;
+  animation-duration: 0.2s;
+  transform-origin: 50% 10%;
+}
+ 
+@keyframes jiggle {
+  from {
+      transform: rotate(-1deg);
+      animation-timing-function: ease-in;
+  }
+  to {
+      transform: rotate(1.5deg);
+      animation-timing-function: ease-out;
+  }
+}

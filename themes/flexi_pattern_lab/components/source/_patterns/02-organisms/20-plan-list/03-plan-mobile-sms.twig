@@ -1,0 +1,58 @@
+<div class="card card-normal mb-50">
+  <div class="card-section card-header user-plan px-3 px-md-5 pt-4">
+    <div class="d-flex flex-row align-items-start align-items-sm-center justify-content-between">
+
+      <div>
+        <h5 class="icon-custom-mobile">Mobile</h5>
+        <p class="sm-smaller-p text-muted">(514) 423-4567</p>
+      </div>
+      <div class="pl-xl-50 pl-lg-20">
+        <div class="d-flex flex-row align-items-center">
+          <h5>$35.00</h5>
+          <p class="sm-smaller-p text-muted mb-10 pl-1">/ month + tx</p>
+        </div>
+        <p class="sm-smaller-p text-muted">
+          {% include 'atoms-icon-16' with { icon:'clock', classes:'align-top' } %}
+          <strong>3 days</strong> left
+        </p>
+      </div>
+      <div class="d-none d-lg-flex">
+        {% include 'atoms-button-outline' with{ buttonLabel:'Invoices',buttonSize:'xl', classes:'ml-0 ml-lg-2'} %}
+        {% include 'atoms-button' with{ buttonLabel:'Manage',buttonSize:'xl', classes:'ml-3 ml-lg-2 ml-xl-4'} %}
+      </div>
+
+    </div>
+  </div>
+
+  <div class="card-section card-body user-plan px-3 px-md-5">
+    <div class="row">
+
+      <div class="col-xl-6 py-3 py-lg-4">
+        {% include 'organisms-progress-with-links' with { gradientcolor:'green', progressValueLabel:'6' ,progressValueProduct:'7 Gigs of data' } %}
+      </div>
+
+      <div class="col-xl-6 py-3 py-lg-4">
+        <h4 class="d-inline-block text-green mt-3">Unlimited</h5>
+        <p class="text-muted d-inline-block">/ SMS</p>
+        {% include 'atoms-progress-slider' with { gradientcolor:'green', progressValue: 100, direction:'descending' } %}
+        <div class="d-flex justify-content-start mt-3 mt-sm-4">
+          {% include 'atoms-button-link' with { buttonLabel:'Usage', active:'active', classes:'mr-10-percent' } %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-section card-body px-2 px-md-5 pb-10 d-flex d-lg-none justify-content-center align-items-center">
+    {% include 'atoms-button' with{ buttonLabel:'Manage',buttonSize:'xl', classes:'mx-2'} %}
+    {% include 'atoms-button-outline' with{ buttonLabel:'Invoices',buttonSize:'xl', classes:'mx-2'} %}
+  </div>
+
+  <div class="card-section card-body d-flex flex-column py-30 px-3 px-md-5">
+    <div class="col-lg-8 mx-auto text-center">
+      <h5 class="d-inline-block text-red">You're using a lot!</h5>
+      <p class="text-muted">At this rythm you're going to need more juice.</p>
+      {% include 'atoms-button' with{ buttonLabel:'Use an add-on', buttonColor:'red', classes: 'text-white mb-0', buttonSize:'xl'} %}
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,24 @@
+{% set stepValueLabelStyle = 'large' %}
+{% set formLabel = 'Bookmark SIM Card' %}
+{% set stepValueLabel = '$10 for your new SIM Card' %}
+
+{% extends 'organisms-collapsible-form-container' %}
+
+{% block activationForm %}
+  <div id="orderNewSIM">
+    <div class="d-flex">
+      <div class="pr-3">
+        {% include 'atoms-icon' with { size:'48',color:'green',icon:'plus-circle'}  %}
+      </div>
+      <div class="">
+        <h4 class="">Order a New SIM Card</h4>
+        <p class="">Your Modification will be activated after receiving and activating your new Sim Card</p>
+      </div>
+    </div>
+    <div class="">
+      <div class="text-center mt-50">
+        {% include 'atoms-button-collapse' with { buttonLabel: 'Order a new SIM Card', uniqueID: uuid} %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

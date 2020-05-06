@@ -1,0 +1,7 @@
+<ul class="list-unstyled list-inline mb-lg-0">
+  {% for listItem in listItems.three %}
+    <li class="list-inline-item">
+      {% include "atoms-link-footer-nav" with { menuTitle: listItem.footerMenuTitle } %}
+    </li>
+  {% endfor %}
+</ul>

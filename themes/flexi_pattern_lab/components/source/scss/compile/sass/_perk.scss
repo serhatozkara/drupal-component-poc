@@ -1,0 +1,52 @@
+// Perks Tabbed Navigation
+#perks-tab {
+  li:first-child a {
+    margin-left: 0;
+  }
+}
+
+.perk {
+  width: 100%;
+  float: left;
+}
+
+.perk-details {
+  bottom: 0;
+  width: 100%;
+  padding: 0 10% 5% 10%;
+  color: $white;
+}
+
+.perk-name {
+  width: 60%;
+  float: left;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.perk-expiration {
+  width: 40%;
+  float: left;
+  text-align: right;
+}
+
+@include media-breakpoint-up(md) {
+  .perk-container {
+    .perk {
+      // margin-right: 1em;
+      max-width: calc(50% - 1em);
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .perk-container {
+    .perk {
+      max-width: calc(33.33% - 1em);
+    }
+  }
+}
+
+.perk-expired {
+  filter: grayscale(0.6) opacity(.25);
+}

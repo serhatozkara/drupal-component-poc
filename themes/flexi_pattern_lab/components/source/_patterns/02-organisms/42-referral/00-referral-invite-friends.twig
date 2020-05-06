@@ -1,0 +1,125 @@
+{% set stepValueLabelStyle = 'small' %}
+{% set stepValueLabel = '<strong>Marie-Pierre Primeau</strong><br>mariepierre.primeau@gmail.com<hr><strong>Elodie Ray</strong><br>elodie.d.ray@hotmail.com' %}
+{% set formLabel = 'Your refer friend' %}
+{% set collapseDefault = 'collapse' %}
+
+{% extends 'organisms-dashboard-collapsible-form-container' %}
+
+{% block activationForm %}
+
+  <div class="text-center mb-4">
+    <h4 data-form-scroll="yes">Invite friends</h4>
+    <p>There’s no limit on how many new members you can invite with your Referral Code.</p>
+  </div>
+
+  <div class="card p-3 my-3">
+    <ul class="nav nav-tab pb-3 border-bottom d-flex justify-content-around" id="myTab" role="tablist">
+      <li>
+        <a class="active show" id="sms-tab" data-toggle="tab" href="#contacts" role="tab" aria-controls="contacts" aria-selected="true">SMS</a>
+      </li>
+      <li>
+        <a id="social-tab" data-toggle="tab" href="#social" role="tab" aria-controls="social" aria-selected="true">Social</a>
+      </li>
+      <li>
+        <a id="email-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Email</a>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+
+      <div class="tab-pane fade show active" id="contacts" role="tabpanel" aria-labelledby="sms-tab">
+        <div class="mt-3">
+          {% include 'organisms-referral-contacts-table' %}
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="social" role="tabpanel" aria-labelledby="social-tab">
+        <div class="row">
+
+            <div class="col-lg-4 col-md-12 col-sm-12 social-box">
+                <div class="form-radio-block d-flex my-2 my-md-3">
+                    <input class="sr-only" type="radio" name="radioOptions" id="radio1" value="option1">
+                    <label class="align-self-center w-100 p-3 text-center" for="radio1">
+                        <div class="col-12"><div class="social-icon color-facebook"><img src="/images/facebook.svg" class="d-block mx-auto"></div></div>
+                        <strong class="col-12 text-center pt-3">Facebook</strong>
+                        <span class="fi-circle fi-circle-16 fi-circle-electric-blue"><svg class="fi fi-16 fi-white"><use xlink:href="/images/icons/feather-sprite.svg#check" href="/images/icons/feather-sprite.svg#check"></use></svg></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 col-sm-12 social-box">
+                <div class="form-radio-block d-flex my-2 my-md-3">
+                    <input class="sr-only" type="radio" name="radioOptions" id="radio2" value="option2">
+                    <label class="align-self-center w-100 p-3 text-center" for="radio2">
+                        <div class="col-12"><div class="social-icon color-fb-messenger"><img src="/images/messenger.svg" class="d-block mx-auto"></div></div>
+                        <strong class="col-12 text-center pt-3">Messenger</strong>
+                        <span class="fi-circle fi-circle-16 fi-circle-electric-blue"><svg class="fi fi-16 fi-white"><use xlink:href="/images/icons/feather-sprite.svg#check" href="/images/icons/feather-sprite.svg#check"></use></svg></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 col-sm-12 social-box">
+                <div class="form-radio-block d-flex my-2 my-md-3">
+                    <input class="sr-only" type="radio" name="radioOptions" id="radio3" value="option3">
+                    <label class="align-self-center w-100 p-3 text-center" for="radio3">
+                        <div class="col-12"><div class="social-icon color-linkedin"><img src="/images/linkedin.svg" class="d-block mx-auto"></div></div>
+                        <strong class="col-12 text-center pt-3">LinkedIn</strong>
+                        <span class="fi-circle fi-circle-16 fi-circle-electric-blue"><svg class="fi fi-16 fi-white"><use xlink:href="/images/icons/feather-sprite.svg#check" href="/images/icons/feather-sprite.svg#check"></use></svg></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="email-tab">
+        <div class="row">
+
+        <div class="col-lg-4 col-md-12 col-sm-12 social-box">
+            <div class="form-radio-block d-flex my-2 my-md-3">
+                <input class="sr-only" type="radio" name="radioOptions" id="radio3" value="option3">
+                <label class="align-self-center w-100 p-3 text-center" for="radio3">
+                    <div class="col-12"><div class="social-icon color-gmail"><img src="/images/gmail.svg" class="d-block mx-auto"></div></div>
+                    <strong class="col-12 text-center pt-3">Gmail</strong>
+                    <span class="fi-circle fi-circle-16 fi-circle-electric-blue"><svg class="fi fi-16 fi-white"><use xlink:href="/images/icons/feather-sprite.svg#check" href="/images/icons/feather-sprite.svg#check"></use></svg></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 col-sm-12 social-box">
+            <div class="form-radio-block d-flex my-2 my-md-3">
+                <input class="sr-only" type="radio" name="radioOptions" id="radio3" value="option3">
+                <label class="align-self-center w-100 p-3 text-center" for="radio3">
+                    <div class="col-12"><div class="social-icon color-outlook"><img src="/images/outlook.svg" class="d-block mx-auto"></div></div>
+                    <strong class="col-12 text-center pt-3">Outlook</strong>
+                    <span class="fi-circle fi-circle-16 fi-circle-electric-blue"><svg class="fi fi-16 fi-white"><use xlink:href="/images/icons/feather-sprite.svg#check" href="/images/icons/feather-sprite.svg#check"></use></svg></span>
+                </label>
+            </div>
+        </div>
+            <!--
+            <div class="col-sm-4">{% include 'atoms-block-radio-icon' with { inputNumber: 4, labelName: "Gmail" } %}</div>
+            <div class="col-sm-4">{% include 'atoms-block-radio-icon' with { inputNumber: 5, labelName: "Outlook" } %}</div>
+            -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="my-5">
+    <h4>Can't find your friends?</h4>
+    <p>Type an email address</p>
+    <div class="refferalEmail">
+      {% include 'atoms-input-with-close' %}
+    </div>
+    <div class="refferalEmail">
+      {% include 'atoms-input-with-close' %}
+    </div>
+
+    <a id="addMore" href="#">Add more email addresses</a>
+  </div>
+
+  <div class="text-center mt-5">
+    {% include 'atoms-button-icon-right-large' with { buttonLabel: 'Next', icon: 'arrow-right', uniqueID: uuid } %}
+  </div>
+
+{% endblock %}

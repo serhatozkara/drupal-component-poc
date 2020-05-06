@@ -1,0 +1,10 @@
+{% extends '@molecule/02-nav-lists/00-nav-list-center.twig' %}
+
+{% block content %}
+  {{ content }}
+  {{ dump(content) }}
+{% endblock %}
+
+{% block site_branding %}
+  {{ drupal_block('system_branding_block') }}
+{% endblock %}

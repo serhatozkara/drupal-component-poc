@@ -1,0 +1,17 @@
+items:
+-
+  url: "#"
+  title: "Home"
+  modifier: ""
+-
+  url: "#"
+  title: "Features"
+  modifier: ""
+-
+  url: "#"
+  title: "Prices"
+  modifier: ""
+-
+  url: "#"
+  title: "Donate"
+  modifier: "nav__link--button"

@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-12">
+    {% include 'atoms-block-radio-text-center-small' with { inputNumber: "phone1", labelName: '514 925 3365' } %}
+  </div>
+  <div class="col-12">
+    {% include 'atoms-block-radio-text-center-small' with { inputNumber: "phone2", labelName: '514 911 0096' } %}
+  </div>
+  <div class="col-12">
+    {% include 'atoms-block-radio-text-center-small' with { inputNumber: "phone3", labelName: '438 200 1888' } %}
+  </div>
+  <div class="col-12">
+    {% include 'atoms-block-radio-text-center-small' with { inputNumber: "phone4", labelName: '438 200 2525' } %}
+  </div>
+  <div class="col-12">
+    {% include 'atoms-block-radio-text-center-small' with { inputNumber: "phone5", labelName: '438 221 6565' } %}
+  </div>  
+</div>
+
+<div class="d-block text-center mt-3">
+  {% include 'atoms-icon-16' with { icon: 'refresh-cw'} %}
+  <a href="#" data-new-random-number>Generate a new list of options</a>
+  {% include 'atoms-tooltip' %}
+</div>

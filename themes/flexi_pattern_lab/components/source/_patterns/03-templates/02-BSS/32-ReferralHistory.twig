@@ -1,0 +1,84 @@
+{% extends 'organisms-dashboard-container' %}
+
+{% block dashboardContent %}
+  <div class="py-50 py-md-120 bg-lightest-gray">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-12 mb-5">
+          <a class="text-muted d-flex align-item-center" href="#">
+            {% include'atoms-icon-24' with {icon:'chevron-left',color:' text-muted'} %}My profile
+          </a>
+        </div>
+
+        <div class="col-12 text-center mb-4">
+          <h3>Referral History</h3>
+          <p class="text-muted">Refer a friend and get both a reward!</p>
+          {% include 'atoms-button' with{ classes:'d-md-none w-100', buttonLabel:'Refer a friend',buttonSize:'xl'} %}
+        </div>
+
+
+        <div class="col-12">
+          <div class="card card-normal">
+            <div class="card-section card-header bg-dark-blue d-flex p-0 p-md-2 px-md-5 pt-md-4 ">
+              <div class="row mx-0 w-100">
+                <div class="form-group col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start  mb-0">
+                  {% include 'atoms-button-dropdown' %}
+                </div>
+                <div class="col-md-6 d-none d-md-flex align-items-center justify-content-end">
+                  {% include 'atoms-button' with{ buttonLabel:'Refer a friend',buttonSize:'xl'} %}
+                </div>
+              </div>
+            </div>
+
+            <div class="card-section card-body d-flex px-2 px-md-5">
+              <div class="col-5 col-md-8 d-flex px-0 flex-wrap-reverse flex-md-row">
+                <div class="col-12 col-md-6 d-flex justify-content-start align-items-center text-muted">514 852 6363</div>
+                <div class="col-12 col-md-6 d-flex justify-content-md-center align-items-center text-md-center"><strong>Welcome to Bookmark</strong></div>
+              </div>
+              <div class="col-7 col-md-4 d-flex justify-content-end align-items-center">
+                <div class="text-right text-light-gray">
+                  <h5 class="mb-0">$15.00
+                    {% include'atoms-icon-24' with {icon:'lock'} %}
+                  </h5>
+                  <p class="d-block text-uppercase caption mb-0">pending</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-section card-body d-flex px-2 px-md-5">
+              <div class="col-5 col-md-8 d-flex px-0 flex-wrap-reverse flex-md-row">
+                <div class="col-12 col-md-6 d-flex justify-content-start align-items-center text-muted">438 263 1125</div>
+                <div class="col-12 col-md-6 d-flex justify-content-md-center align-items-center text-md-center"><strong>Elodie R.</strong></div>
+              </div>
+              <div class="col-7 col-md-4 d-flex justify-content-end align-items-center">
+                <div class="text-right text-light-gray">
+                  <h5 class="mb-0">$15.00
+                    {% include'atoms-icon-24' with {icon:'lock'} %}
+                  </h5>
+                  <p class="d-block text-uppercase caption mb-0">pending</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-section card-body d-flex px-2 px-md-5">
+              <div class="col-5 col-md-8 d-flex px-0 flex-wrap-reverse flex-md-row">
+                <div class="col-12 col-md-6 d-flex justify-content-start align-items-center text-muted">514 852 1515</div>
+                <div class="col-12 col-md-6 d-flex justify-content-md-center align-items-center text-md-center"><strong>Benjamin V.</strong></div>
+              </div>
+              <div class="col-7 col-md-4 d-flex justify-content-end align-items-center">
+                <div class="text-right text-mid-purple">
+                  <h5 class="mb-0">$15.00
+                    {% include'atoms-icon-24' with {icon:'unlock'} %}
+                  </h5>
+                  <p class="d-block text-uppercase caption mb-0">Discount on your bill</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

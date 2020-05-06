@@ -1,0 +1,90 @@
+    <div class="modal-content login-modal">
+
+        <div class="modal-header mb-20">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><svg class="fi fi-24 fi-gray"><use xlink:href="/images/icons/feather-sprite.svg#x" href="/images/icons/feather-sprite.svg#x"></use></svg></button>
+        </div>
+
+        <div class="modal-body p-0 mx-30 mx-md-75 mb-20">
+            <h6 class="mb-15 mb-md-20 fs-22">Login</h6>
+
+            {% include 'atoms-error-message' %}
+
+            <div class="floating-label-group floating-label-control">
+                <input type="email" class="floating-label-input form-control h-60" required/>
+                <label class="floating-label d-flex">
+                    <span class="hide-icon p-0 mr-2"><svg class="fi fi-16 fi-"><use xlink:href="/images/icons/feather-sprite.svg#mail" href="/images/icons/feather-sprite.svg#mail"></use></svg></span> Email
+                </label>
+            </div>
+
+            <div class="floating-label-group floating-label-control mt-md-30 mt-15 mb-15">
+                <input type="password" class="floating-label-input form-control is-invalid h-60" required/>
+                <label class="floating-label d-flex">
+                    <span class="hide-icon p-0 mr-2"><svg class="fi fi-16 fi-"><use xlink:href="/images/icons/feather-sprite.svg#mail" href="/images/icons/feather-sprite.svg#mail"></use></svg></span> Password
+                </label>
+                <div class="invalid-feedback">Sample error message</div>
+                <label class="label-right forgot-label-right"><a href="#" class="">Forgot</a></label>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-block btn-lg btn-height-55 mb-0">Log In</button>
+
+            <div class="container my-20">
+                <div class="row justify-content-center">
+                <div class="col text-laurel d-sm-block"></div>
+                <div>
+                    <p class="text-muted text-uppercase px-3 py-2 d-block">
+                        <small class="fs-11">LOGIN WITH:</small>
+                        <span id="tooltip-social" class="tooltip-container mx-1" data-toggle="tooltip" data-html="true" data-placement="top" title="" data-original-title="When you choose to sign up with a social account, you'll still need to create a Fizz password to secure your account. But once your account is set up, you'll be able to log in using only your social account. ">
+                            <img class="fi fi-24 fi-white" src="/images/Icon-questionMark.svg">
+                        </span>
+                    </p>
+                </div>
+                    <div class="col text-laurel d-sm-block"></div>
+                </div>
+            </div>
+
+            <div class="row d-flex flex-wrap justify-content-between socialz mx-0">
+                <a href="#" class="btn-facebook" title="Facebook">
+                    <svg class="fi fi-16 fi- fi-fill-white">
+                        <use xlink:href="/images/icons/feather-sprite.svg#facebook" href="/images/icons/feather-sprite.svg#facebook"></use>
+                    </svg>
+                </a>
+                <a href="#" class="btn-instagram" title="Instagram">
+                    <svg class="fi fi-16 fi- fi-white">
+                        <use xlink:href="/images/icons/feather-sprite.svg#instagram" href="/images/icons/feather-sprite.svg#instagram"></use>
+                    </svg>
+                </a>
+                <a href="#" class="btn-linkedin" title="Linkedin">
+                    <svg class="fi fi-16 fi- fi-fill-white">
+                        <use xlink:href="/images/icons/feather-sprite.svg#linkedin" href="/images/icons/feather-sprite.svg#linkedin"></use>
+                    </svg>
+                </a>
+                <a href="#" class="btn-google" title="Google Plus">
+                    <svg class="fi fi-16 fi- fi-fill-white">
+                        <use xlink:href="/images/icons/feather-sprite.svg#google-plus" href="/images/icons/feather-sprite.svg#google-plus"></use>
+                    </svg>
+                </a>
+                <a href="#" class="btn-amazon" title="Amazon">
+                    <svg class="fi fi-16 fi- fi-fill-white">
+                        <use xlink:href="/images/icons/feather-sprite.svg#amazon" href="/images/icons/feather-sprite.svg#amazon"></use>
+                    </svg>
+                </a>
+                <a href="#" class="btn-twitter" title="Twitter">
+                    <svg class="fi fi-16 fi- fi-fill-white">
+                        <use xlink:href="/images/icons/feather-sprite.svg#twitter" href="/images/icons/feather-sprite.svg#twitter"></use>
+                    </svg>
+                </a>
+                <a href="#" class="btn-twitch" title="Twitch">
+                    <svg class="fi fi-16 fi- fi-fill-white">
+                        <use xlink:href="/images/icons/feather-sprite.svg#twitch" href="/images/icons/feather-sprite.svg#twitch"></use>
+                    </svg>
+                </a>
+                <a href="#" class="btn-steam" title="Steam">
+                    <svg class="fi fi-16 fi- fi-fill-white">
+                        <use xlink:href="/images/icons/feather-sprite.svg#steam" href="/images/icons/feather-sprite.svg#steam"></use>
+                    </svg>
+                </a>
+            </div>     
+                <p class="text-center text-muted fs-14 my-30">New to Bookmark? <a href="#" data-toggle="modal" class="underline" data-target="#modalRegister">Start here</a></p>
+            </div>
+        </div>
+    </div>

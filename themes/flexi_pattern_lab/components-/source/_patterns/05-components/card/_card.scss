@@ -1,0 +1,48 @@
+
+.card__img {
+  .field--type-image {
+    img {
+      width: 100%;
+      display: block;
+      height: auto;
+      @include border-radius(5px 5px 0 0);
+    }
+  }
+}
+.content-inner-sec {
+  .card-title a{
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: $dark_bg;
+    @include transition (all 0.3s ease-out);
+    &:hover {
+      color: $link_h_color;
+    }
+    span {
+      line-height: 24px;
+      font-size: 0.8em;
+      display: block;
+    }
+  }
+  .card__date {
+    font-size: 0.8em;
+    font-weight: 600;
+    margin: 0 0 10px;
+  }
+  .card-text {
+    font-size: 0.9em;
+  }
+}
+.animation-element{
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-out 0.5s;
+  transform: translateX(-100%);
+  &.in-view{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+

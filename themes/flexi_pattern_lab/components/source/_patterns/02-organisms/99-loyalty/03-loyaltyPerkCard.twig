@@ -1,0 +1,70 @@
+{% set uuid = uniqueID|default(random()) %}
+<div class="perk mb-20 d-inline-block position-relative {{ perkClasses }}" data-toggle="modal" data-target="#modal-{{ uuid }}">
+  <img src="/images/perks/perk-fizz.png" class="img-fluid card card-rounder">
+  <div class="perk-details position-absolute">
+    <h6 class="perk-name">250 MB of mobile data</h6>
+    <span class="perk-expiration small">14 hours left</span>
+  </div>
+</div>  
+
+<div class="modal fade" id="modal-{{ uuid }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content border-radius-25">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg class="fi fi-32 fi-grey">
+              <use xlink:href="/images/icons/feather-sprite.svg#x" href="/images/icons/feather-sprite.svg#x"/>
+            </svg>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        
+        <div id="modal-carousel-{{ uuid }}" class="carousel slide slide-vertical" data-interval="false" data-keyboard="false" data-wrap="false">
+          <div class="carousel-inner">
+            
+            <div class="carousel-item">
+              <h4 class="text-center">{{ upgradeModalTitle|default('Do you want to gift this Perk?') }}</h4>    
+              <p class="text-center text-muted">When you gift a Perk, you cannot take it back. Click Yes to choose a recipient.</p>
+              <div class="text-center">
+                <button type="button" class="btn btn-outline-dark btn-xl " href="#modal-carousel-{{ uuid }}" data-dismiss="modal" data-slide="next">Cancel</button>
+                <button type="button" class="btn btn-primary btn-xl " href="#modal-carousel-{{ uuid }}" role="button">Yes</button>
+              </div>
+            </div>
+            
+            <div class="carousel-item active">
+              <h4>{{ perkModalTitle|default('Free Taxi Ride') }}</h4>
+              <p><strong>{{ perkModalBody|default('Get a cab right now!') }}</strong></p>
+              <p class="text-muted">{{ perkModalDetails|default('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.') }}</p>
+              <p>{{ perkTimeRemaining|default('4 days left') }}</p>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-outline-dark btn-xl mr-15 mr-md-20" href="#modal-carousel-{{ uuid }}" role="button" data-slide="prev">Gift</button>
+                <button type="button" class="btn btn-primary btn-xl " href="#modal-carousel-{{ uuid }}" role="button" data-slide="next">Use</button>
+              </div>
+            </div>
+            
+            <div class="carousel-item">
+              <h4 class="text-center">{{ upgradeModalTitle|default('Do you want to activate this Perk?') }}</h4>    
+              <p class="text-center text-muted">Once used, you cannot get it back. It will be valid until it expires.</p>
+              <div class="text-center">
+                <button type="button" class="btn btn-outline-dark btn-xl " data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary btn-xl " href="#modal-carousel-{{ uuid }}" role="button" data-slide="next">Activate</button>
+              </div>
+            </div>
+            
+            <div class="carousel-item">
+              <h4>{{ perkModalTitle|default('Free Taxi Ride') }}</h4>
+              <p><strong>{{ perkModalBody|default('Get a cab right now!') }}</strong></p>
+              <p class="text-muted">{{ perkModalDetails|default('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.') }}</p>
+              <p>{{ perkTimeRemaining|default('4 days left') }}</p>
+            </div>
+            
+            
+          </div>
+          
+        </div>
+      </div>    
+    
+    </div>
+  </div>
+</div>

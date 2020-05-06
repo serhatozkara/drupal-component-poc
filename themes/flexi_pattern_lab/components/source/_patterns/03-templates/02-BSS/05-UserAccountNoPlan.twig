@@ -1,0 +1,28 @@
+{% extends 'organisms-dashboard-container' %}
+
+{% block dashboardContent %}
+  <div class="row mb-50">
+  <div class="card card-normal mb-50 col-12">
+    <div class="card-section d-flex flex-column align-items-center pt-5 pb-4 px-4">
+      <h4 class="mb-5">Plans</h4>
+      <img src="http://via.placeholder.com/150x150" class="rounded-circle mb-3">
+      <h3 class="text-center mb-2">You like movies?</h3>
+      <p class="text-secondary text-center mb-4">Suspendisse lorem inpsum auctor tororo magic bus.</p>
+      <div class="mb-4"><a href="#"><strong><u>See plans</strong></u></a></div>
+      {% include 'atoms-button' with{buttonLabel:'Subscribe!',buttonSize:'xl'} %}
+    </div>
+  </div>
+
+  <div class="card card-normal mb-50 col-12">
+    <div class="card-section d-flex flex-column align-items-center pt-5 pb-4 px-4">
+      <h4 class="mb-5">Plans</h4>
+      <img src="http://via.placeholder.com/150x150" class="rounded-circle mb-3">
+      <h3 class="text-center mb-2">Do you want to surf on a rocket?</h3>
+      <p class="text-secondary text-center mb-4">Suspendisse lorem inpsum.</p>
+      <div class="mb-4"><a href="#"><strong><u>See plans</strong></u></a></div>
+      {% include 'atoms-button' with{buttonLabel:'Subscribe!',buttonSize:'xl'} %}
+    </div>
+  </div>
+  </div>
+
+{% endblock %}

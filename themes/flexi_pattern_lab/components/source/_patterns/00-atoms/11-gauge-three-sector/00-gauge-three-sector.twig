@@ -1,0 +1,81 @@
+<div class="container mt-50">
+  <div class="gauge-wrapper-ph w-100" id="gauge-three-sector" data-gauge-percent={{ gaugePercent|default(0.4) }}>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="gauge-meter svg-responsive"
+        viewBox="0 0 350 235" preserveAspectRatio="xMinYMid meet">
+
+      <defs>
+        <linearGradient id="purple-gauge-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#EF2731"></stop>
+          <stop offset="100%" stop-color="#2700F2"></stop>
+        </linearGradient>
+      </defs>
+
+      <circle class="gauge-outline" r="150" cx="55%" cy="30%" stroke="#DDDEE9" stroke-width="20" stroke-dasharray="565, 943" stroke-linecap="round"
+              transform="rotate(162 175 117.5)" fill="none">
+      </circle>
+
+      <circle class="gauge-fill"
+              r="150"
+              cx="55%"
+              cy="30%"
+              stroke-width="20"
+              fill-rule="evenodd"
+              stroke="#fe5445"
+              transform="rotate(162 175 117.5)"
+              fill="none"
+              stroke-linecap="round"
+              stroke-dasharray="565, 943">
+      </circle>
+      <circle class="gauge-fill"
+              r="150"
+              cx="55%"
+              cy="30%"
+              stroke-width="20"
+              fill-rule="evenodd"
+              stroke="#ffb745"
+              transform="rotate(162 175 117.5)"
+              fill="none"
+              stroke-dasharray="376, 943">
+      </circle>
+      <circle class="gauge-fill"
+              r="150"
+              cx="55%"
+              cy="30%"
+              stroke-width="20"
+              fill-rule="evenodd"
+              stroke="#00cf6e"
+              transform="rotate(162 175 117.5)"
+              fill="none"
+              stroke-dasharray="188, 943">
+      </circle>
+      <circle class="gauge-fill"
+              r="150"
+              cx="55%"
+              cy="30%"
+              stroke-width="20"
+              fill-rule="evenodd"
+              stroke="#00cf6e"
+              transform="rotate(162 175 117.5)"
+              fill="none"
+              stroke-linecap="round"
+              stroke-dasharray="10, 943">
+      </circle>
+
+      <circle class="gauge-notch" r="110" cx="50%" cy="70%" stroke="#191919" stroke-width="20" stroke-linecap="butt" stroke-dasharray="5, 19"
+              transform="rotate(37 175 160)" fill="none">
+      </circle>
+
+      <circle class="gauge-notch-mask" r="110" cx="50%" cy="70%" stroke="#ffffff" stroke-width="40" stroke-linecap="butt" stroke-dasharray="260, 690"
+              transform="rotate(22 160 175)" fill="none">
+      </circle>
+
+      <circle class="gauge-center" r="10" cx="50%" cy="75%" stroke="#DDDEE9" fill="#DDDEE9">
+      </circle>
+
+      <g class="needle-path">
+        <path d="M4.93034024,7.34573371 C4.93034024,14.5317171 3.50273114,45.8390811 0.647512946,101.267826 C1.26301736,107.547897 3.64804087,110.687933 7.80258348,110.687933 C11.9571261,110.687933 14.3421496,107.547897 14.957654,101.267826 L12.5324454,7.34573371 C12.1166651,2.90720015 10.9405937,0.687933377 9.00423101,0.687933377 C5.30215385,0.687933377 4.93034024,6.14785372 4.93034024,7.34573371 Z"
+              fill="#191919"></path>
+      </g>
+    </svg>
+  </div>
+</div>

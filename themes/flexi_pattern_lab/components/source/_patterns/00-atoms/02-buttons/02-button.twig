@@ -1,0 +1,7 @@
+<button 
+  type="button" 
+  class="btn btn-{{ buttonColor|default('primary') }} btn-{{ buttonSize|default('lg') }} {{ classes }}"
+  {% if dataToggle is defined %} data-toggle="{{ dataToggle|default(NULL) }}"{% endif %}
+  {% if dataTarget is defined %}data-target="{{ dataTarget|default(NULL) }}"{% endif %}
+  {% if ariaExpanded is defined %}aria-expanded="{{ ariaExpanded|default(NULL) }}"{% endif %}
+>{{ buttonLabel }}</button>

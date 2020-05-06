@@ -1,0 +1,21 @@
+<div class="hero-wrapper d-flex">
+  <div class="hero {{ herobgcolor|default('bg-fizz-light-grey ') }} hero-50-left-text d-flex align-items-center w-100 py-5">
+    <div class="container d-flex w-100">
+      <div class="row w-100 mx-auto">
+        <div class="col-md col-lg-5 pb-4 pb-md-0 text-center text-md-left d-flex align-items-center">
+          <div>
+            <h2>Setting up your box is that easy</h2>
+            <p>Here you can find out how to set up your phone and SIM so that you can start making calls, sending texts, and using the internet.</p>
+            <a href="#" class="btn btn-success">Live chat for help</a>
+          </div>
+        </div>
+        <div class="col-md col-lg-7 pb-4 pb-md-0 d-none d-md-block">
+          {% include "atoms-hero-half-square" %}
+        </div>
+        <div class="col-md col-lg-7 pb-4 pb-md-0 d-block d-md-none">
+          {% include "atoms-hero-half-square" %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

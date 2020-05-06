@@ -1,0 +1,5 @@
+<div class="data-blocks">
+  {% include 'molecule-data-block-unactive' with { num_gigs: '1 GB', data_type: 'gift' } %}
+  {% include 'molecule-data-block' with { active: 'current', height: '65%', num_gigs: '1 GB', data_type: 'rollover', days_left: '22' } %}
+  {% include 'molecule-data-block-monthly' with { height: '100%', amount_height: 'amount-7', num_gigs: '7 GB', data_type: 'monthly plan' } %}
+</div>

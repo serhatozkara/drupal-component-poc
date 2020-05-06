@@ -1,0 +1,6 @@
+foo_layout_builder:
+  label: Foo UI Pattern layout
+  fields:
+    text:
+      type: text
+      label: Text

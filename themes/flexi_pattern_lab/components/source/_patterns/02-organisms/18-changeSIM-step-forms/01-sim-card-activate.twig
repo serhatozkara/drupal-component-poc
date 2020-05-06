@@ -1,0 +1,24 @@
+{% set stepValueLabelStyle = 'large' %}
+{% set formLabel = 'Bookmark SIM Card' %}
+{% set stepValueLabel = 'Activate owned SIM Card' %}
+
+{% extends 'organisms-collapsible-form-container' %}
+
+{% block activationForm %}
+  <div id="activateSIM">
+    <div class="d-flex">
+      <div class="pr-3">
+        {% include 'atoms-icon' with { size:'48',color:'green',icon:'x'}  %}
+      </div>
+      <div class="">
+        <h4 class="">Activate my SIM Card</h4>
+        <p class="">You will be able to enjoy your Sim Card right away after activating it!</p>
+      </div>
+    </div>
+    <div class="">
+      <div class="text-center mt-50">
+        {% include 'atoms-button-collapse' with { buttonLabel: 'Activate my SIM Card', uniqueID: uuid} %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

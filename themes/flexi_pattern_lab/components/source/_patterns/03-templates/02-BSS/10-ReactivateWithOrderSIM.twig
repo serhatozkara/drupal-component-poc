@@ -1,0 +1,37 @@
+{% extends "organisms-dashboard-container" %}
+
+{% block dashboardContent %}
+
+<div class="row">
+  <div class="col-lg-10 offset-lg-1">
+
+    <div class="p-4 text-center mb-5">
+      <h2>Reactivate your BM Plan</h2>
+      <h4>It only takes 5 minutes!</h4>
+    </div>
+
+    <div class="card p-4 mb-50">
+      <h4><u>What you need:</u></h4>
+
+      <ul>
+        <li class="media p-4 mb-5">
+          <img src="http://via.placeholder.com/60x60" class="rounded-circle mr-3">
+          <div class="media-body">
+            <h4>Your BM SIM card</h4>
+          </div>
+        </li>
+        <li class="media p-4 mb-5">
+          <img src="http://via.placeholder.com/60x60" class="rounded-circle mr-3">
+          <div class="media-body">
+            <h4>Your phone*</h4>
+            <p>*Must be unlocked and compatible with Bookmark.</p>
+            <p>{% include 'atoms-button' with{ buttonLabel:'Verify my phone',buttonSize:'l', classes:''} %}</p>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

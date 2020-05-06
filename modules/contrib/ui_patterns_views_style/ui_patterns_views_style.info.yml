@@ -1,0 +1,14 @@
+name: UI Patterns Views Style
+type: module
+description: Use patterns as Views Style templates.
+core: 8.x
+package: User interface
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:views
+  - ui_patterns:ui_patterns
+
+# Information added by Drupal.org packaging script on 2020-03-17
+version: '8.x-1.0'
+project: 'ui_patterns_views_style'
+datestamp: 1584471456

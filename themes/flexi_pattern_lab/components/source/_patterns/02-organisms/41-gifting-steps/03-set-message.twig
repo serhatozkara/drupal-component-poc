@@ -1,0 +1,16 @@
+{% set stepValueLabelStyle = 'small' %}
+{% set stepValueLabel = '<strong>2.5 GB of data</strong><br/>January 24, 2018' %}
+{% set priceReveal = 'yes' %}
+{% set collapseDefault = 'collapse' %}
+{% set formLabel = 'Your amount gifted' %}
+
+{% extends 'organisms-dashboard-collapsible-form-container' %}
+
+{% block activationForm %}
+
+  <h4 data-form-scroll="yes">Personalize your message</h4>
+  <p class="text-muted">A personalized message is more likely to be read by friends.</p>
+  
+  {% include 'molecule-personalize-your-message' %}
+
+{% endblock %}

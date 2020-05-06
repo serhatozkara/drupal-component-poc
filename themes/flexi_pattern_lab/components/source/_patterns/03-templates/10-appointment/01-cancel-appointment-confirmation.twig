@@ -1,0 +1,36 @@
+{% extends "organisms-dashboard-container" %}
+
+{% block dashboardContent %}
+
+  <div class="row">
+    <div class="col-12 text-muted"><span class="display-4">‹</span> Manage</div>
+    <div class="col-12 col-lg-8 offset-lg-2">
+      <div class="col col-lg-8 offset-lg-2">
+        <div class="my-2 mx-2 mb-3">
+          <h4 class="text-left text-sm-center">Can you confirm you want to cancel your service call appointment?</h4>
+          <p class="text-left text-sm-center text-muted">By canceling your appointment, we will cancel your subscription to bookmark as well</p>
+          <h4 class="text-left text-sm-center mt-4">Current appointment</h4>
+        </div>
+      </div>
+      <div class="card py-3 p-lg-4 p-md-3">
+        <div class="row px-2">
+          <div class="col-10 col-sm-8 mx-auto px-3">
+            <div class="media">
+              <img src="http://via.placeholder.com/60x60" class="rounded-circle mr-3 my-auto">
+              <div class="media-body mt-2">
+                <span class="font-weight-bold small mb-0">01/01/2018 at 9h45</span>
+                <h5>Service Call</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-8 col-sm-4 px-3 mx-auto my-auto">
+            <div class="text-center m-auto pt-3">
+              {% include 'atoms-button-outline' with{ buttonLabel:'Cancel',buttonSize:'l', classes:'btn-block btn-small'} %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+ol.instructions {
+  counter-reset: li;
+  margin-left: 0; /* Remove the default left margin */
+  padding-left: 0; /* Remove the default left padding */
+
+  &>li {
+    position: relative; /* Create a positioning context */
+  	list-style: none; /* Disable the normal item numbering */
+    margin-bottom: 2em;
+  }
+
+  &>li:before {
+    content:counter(li); /* Use the counter as content */
+  	counter-increment:li; /* Increment the counter by 1 */
+    line-height: 1em;
+    font-size: 9em;
+    font-weight: 600;
+    float: left;
+    padding-right: 1rem;
+  }
+
+  .instruction-intro {
+    min-height: 8em;
+    padding-top: 1em;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &>li:before {
+    	position: absolute;
+    	// left: -0.8em;
+    	//left: -2.2em;
+        left: -1.5em;
+      padding: 0;
+      text-align: center;
+    }
+
+    .instruction-intro {
+      padding-top: 2em;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+/**
+ * Generic Components
+*/
+
+
+body {
+	color: $link_dark_color;
+	background: $white_bg;
+	font-size: 16px;
+	line-height: 22px;
+}
+a{
+	color: $link_dark_color;
+	text-decoration: none;
+	outline: 0;
+	font-weight: 600;
+	@include transition(all .3s ease);
+}
+a:focus, a:hover, a:active {
+	color: $link_h_color;
+	text-decoration: underline;
+}
+a:focus, a:active {
+		text-decoration: underline;
+}
+img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+h1,h2,h3,h4,h5{
+	color: $text_black;
+	font-weight: 600;
+}
+
+
+
+/**
+ * Form Fields
+*/
+input[type="text"], input.form-text, select, textarea, input[type="email"]{
+	border: 1px solid $grey_color;
+	background: $white_bg;
+	color: $text_black;
+	height: 35px;
+	padding: 6px 12px;
+	font-size: 100%;
+	@include border-radius(2px);
+	max-width: 100%;
+	vertical-align: middle;
+	&:focus {
+		border-color: rgba(0,0,0,0.1);
+		outline: 0 !important;
+		@include box-shadow(none);
+	}
+}
+textarea, select[multiple="multiple"] {
+	height: auto;
+	padding: 5px;
+}
+button, .form-submit, .button, input[type="button"] {
+	background: $dark_bg;
+	border: 1px solid $dark_bg;
+	@include transition(color 0.1s linear 0s,background-color 0.1s linear 0s,opacity 0.2s linear 0s!important);
+	color: $text_white;
+	min-width: 120px;
+	margin-right: 5px;
+	display: inline-block;
+	padding: 6px 12px;
+	white-space: nowrap;
+	cursor: pointer;
+	@include border-radius(4px);
+	height: 35px;
+	line-height: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9em;
+	&:hover {
+		background: $link_h_color;
+		border-color: $link_h_color;
+	}
+}
+
+label {
+  display: block;
+  font-weight: 600;
+}
+

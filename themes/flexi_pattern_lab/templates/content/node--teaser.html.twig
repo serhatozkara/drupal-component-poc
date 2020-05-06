@@ -1,0 +1,10 @@
+
+{% include "@components/card/card.twig"
+  with {
+    "card__img": content.field_image,
+    "card_date": date,
+    "card_heading": label,
+    "card_teaser": content.body
+  }
+%}
+

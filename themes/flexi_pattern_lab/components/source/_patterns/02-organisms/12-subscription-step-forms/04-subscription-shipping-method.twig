@@ -1,0 +1,18 @@
+{% set stepValueLabelStyle = 'small' %}
+{% set stepValueLabel = 'Express shipping <br> (Under 2 hours -$x)' %}
+{% set collapseDefault = 'collapse' %}
+{% set formLabel = 'Shipping method' %}
+
+{% extends 'organisms-collapsible-form-container' %}
+
+{% block activationForm %}
+
+  <h4 data-form-scroll="yes">Shipping Method</h4>
+
+  {% include 'organisms-radio-list-left-shipping-method' %}
+
+  <div class="text-center mt-50">
+    {% include 'atoms-button-icon-right-large' with { buttonLabel: 'Save', icon: 'arrow-right', uniqueID: uuid} %}
+  </div>
+
+{% endblock %}

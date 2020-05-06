@@ -1,0 +1,21 @@
+{% set stepValueLabelStyle = 'small' %}
+{% set stepValueLabel = '5631 Boul Saint-Michel<br>Montreal QC H1Y 2E3<br>Canada' %}
+{% set collapseDefault = 'collapse' %}
+{% set formLabel = 'Home address' %}
+
+{% extends 'organisms-collapsible-form-container' %}
+
+{% block activationForm %}
+
+  <h4 class="d-inline-block" data-form-scroll="yes">Your home address</h4>{% include 'atoms-tooltip' with { title: 'It’s important to enter the address where you are currently living even if it isn’t a permanent address. If you have multiple addresses, please choose the one where you spend the most time.'} %}
+
+
+  {% include 'atoms-input-with-label-right' with { placeholder: 'Enter your address', formLabel: 'I couldn\'t find my address'} %}
+
+  <p class="text-muted"><small>The service is available in Quebec and parts of Ontario.</small></p>
+
+  <div class="text-center mt-50">
+    {% include 'atoms-button-icon-right-large' with { buttonLabel: 'Save', icon: 'arrow-right', uniqueID: uuid} %}
+  </div>
+
+{% endblock %}

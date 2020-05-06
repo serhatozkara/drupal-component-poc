@@ -1,0 +1,10 @@
+<div class="form-checkbox-block d-flex my-2 my-md-3">
+  <input class="sr-only" type="checkbox" name="checkboxOptions" id="checkbox{{inputNumber}}" value="option{{inputNumber}}">
+  <label class="align-self-center align-items-center w-100 p-3 d-flex" for="checkbox{{inputNumber}}">
+    <span class="col-12">
+      <h6>{{ header|default('Germany, Zone 1') }}</h6>
+      <small>{{ line1|default('LongDistance') }}</small>
+    </span>
+    {% include 'atoms-circle-icon-16' with { circleColor: 'electric-blue', icon: 'check', color: 'white'} %}
+  </label>
+</div>

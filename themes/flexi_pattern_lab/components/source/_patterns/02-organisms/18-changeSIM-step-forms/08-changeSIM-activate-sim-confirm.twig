@@ -1,0 +1,16 @@
+{% set priceReveal = 'no' %}
+{% set formLabel = 'Your SIM activation code' %}
+{% set collapseDefault = 'collapse' %}
+
+{% extends 'organisms-collapsible-form-container' %}
+
+{% block activationForm %}
+  <div class="d-flex flex-column align-items-center">
+    <div>
+      {% include 'atoms-button-large' with { buttonLabel: 'Confirm',classes:'px-5'} %}
+    </div>
+    <div>
+      {% include 'atoms-button-outline-large' with { buttonLabel: 'Cancel',classes:'px-5'} %}
+    </div>
+  </div>
+{% endblock %}

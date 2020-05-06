@@ -1,0 +1,60 @@
+{% set stepValueLabelStyle = 'small' %}
+{% set stepValueLabel = 'Download speed: 30 Mbps<br>Monthly Usage: Unlimited' %}
+{% set priceReveal = 'yes' %}
+{% set formLabel = 'Your home internet plan' %}
+
+{% extends 'organisms-collapsible-form-container' %}
+
+{% block activationForm %}
+  <h1>Set your plan</h1>
+  
+  <div class="my-50">  
+    <h4 class="d-inline-block">Unlimited</h4>
+    <p class="text-muted d-inline-block">/ Data</p>
+    {% include 'atoms-progress-slider' with { gradientcolor:'green', progressValue: 100 } %}
+  </div>
+  
+  <div class="my-50">
+    <h4>Choose your speed</h4>
+    <a href="#" data-toggle="modal" data-target="#exampleModalLong">Help me choose my speed</a>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Modal body content
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <form class="d-flex row mt-3">
+      {% include 'atoms-block-radio-text-center-large' with { title: '30', subtitle: 'Mbps', inputNumber: 1} %}
+      {% include 'atoms-block-radio-text-center-large' with { title: '60', subtitle: 'Mbps', inputNumber: 2 } %}
+      {% include 'atoms-block-radio-text-center-large' with { title: '90', subtitle: 'Mbps', inputNumber: 3} %}
+      {% include 'atoms-block-radio-text-center-large' with { title: '120', subtitle: 'Mbps', inputNumber: 4} %}
+    </form>
+  </div>
+  
+  <div class-"mb-50">
+    <span class="float-right">{% include 'atoms-circle-icon-16' with { circleColor: 'electric-blue', icon: 'check', color: 'white'} %}</span>
+    <h4>Free stuff everyone gets:</h4>
+    <ul class="checklist two-column text-muted">
+      <li>Feature 1</li>
+      <li>Feature 2</li>
+      <li>Feature 3</li>
+      <li>Feature 4</li>
+    </ul>
+  </div>
+  
+  <div class="text-center">
+    {% include 'atoms-button-icon-right-large' with { buttonLabel: 'Confirm', icon: 'arrow-right', uniqueID: uuid } %}
+  </div>
+  
+{% endblock %}

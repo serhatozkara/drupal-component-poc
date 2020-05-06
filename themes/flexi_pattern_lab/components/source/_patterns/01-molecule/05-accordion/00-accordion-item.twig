@@ -1,0 +1,20 @@
+<div class="accordion-item py-3">
+  <a data-toggle="collapse" role="button" aria-expanded="false" data-target="#collapse{{ inlineAnchor }}" aria-controls="collapse{{ inlineAnchor }}" class="collapsed">
+    <div class="accordion-header d-flex">
+      <div class="accordion-icon" >
+        <div class="accordion-plus">
+          {% include 'atoms-icon' with { size:'32',color:'black',icon:'plus-circle'}  %}
+        </div>
+        <div class="accordion-minus">
+          {% include 'atoms-icon' with { size:'32',color:'green',icon:'minus-circle'}  %}
+        </div>
+      </div>
+      <div class="flex-grow-1">
+        <h6>{{ titleLong }}</h6>
+      </div>
+    </div>
+  </a>
+  <div class="accordion-body collapse pl-5" id="collapse{{ inlineAnchor }}">
+    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+  </div>
+</div>

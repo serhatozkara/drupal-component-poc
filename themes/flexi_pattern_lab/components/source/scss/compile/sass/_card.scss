@@ -1,0 +1,277 @@
+.card {
+  box-shadow: 1px 1px 3px 0px rgba($black, 0.15);
+  transition: box-shadow 0.2s;
+
+  &.card-sidebar {
+    border: 2px solid $light-gray;
+    border-radius: 1rem;
+
+    .list-group:first-child .list-group-item:first-child {
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+
+    .list-group:last-child .list-group-item:last-child {
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+
+    .list-group-item {
+      border-top: 2px solid $light-gray;
+    }
+  }
+
+  &.card-rounder,
+  .card-rounder {
+    border-radius: 1rem;
+  }
+
+  &.card-bottom-fixed,
+  .card-bottom-fixed {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.8);
+  }
+
+  &.chart-card {
+    width: 100%;
+  }
+}
+
+a>.card {
+  &:hover {
+    text-decoration: none;
+    box-shadow: 0px 50px 60px 24px rgba($black, 0.15);
+    transition: box-shadow 0.2s;
+    z-index: 1;
+  }
+}
+
+.card-deck {
+  .card {
+    margin-bottom: $grid-gutter-width;
+    max-width: 250px;
+    &:hover {
+        p{
+            text-decoration: underline;
+        }
+    }
+  }
+  .card-body {
+    max-width: 200px;
+    padding: 0 !important;
+  }
+
+  @include media-breakpoint-down(xs) {
+    .card {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.media.card {
+  flex-direction: row;
+}
+
+.card.toast {
+  border-radius: 6px;
+}
+
+.card-header {
+  border-bottom: 0px;
+}
+
+.card-header.user-plan {
+  @media only screen and (min-width: 768px) and (max-width: 1150px) {
+    h4 {
+      font-size: 1.3rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.card-section:not(:first-child) {
+  border-top: 1px solid rgba($black, 0.1)
+}
+
+.card-section.user-plan {
+  p {
+    line-height: 17px;
+  }
+
+  .internet-speed {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .one-speed {
+      padding: 0 1rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      justify-content: flex-end;
+      flex-direction: column;
+
+      h5 {
+        margin-bottom: 10px !important;
+      }
+
+      .one-speed {
+        padding: 10px 0 !important;
+      }
+    }
+
+    @media only screen and (min-width: 1400px) {
+      flex-direction: row;
+
+      .one-speed {
+        padding-left: 19% !important;
+      }
+
+      .one-speed:first-child {
+        padding-left: 0 !important;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .card-container:nth-child(odd) {
+    padding-left: 0;
+    padding-right: 1rem;
+  }
+
+  .card-container:nth-child(even) {
+    padding-left: 1rem;
+    padding-right: 0;
+  }
+}
+
+.card-disabled {
+  background-color: transparent;
+  box-shadow: none;
+  border: 2px dashed $light-gray;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.upgrade-container {
+  margin: 0 -0.5rem;
+  flex: 1 0 auto;
+
+  @include media-breakpoint-up(sm) {
+    margin: 0 -1rem;
+  }
+}
+
+.upgrade {
+  position: relative;
+
+  @include media-breakpoint-up(sm) {
+    max-width: 265px;
+    max-height: 265px;
+  }
+
+  span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    font-family: Bookmark, sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+
+    @include media-breakpoint-down(md) {
+      bottom: 10px;
+    }
+  }
+}
+
+.upgrade-locked {
+  background-color: transparent;
+  box-shadow: none;
+  border: 2px dashed $light-gray;
+}
+
+.upgrade-overlay {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    position: absolute;
+    font-weight: bold;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+  }
+
+  img {
+    opacity: 0.15;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.upgrade-collection {
+  padding: 0 20px;
+
+  @include media-breakpoint-up(md) {
+    width: 320px;
+    padding: 0;
+    left: auto;
+    right: 180px;
+  }
+
+  .card-header svg {
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+  }
+
+  .card-header[aria-expanded=true] svg {
+    transform: rotate(180deg);
+  }
+
+  .tab-content {
+    max-width: 336px;
+  }
+}
+
+.upgradeCollectionPaneBody {
+  max-height: 60vh;
+  overflow: overlay;
+  -webkit-overflow-scrolling: touch;
+
+  .upgrade {
+    max-width: 80px;
+  }
+}
+
+/* class creted to fix a problem with the middle vertical align in IE, which uses margin auto in all directions
+   but IE sets the height of the button to the height of its container, which causes the button to be always aligned
+   on top
+   The element seems to have be 24x24, with a 4px padding and 1px border
+*/
+.arrow-chart {
+  height: 36px;
+}
+
+@media (min-width: 568px){
+    .card-deck .card{
+        margin-bottom: 0 !important;
+    }
+}
+.mw-70{
+    max-width: 70% !important;
+}

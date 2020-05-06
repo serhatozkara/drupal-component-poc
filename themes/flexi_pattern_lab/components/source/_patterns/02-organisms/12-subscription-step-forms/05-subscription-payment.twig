@@ -1,0 +1,75 @@
+{% set stepValueLabelStyle = 'small' %}
+{% set stepValueLabel = 'Visa' %}
+{% set collapseDefault = collapse|default('collapse') %}
+{% set formLabel = 'Payment method' %}
+
+{% extends 'organisms-collapsible-form-container' %}
+
+{% block activationForm %}
+
+  <h4 data-form-scroll="yes" class="pb-3">Select a payment method</h4>
+
+
+  <div class="mb-3">
+    {% include 'organisms-radio-list-left-payment-method' %}
+  </div>
+
+  <div id="credit-card-form" class="collapse">
+    {% include 'organisms-credit-card-form' %}
+  </div>
+
+  <h5>Billing Address</h5>
+
+  <form id="subscription-billing-address">
+    <div class="custom-control custom-radio">
+      <input type="radio" id="subscription-billing-address-same" name="customRadio" class="custom-control-input">
+      <label class="custom-control-label" for="subscription-billing-address-same">Home address</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="subscription-billing-address-different" name="customRadio" class="custom-control-input">
+      <label class="custom-control-label" for="subscription-billing-address-different">Use a different billing address</label>
+    </div>
+  </form>
+
+  <form id="subscription-billing-address-form" class="collapse">
+    <p class="muted">Enter your billing address below</p>
+
+    <div class="form-row">
+      <div class="col-12">
+        {% include 'atoms-input-with-label-top' with { placeholder: ' ', formLabel: 'Street number' } %}
+      </div>
+      <div class="col-12">
+        {% include 'atoms-input-with-label-top' with { placeholder: ' ', formLabel: 'Street name' } %}
+      </div>
+      <div class="col-12">
+        {% include 'atoms-input-with-label-top' with { placeholder: ' ', formLabel: 'Apt., Suite, Bldg. (optional)' } %}
+      </div>
+      <div class="col-12">
+        {% include 'atoms-input-with-label-top' with { placeholder: ' ', formLabel: 'Postal code / zip code' } %}
+      </div>
+
+      <div class="form-group col-12">
+        <select class="custom-select">
+          <option  disabled selected>Country</option>
+          <option>Canada</option>
+          <option>United States</option>
+          <option>Mexico</option>
+        </select>
+      </div>
+
+      <div class="form-group col-12">
+        <select class="custom-select">
+          <option  disabled selected>Province</option>
+          <option>Alberta</option>
+          <option>British Columbia</option>
+          <option>Quebec</option>
+        </select>
+      </div>
+    </div>
+  </form>
+
+  <div class="text-center mt-50">
+    {% include 'atoms-button-icon-right-large' with { buttonLabel: 'Save', icon: 'arrow-right', uniqueID: uuid} %}
+  </div>
+
+{% endblock %}
